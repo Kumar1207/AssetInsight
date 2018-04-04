@@ -1,0 +1,902 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 25835030473,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.setUp()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Creating a New Application",
+        "description": "",
+        "id": "i-verify-where-possible-please-specify-the-retention-period-applied-to-personal-data-on-your-application-and-its-basis-is-added.;creating-a-new-application",
+        "after": [
+          {
+            "result": {
+              "duration": 37526,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 25216744917,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Asset Insight Home page should be displayed",
+            "match": {
+              "location": "HomePageStepDef.assetInsightHomePageShouldBeDisplayed()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 18434829,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click on the \"Technology\" in the homepage",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 16
+                }
+              ],
+              "location": "HomePageStepDef.iClickOnTheInTheHomepage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35418311,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify the respective \"Technology\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 25
+                }
+              ],
+              "location": "HomePageStepDef.iVerifyTheRespectivePageIsDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63403660408,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I create New Application in the Technology page for below mandatory fields",
+            "match": {
+              "location": "TechnologyPageStep.iCreateNewApplicationInTheTechnologyPageForBelowMandatoryFields(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Application Name",
+                  "Data Management System"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "Short Name",
+                  "DM"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Launch Year",
+                  "1998"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Business Unit (BU)",
+                  "Financial \u0026 Risk"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Application Type",
+                  "Software Sale"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Description",
+                  "Data Management System"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Application Development Contact",
+                  "Prashanthi Modium"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "AML Business Contact",
+                  "Beaumont, Stewart (TRGR)"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Platform Classification",
+                  "No Intent to Migrate"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7401141641,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I click on \"SAVE/VALIDATE\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SAVE/VALIDATE",
+                  "offset": 12
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnButtonOnCreateApplicationPage(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@pageDisplay"
+          },
+          {
+            "line": 4,
+            "name": "@AC_TechnologyPage_15_01"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 27668236580,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.setUp()"
+            }
+          }
+        ],
+        "line": 47,
+        "name": "I Verify new New field in the Existing Application",
+        "description": "",
+        "id": "i-verify-where-possible-please-specify-the-retention-period-applied-to-personal-data-on-your-application-and-its-basis-is-added.;i-verify-new-new-field-in-the-existing-application;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 24056,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 25131813391,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Asset Insight Home page should be displayed",
+            "match": {
+              "location": "HomePageStepDef.assetInsightHomePageShouldBeDisplayed()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16568125,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I click on the \"Technology\" in the homepage",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 16
+                }
+              ],
+              "location": "HomePageStepDef.iClickOnTheInTheHomepage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 32977162,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I verify the respective \"Technology\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 25
+                }
+              ],
+              "location": "HomePageStepDef.iVerifyTheRespectivePageIsDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 24913971224,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I click on the \"Applications\" present in the Technology page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Applications",
+                  "offset": 16
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnThePresentInTheTechnologyPage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7671112652,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I select any Existing Application present in the Result Page",
+            "match": {
+              "location": "TechnologyPageStep.iSelectAnyExistingApplicationPresentInTheResultPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6773313759,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I click on \"Edit This Record\" Details Page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Edit This Record",
+                  "offset": 12
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnDetailsPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14143663757,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I click on \"Data Governance\" tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Data Governance",
+                  "offset": 12
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnTab(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8108553676,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I verify \"Where possible please specify the retention period applied to personal data on your application and its basis\" field present in the Data Governance page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Where possible please specify the retention period applied to personal data on your application and its basis",
+                  "offset": 10
+                }
+              ],
+              "location": "RetentionPeriodPageStep.iVerifyFieldPresentInTheDataGovernancePage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3061162155,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I Check the type of \"Where possible please specify the retention period applied to personal data on your application and its basis\" filed in the Data Governance page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Where possible please specify the retention period applied to personal data on your application and its basis",
+                  "offset": 21
+                }
+              ],
+              "location": "RetentionPeriodPageStep.iCheckTheTypeOfFiledInTheDataGovernancePage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3089441765,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I verify that field type of \"Where possible please specify the retention period applied to personal data on your application and its basis\" should be same as Existing filed \"Data Sensitive to Hosting Context Description Customer\" type in the Data Governance page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Where possible please specify the retention period applied to personal data on your application and its basis",
+                  "offset": 29
+                },
+                {
+                  "val": "Data Sensitive to Hosting Context Description Customer",
+                  "offset": 174
+                }
+              ],
+              "location": "RetentionPeriodPageStep.iVerifyThatFieldTypeOfShouldBeSameAsExistingFiledTypeInTheDataGovernancePage(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64468,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I verify that it should not a mandatory field",
+            "match": {
+              "location": "RetentionPeriodPageStep.iVerifyThatItShouldNotAMandatoryField()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23448951,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I verify that Character limit for this field should be 512 characters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "512",
+                  "offset": 55
+                }
+              ],
+              "location": "RetentionPeriodPageStep.iVerifyThatCharacterLimitForThisFieldShouldBeCharacters(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4338321261,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I Verify if the limit exceeds a validation message should get displayed",
+            "match": {
+              "location": "RetentionPeriodPageStep.iVerifyIfTheLimitExceedsAValidationMessageShouldGetDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 45475423,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I verify that \"Help text\" should be displayed below the text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Help text",
+                  "offset": 15
+                }
+              ],
+              "location": "RetentionPeriodPageStep.iVerifyThatShouldBeDisplayedBelowTheTextField(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9016203765,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I click on \"Save/Validate\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Save/Validate",
+                  "offset": 12
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnButtonOnCreateApplicationPage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15254282034,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I click on \"Audit history\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Audit history",
+                  "offset": 12
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOn(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35602,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I verify Updated field should get displayed in the Audit History tab",
+            "match": {
+              "location": "RetentionPeriodPageStep.iVerifyUpdatedFieldShouldGetDisplayedInTheAuditHistoryTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7288512968,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I click on \"Back to detail\" button respective application details page should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Back to detail",
+                  "offset": 12
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnButtonRespectiveApplicationDetailsPageShouldBeDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 90448,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I verify Updated field should get displayed in the Data Governance tab present in the Details page",
+            "match": {
+              "location": "RetentionPeriodPageStep.iVerifyUpdatedFieldShouldGetDisplayedInTheDataGovernanceTabPresentInTheDetailsPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Feature_TechnologyPage_15"
+          },
+          {
+            "line": 22,
+            "name": "@pageDisplay"
+          },
+          {
+            "line": 22,
+            "name": "@AC_TechnologyPage_15_02"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24775665101,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.setUp()"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "I verify Excel should be downloaded with the updated values",
+        "description": "",
+        "id": "i-verify-where-possible-please-specify-the-retention-period-applied-to-personal-data-on-your-application-and-its-basis-is-added.;i-verify-excel-should-be-downloaded-with-the-updated-values",
+        "after": [
+          {
+            "result": {
+              "duration": 19565,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 25124224372,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Asset Insight Home page should be displayed",
+            "match": {
+              "location": "HomePageStepDef.assetInsightHomePageShouldBeDisplayed()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16567484,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I click on the \"Technology\" in the homepage",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 16
+                }
+              ],
+              "location": "HomePageStepDef.iClickOnTheInTheHomepage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30551729,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I verify the respective \"Technology\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 25
+                }
+              ],
+              "location": "HomePageStepDef.iVerifyTheRespectivePageIsDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19998945408,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I click on the \"Applications\" present in the Technology page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Applications",
+                  "offset": 16
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnThePresentInTheTechnologyPage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5322115252,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I click on \"export to Excel\" button and Excel should be downloaded",
+            "match": {
+              "arguments": [
+                {
+                  "val": "export to Excel",
+                  "offset": 12
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnButtonAndExcelShouldBeDownloaded(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 50,
+            "name": "@pageDisplay"
+          },
+          {
+            "line": 50,
+            "name": "@AC_TechnologyPage_15_03"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 21652721443,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.setUp()"
+            }
+          }
+        ],
+        "line": 60,
+        "name": "Verifying Downloaded Excel data with GUI",
+        "description": "",
+        "id": "i-verify-where-possible-please-specify-the-retention-period-applied-to-personal-data-on-your-application-and-its-basis-is-added.;verifying-downloaded-excel-data-with-gui",
+        "after": [
+          {
+            "result": {
+              "duration": 26622,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12703932973,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "I navigate to URL \"https://assetsdev.int.thomsonreuters.com/Technology/tgo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://assetsdev.int.thomsonreuters.com/Technology/tgo",
+                  "offset": 19
+                }
+              ],
+              "location": "TechnologyPageStep.iNavigateToURL(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12246637527,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I click on Application- Full Extract should be downloaded",
+            "match": {
+              "location": "TechnologyPageStep.iClickOnApplicationFullExtractShouldShouldBeDownloaded()"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "line": 59,
+            "name": "@pageDisplay"
+          },
+          {
+            "line": 59,
+            "name": "@AC_TechnologyPage_15_04"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 63,
+            "value": "#   Then  Application- Full Extract should be downloaded"
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 25789453697,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.setUp()"
+            }
+          }
+        ],
+        "line": 68,
+        "name": "Navigating To The AssetInsight HomePage",
+        "description": "",
+        "id": "i-verify-where-possible-please-specify-the-retention-period-applied-to-personal-data-on-your-application-and-its-basis-is-added.;navigating-to-the-assetinsight-homepage",
+        "after": [
+          {
+            "result": {
+              "duration": 14112,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfter.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 25078219087,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "Asset Insight Home page should be displayed",
+            "match": {
+              "location": "HomePageStepDef.assetInsightHomePageShouldBeDisplayed()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15089836,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "I click on the \"Technology\" in the homepage",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 16
+                }
+              ],
+              "location": "HomePageStepDef.iClickOnTheInTheHomepage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26732042,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "I verify the respective \"Technology\" page is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Technology",
+                  "offset": 25
+                }
+              ],
+              "location": "HomePageStepDef.iVerifyTheRespectivePageIsDisplayed(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 32124501490,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "I click on the \"Applications\" present in the Technology page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Applications",
+                  "offset": 16
+                }
+              ],
+              "location": "TechnologyPageStep.iClickOnThePresentInTheTechnologyPage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7952573197,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "I select any Existing Application present in the Result Page",
+            "match": {
+              "location": "TechnologyPageStep.iSelectAnyExistingApplicationPresentInTheResultPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 74,
+            "name": "I verify that excel document \"./Excel/Technology-Application.xlsx\" with sheet name \"Technology\" , row number \"1\" and cell number \"59\" in report page and downloaded excel report are matching",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 67,
+            "name": "@pageDisplay"
+          },
+          {
+            "line": 67,
+            "name": "@AC_TechnologyPage_15_05"
+          }
+        ]
+      }
+    ],
+    "name": "I verify Where possible please specify the retention period applied to personal data on your application and its basis is added.",
+    "description": "",
+    "id": "i-verify-where-possible-please-specify-the-retention-period-applied-to-personal-data-on-your-application-and-its-basis-is-added.",
+    "keyword": "Feature",
+    "uri": "com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_15/RetentionPeriod.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Feature_TechnologyPage_15"
+      }
+    ]
+  }
+]
