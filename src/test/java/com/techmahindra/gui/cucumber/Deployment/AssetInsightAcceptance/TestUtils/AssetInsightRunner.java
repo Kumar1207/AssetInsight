@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         , glue = {"com.techmahindra.gui.cucumber"}
         , plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
         , features = {"src/test/resources"}
-        , tags = {"@Feature_TechnologyPage_15"}
+        , tags = {"@AC_TechnologyPage_16_02"}
 
 )
 

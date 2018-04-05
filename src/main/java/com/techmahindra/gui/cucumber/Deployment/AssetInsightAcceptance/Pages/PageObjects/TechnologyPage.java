@@ -390,7 +390,7 @@ public class TechnologyPage extends BasePage {
 
 
     public boolean clickOnSaveButton() {
-        WebDriverUtils.waitForElementLoading(2);
+        WebDriverUtils.waitForElementLoading(5);
         saveButton.click();
         return true;
     }

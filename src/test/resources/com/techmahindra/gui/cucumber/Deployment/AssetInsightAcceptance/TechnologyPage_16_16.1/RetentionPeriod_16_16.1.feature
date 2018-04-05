@@ -32,14 +32,13 @@ Feature: I verify Where possible please specify the retention period applied to 
     And  I Check the type of "<Newfield>" field in the Data Governance page
     And  I verify that field type of "<Newfield>" should be same as Existing field "<Existingfield>" type in the Data Governance page
     And  I verify that it should be a mandatory field
-    When I do not select Yes/No option validation message should be displayed
+    When I do not select any option validation message should be displayed
     When I click on Yes "please explain" subquestion should be displayed
-    When I click on "No" option nothing should be displayed below the main question field
+    When I click on No nothing should be displayed below the main question field
     When I click on Yes I verify the type of the new subquestion field
-    Then I verify that it should be same as existing "Data Sensitive to Hosting Context Description" field
+    Then I verify that subquestion field should be same as existing "Data Sensitive to Hosting Context Description" field
     And  I verify that subquestion field should be mandatory field whenever main Question value is 'Yes'
-    Then I Verify if the limit exceeds a validation message should get displayed
-    Then I enter the values in the textbox
+    Then I Verify if the limit exceeds -validation message should get displayed
     Then I click on "Save/Validate" button
     And  I click on "Audit history"
     And  I verify Updated field should get displayed in the Audit History tab

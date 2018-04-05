@@ -20,6 +20,7 @@ public class RetentionPeriodPage extends BasePage {
 
     @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataRetentionPeriod']")
     private WebElement retentionPeriodtextField;
+
     @FindBy(xpath = "//*[text()='Data Sensitive to Hosting Context Description ']")
     private WebElement HostingContextDesc;
 
@@ -108,6 +109,7 @@ public class RetentionPeriodPage extends BasePage {
             System.out.println("Found the text \"" + matcher.group()
                     + "\" starting at " + matcher.start()
                     + " index and ending at index " + matcher.end());
+
 
         }
         return true;
