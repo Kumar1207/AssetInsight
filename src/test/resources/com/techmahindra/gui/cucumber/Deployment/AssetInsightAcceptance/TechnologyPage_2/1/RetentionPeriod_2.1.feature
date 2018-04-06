@@ -28,26 +28,22 @@ Feature: I verify Where possible please specify the retention period applied to 
     And  I select any Existing Application present in the Result Page
     And  I click on "Edit This Record" Details Page
     And  I click on "Data Governance" tab
-    Then I verify the "<NewfieldName>" field present in the Data Governance page
-    And  I Check the type of "<NewfieldName>" filed in the Data Governance page
+    Then I verify "<NewfieldName>" field is present in the Data Governance page
+    And  I Check the type of "<NewfieldName>" in the Data Governance page
     When I click on "Yes" button All the subquestions under 'Sensitive PII Data' field should get displayed
-    And  I verify that it should be a mandatory field
-    When I click on Yes All the subquestions under 'Sensitive PII Data' field should get displayed
+    Then I verify All the subquestions under 'Sensitive PII Data' field should get displayed
     And  I verify that "Help text" should get displayed in the same format as 'Standard PII Data'
-    And  I verify that Character limit for this field should be 512 characters
-    Then I Verify if the limit exceeds a validation message should get displayed
-
+    Then I verify existing list of values should remain same
+    And  I verify new values which are given in the requirement document also should be added to the picklist.
+    And  I Select all the newly added values
     Then I click on "Save/Validate" button
-    And  I click on "Audit history"
-    And  I verify Updated field should get displayed in the Audit History tab
     Then I click on "Back to detail" button respective application details page should be displayed
     Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
 
 
     Examples:
-      | NewfieldName                                                                                                  | ExistingfieldName                                      |
-      | Sensitive PII Data | Data Sensitive to Hosting Context Description Customer |
-
+      | NewfieldName       |
+      | Sensitive PII Data |
 
   @pageDisplay @AC_TechnologyPage_2.1_03
   Scenario: I verify Excel should be downloaded with the updated values
