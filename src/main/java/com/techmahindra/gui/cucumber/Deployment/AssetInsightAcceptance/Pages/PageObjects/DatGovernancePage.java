@@ -41,7 +41,7 @@ public class DatGovernancePage extends BasePage {
     @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataRetentionPeriodVaryDescription']")
     private WebElement newSubQuetextField;
 
-    @FindBy(xpath ="//*[@id='BusinessCriticalitySpecialFactor_DataSensitiveToHostingContextDescription']")
+    @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_DataSensitiveToHostingContextDescription']")
     private WebElement existingField;
 
     @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataRetentionPeriodVaryDescription-error']")
@@ -77,7 +77,7 @@ public class DatGovernancePage extends BasePage {
     public boolean VerifyThatFieldTypeOfShouldBeSameAsExistingFieldType() {
 
         WebDriverUtils.waitForElementLoading(5);
-       /* System.out.println(newFieldRadioBtn.getAttribute("type"));*/
+        /* System.out.println(newFieldRadioBtn.getAttribute("type"));*/
 
         boolean flag = false;
         if (newFieldRadioBtn.getAttribute("type").equals(radioButtonExistnfField.getAttribute("type"))) {
@@ -153,8 +153,7 @@ public class DatGovernancePage extends BasePage {
     }
 
     public boolean verifyIfTheLimitExceedsValidationMessageShouldGetDisplayed() {
-        WebDriverUtils.waitForElementLoading(2);
-        boolean flag = false;
+        WebDriverUtils.waitForElementLoading(1);
         int i;
         WebElement textbox = newSubQuetextField;
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", textbox);
@@ -162,7 +161,9 @@ public class DatGovernancePage extends BasePage {
         String textvalue = "Text Box for Retention period Text Box for Retention period " +
                 "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
                 "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period";
+                "Text Box for Retention Text Box for Retention period Text Box for Retention period Text " +
+                "Box for Retention period Text Box for Retention Text Box for Retention period Text Box " +
+                "for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period ";
 
 
         i = textvalue.length();
@@ -172,21 +173,24 @@ public class DatGovernancePage extends BasePage {
         if (i > 512) {
             WebDriverUtils.waitForElementLoading(1);
             textbox.sendKeys(textvalue);
-            flag = true;
-        }else
-        {
-            textbox.sendKeys(textvalue);
-            flag = true;
-        }
-
-        if (flag) {
             textvalue = textvalue.substring(0, 512);
             textbox.clear();
             WebDriverUtils.waitForElementLoading(1);
             textbox.sendKeys(textvalue);
+
+        } else {
+            textbox.sendKeys(textvalue);
+
         }
 
-        return flag;
+       /* if (flag) {
+            textvalue = textvalue.substring(0, 512);
+            textbox.clear();
+            WebDriverUtils.waitForElementLoading(1);
+            textbox.sendKeys(textvalue);
+        }*/
+
+        return true;
     }
 
     @Override
