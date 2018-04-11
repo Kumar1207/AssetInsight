@@ -1,5 +1,6 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Helpers.CommonMethods;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -152,44 +153,8 @@ public class DatGovernancePage extends BasePage {
 
     }
 
-    public boolean verifyIfTheLimitExceedsValidationMessageShouldGetDisplayed() {
-        WebDriverUtils.waitForElementLoading(1);
-        int i;
-        WebElement textbox = newSubQuetextField;
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", textbox);
-
-        String textvalue = "Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period Text " +
-                "Box for Retention period Text Box for Retention Text Box for Retention period Text Box " +
-                "for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period ";
-
-
-        i = textvalue.length();
-        textbox.clear();
-        WebDriverUtils.waitForElementLoading(1);
-
-        if (i > 512) {
-            WebDriverUtils.waitForElementLoading(1);
-            textbox.sendKeys(textvalue);
-            textvalue = textvalue.substring(0, 512);
-            textbox.clear();
-            WebDriverUtils.waitForElementLoading(1);
-            textbox.sendKeys(textvalue);
-
-        } else {
-            textbox.sendKeys(textvalue);
-
-        }
-
-       /* if (flag) {
-            textvalue = textvalue.substring(0, 512);
-            textbox.clear();
-            WebDriverUtils.waitForElementLoading(1);
-            textbox.sendKeys(textvalue);
-        }*/
-
+    public boolean verifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(String textvalue) {
+        CommonMethods.ValidateAndUpdateField(newSubQuetextField, textvalue);
         return true;
     }
 
