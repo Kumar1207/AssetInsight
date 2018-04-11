@@ -9,6 +9,8 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class RetentionStepDef16 extends PageInstances {
 
 
@@ -66,8 +68,10 @@ public class RetentionStepDef16 extends PageInstances {
     }
 
     @Then("^I Verify if the limit exceeds -validation message should get displayed$")
-    public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayed() throws Throwable {
-        Assert.assertTrue(datGovernancePage.verifyIfTheLimitExceedsValidationMessageShouldGetDisplayed());
+    public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(List<String> textList) throws Throwable {
+        for(String text:textList){
+            Assert.assertTrue(datGovernancePage.verifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(text));
+        }
 
     }
 

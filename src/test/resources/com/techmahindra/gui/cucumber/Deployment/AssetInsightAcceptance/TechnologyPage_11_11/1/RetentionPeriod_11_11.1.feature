@@ -28,17 +28,18 @@ Feature: I verify Where possible please specify the retention period applied to 
     And  I select any Existing Application present in the Result Page
     And  I click on "Edit This Record" Details Page
     And  I click on "Data Governance" tab
-    Then I verify "<NewfieldName>" field present in the Data Governance page
-    And  I Check the type of "<NewfieldName>" filed in the Data Governance page
-    And  I verify that field type of "<NewfieldName>" should be same as Existing filed "<ExistingfieldName>" type in the Data Governance page
-    And  I verify that it should be a mandatory field
-    When I do not select Yes/No option validation message should be displayed
-    When I click on Yes "Provide a brief description as to why you think this is" subquestion should be displayed
-    When I answered Yes "please identify the name and contact details of the customer, reseller, partner or other party who jointly decides how to use personal data.  Please include for example the contract number and/or TR personnel that negotiated the contract" subquestion should be displayed
-    When I click on "No" option nothing should be displayed below the main question field
-    When I click on Yes I verify the type of the new subquestion fields
-    Then I verify that it should be same as existing "Data Sensitive to Hosting Context Description" field
-    Then I Verify if the limit exceeds a validation message should get displayed
+    Then I verify the "<NewfieldName>" present in the Data Governance page
+    And  I Check the type of the "<NewfieldName>" in the Data Governance page
+    And  I verify that type of "<NewfieldName>" should be same as Existing filed "<ExistingfieldName>" type in the Data Governance page
+    And  I verify that it should be mandatory field
+    When I dont select Yes/No option validation message should be displayed
+    When I click on Yes "<SubQueField1>" and "<SubQueField2>" should be displayed
+    When I click on No option nothing should be displayed below the main question field
+    When I click on I dont Know option nothing should be displayed below the main question field
+    When I click on Yes I verify the type of the "<SubQueField1>" and "<SubQueField2>"
+    Then I verify type of "<SubQueField1>" and "<SubQueField2>" should be same as existing "Data Sensitive to Hosting Context Description" field
+    Then I Verify if the limit exceeds for "<SubQueField1>" validation message should get displayed
+    Then I Verify if the limit exceeds "<SubQueField2>" validation message should get displayed
     Then I click on "Save/Validate" button
     And  I click on "Audit history"
     And  I verify Updated field should get displayed in the Audit History tab
@@ -47,8 +48,12 @@ Feature: I verify Where possible please specify the retention period applied to 
 
 
     Examples:
-      | NewfieldName                                                                                                  | ExistingfieldName                                      |
-      | Does Thomson Reuters jointly decide how to use personal data in your application with any other party  | Standard Customer or Partner Data  |
+      | NewfieldName                                                                                           | ExistingfieldName                 |
+      | Does Thomson Reuters jointly decide how to use personal data in your application with any other party? | Standard Customer or Partner Data |
+
+    Examples:
+      | SubQueField1                                            | SubQueField2                                                                                                                                                                                                                                   |
+      | Provide a brief description as to why you think this is | please identify the name and contact details of the customer, reseller, partner or other party who jointly decides how to use personal data.  Please include for example the contract number and/or TR personnel that negotiated the contract. |
 
 
   @pageDisplay @AC_TechnologyPage_14_03
