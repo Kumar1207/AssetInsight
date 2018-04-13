@@ -1,4 +1,5 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Helpers.Driver;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 
 import org.openqa.selenium.NoSuchElementException;
@@ -10,17 +11,14 @@ public abstract class BasePage extends PageInstances {
     protected int _timeOut = 100;
 
     public BasePage() throws Exception {
-        currentWindowHandler = driver.getWindowHandle();
-
+        currentWindowHandler = Driver.getDriver().getWindowHandle();
         try {
-            WebDriverUtils.waitForElementLoading(5);
-            WebDriverUtils.waitForElementIsPresent(elementForLoading(),5);
-
+            WebDriverUtils.waitForElementLoading(15);
+            WebDriverUtils.waitForElementIsPresent(elementForLoading(),20);
         } catch (NoSuchElementException e) {
-           e.printStackTrace();
+            WebDriverUtils.waitForElementLoading(1);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
+            WebDriverUtils.waitForElementLoading(2);
         }
         pageName();
 

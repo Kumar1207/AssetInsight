@@ -92,21 +92,10 @@ public class DataGovernance11Page extends BasePage {
     public boolean verifyTypeShouldSameAsExisting() {
         WebDriverUtils.waitForElementLoading(5);
         return true;
-        /* System.out.println(newFieldRadioBtn.getAttribute("type"));*/
-
-      /*  boolean flag = false;
-        if (newFieldRadioBtn.getAttribute("type").equals(radioButtonExistnfField.getAttribute("type"))) {
-            flag = true;
-        }
-        return flag;
-    */
     }
 
     public boolean verifyMandatoryField() {
-
         return mandatoryField.isDisplayed();
-
-
     }
 
 
