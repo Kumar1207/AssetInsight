@@ -1,5 +1,5 @@
 @Feature_TechnologyPage_3.1_1
-Feature: ABC
+Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII Data Type - Other' is added as per the requirement for Applications of  Technology
 
   @pageDisplay @AC_TechnologyPage_3.1_01
   Scenario: Creating a New Application
