@@ -122,14 +122,29 @@ public class Products_900_Page extends BasePage {
                             Select sel = new Select(productstatus);
                             sel.selectByVisibleText(CreateProductFields.get(key));
                             break;
+                        case "product level":
+                            Select product = new Select(productLevel);
+                            product.selectByVisibleText(CreateProductFields.get(key));
+                            break;
+
                         case "marketing contact":
                             WebDriverUtils.waitForElementLoading(2);
-
-                            WebElement ele = driver.findElement(By.xpath("//*[@id='_ac_ContactsMarketingCSV']"));
-                            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele);
+                            marketingCOntact.sendKeys(CreateProductFields.get(key));
+                            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", marketingCOntact);
+                            marketingCOntact.click();
                             WebDriverUtils.waitForElementLoading(1);
-                            ele.click();
-                            driver.findElement(By.xpath("//*[@id='ui-id-11']")).click();
+
+                            try {
+                                Robot robot = new Robot();
+                                marketingCOntact.sendKeys("Prashanthi Modium");
+                                WebDriverUtils.waitForElementLoading(2);
+                                WebElement mc = driver.findElement(By.xpath("//*[@id='ui-id-2']/li/div[contains(text(),'Prashanthi')]"));
+                                WebDriverUtils.waitForElementLoading(2);
+                                Actions actions = new Actions(driver);
+                                actions.moveToElement(mc).click().perform();
+                            } catch (AWTException e) {
+                                e.printStackTrace();
+                            }
                             break;
                         default:
                             return false;
