@@ -15,16 +15,30 @@ public class CommonMethods extends PageInstances {
 
         i = text1.length();
         element.clear();
+        //added
+        String text2 = null;
         WebDriverUtils.waitForElementLoading(1);
-        if (i > 512 | i > 255) {
+        //if (i > 512 | i > 256) {
+        if (i > 512){
             WebDriverUtils.waitForElementLoading(1);
             element.sendKeys(text1);
             text1 = text1.substring(0, 512);
+
             element.clear();
             WebDriverUtils.waitForElementLoading(1);
             element.sendKeys(text1);
 
-        } else {
+        }
+        if(i > 256){
+            WebDriverUtils.waitForElementLoading(1);
+            element.sendKeys(text1);
+            text1 = text1.substring(0, 255);
+
+            element.clear();
+            WebDriverUtils.waitForElementLoading(1);
+            element.sendKeys(text1);
+        }
+        else {
             element.sendKeys(text1);
 
         }

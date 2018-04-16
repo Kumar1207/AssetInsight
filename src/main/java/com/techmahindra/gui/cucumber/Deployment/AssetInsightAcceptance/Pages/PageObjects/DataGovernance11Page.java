@@ -2,9 +2,14 @@ package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Pa
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
+
 
 public class DataGovernance11Page extends BasePage {
 
@@ -17,44 +22,43 @@ public class DataGovernance11Page extends BasePage {
     @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party? ']/..//td//div//input")
     private WebElement typeOfnewField;
 
-    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party?']//span")
-    private WebElement mandatoryField;
+    @FindBy(xpath="//*[@id='BusinessCriticalitySpecialFactor_StandardPIIData']")
+    private WebElement typeOfnewSTDPIIField;
 
-    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party?']/..//*[@type='radio']")
-    private WebElement radioButton;
+    @FindBy(xpath="//div[contains(@id, 'divPickListStandardPIIDataType')]//li[@title='Other']")
+    private WebElement newFieldOtherSTD;
 
-    @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_Yes']")
-    private WebElement clikOnYes;
-
-   /* @FindBy(xpath = "//*[text()='Provide a brief description as to why you think this is ']/..//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionDescription']")
-    private WebElement SubQueField1Type;
-*/
-
-   @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionDescription']")
-   private WebElement SubQueField1Type;
-
-    @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_No']")
-    private WebElement clikOnNo;
-
-    @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_IDK']")
-    private WebElement clickOnIdontKnow;
+   // @FindBy(xpath="//div[contains(@id, 'divPickListStandardPIIDataType')]//span[@class='ui-corner-all ui-icon ui-icon-plus']")
+   @FindBy(xpath="//div[contains(@id, 'divPickListStandardPIIDataType')]//li[@title='Other']//span[@class='ui-corner-all ui-icon ui-icon-plus']")
+    private WebElement newFieldOther;
 
 
-    @FindBy(xpath = "//*[text()='Provide a brief description as to why you think this is ']")
-    private WebElement subQueField1;
+    @FindBy(xpath="//textarea[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
+    private WebElement othernewSTDPIIField;
 
-    @FindBy(xpath = "//*[text()='If you answered \"Yes\", please identify the name and contact details of the customer, reseller, partner or other party who jointly decides how to use personal data.  Please include for example the contract number and/or TR personnel that negotiated the contract. ']")
-    private WebElement subQueField2;
-
-    @FindBy(xpath ="//*[@id='BusinessCriticalitySpecialFactor_DataSensitiveToHostingContextDescription']")
-    private WebElement ExistingFieldType;
-
-    @FindBy(xpath ="//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionDescription']")
-    private WebElement SubQueField1txtbox;
+    @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_StandardPIIData'][1]")
+    private WebElement stdPIIDataYes;
 
 
-    @FindBy(xpath ="//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionContact']")
-    private WebElement SubQueField2txtbox;
+
+    @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_StandardPIIData'][2]")
+    private WebElement stdPIIDataNo;
+
+
+    @FindBy(xpath="//div[contains(@id,'divStandardPIIData')]//div[text()='Standard PII Data Type ']")
+    private WebElement stdPIIType;
+
+
+    private static final String XPATH_ITEM_LIST=".//*[contains(@id,'%s')]//li[@title='%s']";
+
+    @FindBy(xpath="//*[text()='Standard PII Data Type - Other ']//span")
+    private WebElement stdOthrmandatoryfield;
+
+    @FindBy(xpath="//*[contains(text(),'please select \"Other\" and specify these other types of Standard PII Data')]")
+    private WebElement helpSTDPIIData;
+
+    @FindBy(xpath="//*[contains(text(),'Please specify these other types of Standard PII Data')]")
+    private WebElement helpSTDPIIOthers;
 
 
     public DataGovernance11Page() throws Exception {
@@ -84,6 +88,7 @@ public class DataGovernance11Page extends BasePage {
     public boolean checkTypeOfField() {
         boolean flag = false;
         if (typeOfnewField.getAttribute("type").equals("radio")) {
+
             flag = true;
         }
         return flag;
@@ -92,150 +97,168 @@ public class DataGovernance11Page extends BasePage {
     public boolean verifyTypeShouldSameAsExisting() {
         WebDriverUtils.waitForElementLoading(5);
         return true;
+        /* System.out.println(newFieldRadioBtn.getAttribute("type"));*/
+
+      /*  boolean flag = false;
+        if (newFieldRadioBtn.getAttribute("type").equals(radioButtonExistnfField.getAttribute("type"))) {
+            flag = true;
+        }
+        return flag;
+    */
     }
 
-    public boolean verifyMandatoryField() {
-        return mandatoryField.isDisplayed();
+    public boolean checkTypeOfSTDPIIField() {
+        boolean flag = false;
+        if (typeOfnewSTDPIIField.getAttribute("type").equals("radio")) {
+            flag = true;
+        }
+        return flag;
     }
 
-
-    public boolean verifyValidationMessage() {
-        boolean flag = true;
-        if (!radioButton.isSelected()) {
-            flag = false;
+    public boolean verifyTypeOtherSTDPIIField() {
+        WebDriverUtils.waitForElementLoading(3);
+        boolean flag = false;
+        if (newFieldOtherSTD.isDisplayed()) {
+            flag = true;
         }
         return flag;
 
     }
 
-    public boolean verifySubQuestionFields() {
-        WebDriverUtils.waitForElementLoading(2);
 
-        clikOnYes.click();
 
-        if (clikOnYes.isSelected())
-            return subQueField1.isDisplayed();
-        if (clikOnYes.isSelected())
-            return subQueField2.isDisplayed();
-        else return false;
-    }
-
-    public boolean clickonNO() {
-        WebDriverUtils.waitForElementLoading(2);
-
-        clikOnNo.click();
-
-      if (clikOnNo.isSelected())
-          return !subQueField1.isDisplayed();
-        if (clikOnYes.isSelected())
-            return !subQueField2.isDisplayed();
-        else return false;
+    public boolean VerifyFieldPresentInTheDataGovernancePage() {
+        WebDriverUtils.waitForElementLoading(3);
+        boolean flag = false;
+        if (newField.isDisplayed()) {
+            flag = true;
+        }
+        return flag;
 
     }
 
-    public boolean clickonIDontKnow() {
-        WebDriverUtils.waitForElementLoading(2);
-
-        clickOnIdontKnow.click();
-        if (clickOnIdontKnow.isSelected())
-            return !subQueField1.isDisplayed();
-        if (clickOnIdontKnow.isSelected())
-            return !subQueField2.isDisplayed();
-        else return false;
-
-
+    public boolean clickonOtherSTDPIIField() {
+        WebDriverUtils.waitForElementLoading(5);
+        boolean flag = false;
+        if (newFieldOther.isDisplayed()) {
+            newFieldOther.click();
+            flag = true;
+        }
+        return flag;
     }
 
-    public boolean verifyTheTypeOfSubQueFields() {
+    public boolean checkOtherSTDPIIField() {
 
         boolean flag = false;
-        if (SubQueField1Type.getAttribute("tagName").equals("textarea")) {
+               // if (othernewSTDPIIField.getAttribute("id").equals("textarea")) {
+
+        if (othernewSTDPIIField.isDisplayed()){
+            flag = true;
+        }
+        return flag;
+    }
+
+    public boolean clickOnSTDPIIDataYes() {
+
+        WebDriverUtils.waitForElementLoading(5);
+
+        boolean flag = false;
+        if (stdPIIDataYes.isDisplayed()) {
+            stdPIIDataYes.click();
             flag = true;
         }
         return flag;
 
     }
 
-    public boolean verifyTypeOfSubQueShouldBeSameAsExistingField() {
 
-         boolean flag = false;
-        if (ExistingFieldType.getAttribute("tagName").equals("textarea")) {
+    public boolean stdPIIDataFieldYesThenStdPIIType() {
+        WebDriverUtils.waitForElementLoading(3);
+        boolean flag = false;
+        if (stdPIIType.isDisplayed()) {
+            System.out.println("+++PIIDATE");
             flag = true;
         }
         return flag;
     }
 
-    public boolean verifySubQue1FieldLimit() {
-        WebDriverUtils.waitForElementLoading(1);
-        clikOnYes.click();
-        WebDriverUtils.waitForElementLoading(1);
-        int i;
-        WebElement textbox = SubQueField1txtbox;
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", textbox);
 
-        String textvalue = "Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period Text " +
-                "Box for Retention period Text Box for Retention Text Box for Retention period Text Box " +
-                "for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period ";
+    public boolean clickOnSTDPIIDataNo() {
 
 
-        i = textvalue.length();
-        textbox.clear();
-        WebDriverUtils.waitForElementLoading(1);
+        WebDriverUtils.waitForElementLoading(6);
+        boolean flag = false;
+        if (stdPIIDataNo.isDisplayed()) {
+            stdPIIDataNo.click();
 
-        if (i > 512) {
-            WebDriverUtils.waitForElementLoading(1);
-            textbox.sendKeys(textvalue);
-            textvalue = textvalue.substring(0, 512);
-            textbox.clear();
-            WebDriverUtils.waitForElementLoading(1);
-            textbox.sendKeys(textvalue);
+            Alert alert = driver.switchTo().alert();
 
-        } else {
-            textbox.sendKeys(textvalue);
+            driver.switchTo().alert();
 
+            alert.accept();
+            WebDriverUtils.waitForElementLoading(6);
+
+            flag = true;
         }
+        return flag;
 
-        return true;
     }
 
-    public boolean verifySubQue2FieldLimit() {
-        WebDriverUtils.waitForElementLoading(1);
-
-        WebDriverUtils.waitForElementLoading(1);
-        int i;
-        WebElement ele = SubQueField2txtbox;
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele);
-
-        String textvalue = "Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period " +
-                "Text Box for Retention Text Box for Retention period Text Box for Retention period Text " +
-                "Box for Retention period Text Box for Retention Text Box for Retention period Text Box " +
-                "for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period ";
+    public boolean verifyOtherNotDisSTDPIIField() {
 
 
-        i = textvalue.length();
-        ele.clear();
-        WebDriverUtils.waitForElementLoading(1);
+        boolean flag = false;
 
-        if (i > 512) {
-            WebDriverUtils.waitForElementLoading(1);
-            ele.sendKeys(textvalue);
-            textvalue = textvalue.substring(0, 512);
-            ele.clear();
-            WebDriverUtils.waitForElementLoading(1);
-            ele.sendKeys(textvalue);
-
-        } else {
-            ele.sendKeys(textvalue);
-
+        // if (othernewSTDPIIField.getAttribute("id").equals("textarea")) {
+        if (!(othernewSTDPIIField.isDisplayed())){
+            flag = true;
         }
+        return flag;
+    }
 
-        return true;
+    public boolean selectBelowListOfValuesUnderSubField(String subField, List<String> items) {
+        boolean flag=false;
+       String fieldName = subField.replaceAll("\\s","");
+    for(String item:items){
+        WebElement stdPII = driver.findElement(By.xpath("//*[text()='Standard PII Data Context']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", stdPII);
+        //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", item);
+    //driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).isDisplayed();
+        flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item))).isDisplayed();
+//flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).getAttribute("class").contains("minus");
+ }
+    return flag;
     }
 
 
+    public boolean verifySTDPIIOthrfieldMandrty() {
+
+        return stdOthrmandatoryfield.isDisplayed();
+
+    }
+
+    public boolean verifyHelpTxtSTDPIIData() {
+    WebDriverUtils.waitForElementLoading(2);
+        boolean flag=false;
+       if(helpSTDPIIData.isDisplayed()){
+            flag=true;
+       }
+
+            return flag;
+
+
+    }
+
+    public boolean verifyHelpTxtSTDPIIDataOthers() {
+        boolean flag = false;
+        if(helpSTDPIIOthers.isDisplayed()){
+            flag = true;
+        }
+
+        return flag;
+
+    }
 }
+
+
+

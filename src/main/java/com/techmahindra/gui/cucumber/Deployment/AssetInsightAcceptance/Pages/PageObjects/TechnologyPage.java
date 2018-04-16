@@ -111,7 +111,9 @@ public class TechnologyPage extends BasePage {
     @FindBy(xpath = "(//*[@id='ApplicationDataPrivacySecurity_PersonalDataHasTRPermission'])[2]")
     private WebElement radioBtnNo;
 
-    @FindBy(xpath = "//*[text()='170 Systems (Markview)']")
+    @FindBy(xpath = "//*[text()='" +
+            "170 Systems (Markview)']")
+    //@FindBy(xpath = "//*[text()='1C Local Kortes Accounting System']")
     private WebElement anyApplication;
 
 
@@ -417,7 +419,7 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnApplications() {
-        WebDriverUtils.waitForElementLoading(3);
+        WebDriverUtils.waitForElementLoading(6);
         applications.click();
         return true;
     }
@@ -429,7 +431,7 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnEdit() {
-        WebDriverUtils.waitForElementLoading(4);
+        WebDriverUtils.waitForElementLoading(7);
         editButton.click();
         return true;
     }
