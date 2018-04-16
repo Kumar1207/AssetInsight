@@ -17,16 +17,9 @@ public class LoginPage extends BasePage{
 
     @FindBy(xpath = ".//*[@id='safeLoginbtn']")
     private WebElement buttonLogin;
-    public String username;
-    public String password;
 
     public LoginPage() throws Exception {
         super();
-//        config=new XMLConfiguration("config.xml");
-//        username=config.getString("main.userName");
-//        password=config.getString("main.password");
-       username="X012829";
-        password="Soft@2018";
     }
 
 
@@ -47,7 +40,7 @@ public class LoginPage extends BasePage{
      * @throws Exception
      * @params Nothing.
      */
-    public void login() throws Exception {
+    public void login(String username,String password) throws Exception {
         textBoxUserName.sendKeys(username);
         textBoxPassword.sendKeys(password);
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", buttonLogin);

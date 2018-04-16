@@ -2,8 +2,6 @@ package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Pa
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.When;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.springframework.util.Assert;
