@@ -37,6 +37,10 @@ public class HomePageStepDef extends PageInstances {
     public void resultsPageShouldBeDisplayed() throws Throwable {
         Assert.assertTrue(assetHomePage.validateResultPage());
     }
+    @Then("^I navigate to AssetInsight Homepage$")
+    public void iNavigateToAssetInsightHomepage() throws Throwable {
+        Assert.assertTrue(assetHomePage.navigateToAssetInsightHomePage());
+    }
 
 
     @When("^I click on the \"([^\"]*)\" in the homepage$")
@@ -64,5 +68,6 @@ public class HomePageStepDef extends PageInstances {
     public void iClickOnUnderMostPopularListOnContentPage(String arg0) throws Throwable {
         Assert.assertTrue(assetHomePage.clickOnRandomLink(arg0));
     }
+
 
     }
