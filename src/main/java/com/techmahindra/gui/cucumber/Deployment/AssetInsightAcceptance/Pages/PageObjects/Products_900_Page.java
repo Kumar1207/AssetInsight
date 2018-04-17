@@ -1,5 +1,6 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Helpers.CommonMethods;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Util.Utility;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
@@ -41,29 +42,28 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "//*[@id='_ac_ContactsMarketingCSV']")
     private WebElement marketingCOntact;
 
-    @FindBy(xpath = "//*[text()='Products'])[2]")
+    @FindBy(xpath = "(//*[text()='Products'])[2]")
     private WebElement products;
 
     @FindBy(xpath = "//*[text()='3E']")
     private WebElement selectAnyProduct;
 
-    @FindBy(xpath = "//*[contains(text(),'Please provide a short description of the product')])[2]")
+    @FindBy(xpath = "(//*[contains(text(),'Please provide a short description of the product')])[2]")
     private WebElement newFieldInProducts;
 
     @FindBy(xpath = "//*[@id='DescriptionOfPersonalDataUsage']")
     private WebElement newFieldtxtBox;
 
-
-    @FindBy(xpath = "//*[contains(text(),'recipients of the personal data and a general statement on why and how the personal data is used.')])[2]")
+    @FindBy(xpath = "(//*[contains(text(),'recipients of the personal data and a general statement on why and how the personal data is used.')])[2]")
     private WebElement newFieldHelptxtBox;
 
-    @FindBy(xpath = "//*[@class='tipsLink2 navigate-away-disable'])[1]")
+    @FindBy(xpath = "(//*[@class='tipsLink2 navigate-away-disable'])[1]")
     private WebElement informationSymbol;
 
-    @FindBy(xpath = "//*[contains(text(),'Please provide a short description of the product')])[1]")
+    @FindBy(xpath = "(//*[contains(text(),'Please provide a short description of the product')])[1]")
     private WebElement newFieldInInformationBox;
 
-    @FindBy(xpath = "//*[contains(text(),'In order to determine the purpose for which personal data is being processed')])[1]")
+    @FindBy(xpath = "(//*[contains(text(),'In order to determine the purpose for which personal data is being processed')])[1]")
     private WebElement helpTextInInformationBox;
 
     @FindBy(xpath = "//*[contains(text(),'Please provide a short description of the product')]//span")
@@ -199,9 +199,28 @@ public class Products_900_Page extends BasePage {
 
     public boolean verifyUpdatedFieldInAuditHistory() {
         return updatedFieldInAuditHistory.isDisplayed();
+
     }
 
     public boolean verifyUpdatedFieldInDetailsPage() {
         return updatedFieldInDetailsPage.isDisplayed();
+    }
+
+    public boolean ClickOnTheBelowTheListsInTheHomepage() {
+        WebDriverUtils.waitForElementLoading(1);
+        products.click();
+        return true;
+    }
+
+    public boolean verifyTheValidationMessage(String textvalue) {
+        WebDriverUtils.waitForElementLoading(1);
+        CommonMethods.ValidateAndUpdateField(newFieldtxtBox,textvalue);
+        return true;
+    }
+
+    public boolean verifyUpdatedFieldInDataGovernance() {
+        WebDriverUtils.waitForElementLoading(1);
+        updatedFieldInDetailsPage.isDisplayed();
+        return true;
     }
 }

@@ -7,6 +7,7 @@ import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
@@ -33,7 +34,7 @@ public class Products_900_StepDef extends PageInstances{
         Assert.assertTrue(products_900_page.verifyNewField());
     }
 
-    @And("^I Check the type of  the \"([^\"]*)\" field$")
+    @And("^I Check the type of the \"([^\"]*)\" field$")
     public void iCheckTheTypeOfTheField(String arg0) throws Throwable {
         Assert.assertTrue(products_900_page.verifyTypeOfTheField());
     }
@@ -49,7 +50,7 @@ public class Products_900_StepDef extends PageInstances{
         Assert.assertTrue(products_900_page.clickOnInformationNextToGeneralSection());
     }
 
-    @Then("^I verify the \"([^\"]*)\"  and help text should be displayed$")
+    @Then("^I verify the \"([^\"]*)\" and help text should be displayed$")
     public void iVerifyTheAndHelpTextShouldBeDisplayed(String arg0) throws Throwable {
         Assert.assertTrue(products_900_page.verifyNewFieldandHelpTextInInformatioBox());
     }
@@ -68,5 +69,28 @@ public class Products_900_StepDef extends PageInstances{
     public void iVerifyTheShouldBeDisplayedInTheDetailsPage(String arg0) throws Throwable {
         Assert.assertTrue(products_900_page.verifyUpdatedFieldInDetailsPage());
     }
-}
+
+    @When("^I click on the \"([^\"]*)\" below the lists in the homepage$")
+    public void iClickOnTheBelowTheListsInTheHomepage(String arg0) throws Throwable {
+        Assert.assertTrue(products_900_page.ClickOnTheBelowTheListsInTheHomepage());
+    }
+
+
+    @Then("^I verify the \"([^\"]*)\" and help text should be displayed in information textbox$")
+    public void iVerifyTheAndHelpTextShouldBeDisplayedInInformationTextbox(String arg0) throws Throwable {
+        Assert.assertTrue(products_900_page.verifyNewFieldandHelpTextInInformatioBox());
+
+    }
+
+    @Then("^I Verify if the limit exceeds validation \"([^\"]*)\" should get displayed$")
+    public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(String text) throws Throwable {
+        Assert.assertTrue(products_900_page.verifyTheValidationMessage(text));
+    }
+
+    @Then("^I verify Updated fields should get displayed in the Data Governance tab present in the Details page$")
+    public void iVerifyUpdatedFieldsShouldGetDisplayedInTheDataGovernanceTabPresentInTheDetailsPage() throws Throwable {
+        Assert.assertTrue(products_900_page.verifyUpdatedFieldInDataGovernance());
+    }
+    }
+
 
