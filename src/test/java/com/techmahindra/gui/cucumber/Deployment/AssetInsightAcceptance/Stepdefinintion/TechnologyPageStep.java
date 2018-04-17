@@ -22,7 +22,6 @@ public class TechnologyPageStep extends PageInstances {
     @Then("^I create New Application in the Technology page for below mandatory fields$")
     public void iCreateNewApplicationInTheTechnologyPageForBelowMandatoryFields(DataTable CreateApplicationFields) throws Throwable {
         Map<String, String> data = CreateApplicationFields.asMap(String.class, String.class);
-
         technologyPage.CreatingApplication("Create", data);
     }
 
