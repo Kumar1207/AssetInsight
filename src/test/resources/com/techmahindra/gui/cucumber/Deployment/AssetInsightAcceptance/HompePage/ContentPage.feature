@@ -2,9 +2,10 @@
 Feature: ContentPage
   This page provides the search operation based on the Contenttype, Business Unit and Region
 
+  Background:  Given Asset Insight Home page should be displayed
+
   @deployment @pageDisplay @AC_ContentPage_1
   Scenario: I verify on click of the links under Content Type/Businessunit/Region will navigate to respective result page
-    Given Asset Insight Home page should be displayed
     When I click on the "Content" in the homepage
     Then I verify the respective "Content" page is displayed
     And I click on the random links under "Content Type"
@@ -20,7 +21,7 @@ Feature: ContentPage
 
   @deployment @pageDisplay @AC_ContentPage_2
   Scenario: I verify on click of the links on Content Page
-    Given Asset Insight Home page should be displayed
+    #Given Asset Insight Home page should be displayed
     When I click on the "Content" in the homepage
     Then I verify the respective "Content" page is displayed
     And I click on the "All Records" on Content Page
@@ -32,7 +33,7 @@ Feature: ContentPage
 
   @deployment @pageDisplay @AC_ContentPage_3
   Scenario: Content Page Search Operation
-    Given Asset Insight Home page should be displayed
+    #Given Asset Insight Home page should be displayed
     When I click on the "Content" in the homepage
     Then I verify the respective "Content" page is displayed
     When I perform Quick search for the term "Blue Prism"

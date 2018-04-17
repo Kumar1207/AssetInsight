@@ -30,11 +30,16 @@ public class BeforeAfter extends PageInstances {
     @Before
     public void setUp() throws Exception {
         try {
+            if(driver==null){
             Driver.setWebdriver(configFileReader.getBrowser(),true);
             driver = Driver.getDriver();
             driver.manage().deleteAllCookies();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             goToStartPosition();
+            }else{
+                driver.manage().deleteAllCookies();
+
+            }
              } catch (Exception ex) {
             ex.printStackTrace();
         }
