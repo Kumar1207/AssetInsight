@@ -158,8 +158,8 @@ public class Products_900_Page extends BasePage {
     }
 
     public boolean selectAnyExistingProduct() {
-        products.click();
-        return products.isSelected();
+        selectAnyProduct.click();
+        return selectAnyProduct.isSelected();
 
     }
 
