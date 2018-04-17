@@ -220,13 +220,17 @@ public class DataGovernance11Page extends BasePage {
         boolean flag=false;
        String fieldName = subField.replaceAll("\\s","");
     for(String item:items){
-        WebElement stdPII = driver.findElement(By.xpath("//*[text()='Standard PII Data Context']"));
+        WebElement stdPII = driver.findElement(By.xpath("//*[text()='Standard PII Data Context ']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", stdPII);
         //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", item);
     //driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).isDisplayed();
         flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item))).isDisplayed();
 //flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).getAttribute("class").contains("minus");
- }
+ //commented
+        /*driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).click();
+        flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).getAttribute("class").contains("minus");*/
+
+    }
     return flag;
     }
 

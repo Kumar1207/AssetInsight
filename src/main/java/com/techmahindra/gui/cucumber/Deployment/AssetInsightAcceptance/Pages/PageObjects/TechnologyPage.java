@@ -431,7 +431,7 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnEdit() {
-        WebDriverUtils.waitForElementLoading(7);
+        WebDriverUtils.waitForElementLoading(10);
         editButton.click();
         return true;
     }
@@ -591,14 +591,14 @@ public class TechnologyPage extends BasePage {
         WebDriverUtils.waitForElementLoading(5);
         WebElement audit = driver.findElement(By.xpath("//*[text()='Audit History']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", audit);
-        WebDriverUtils.waitForElementLoading(5);
-        audit.click();
-        /*   auditHistory.click();*/
-        return true;
+         WebDriverUtils.waitForElementLoading(10);
+         audit.click();
+     /*   auditHistory.click();*/
+         return true;
     }
 
     public boolean clickBackToDetail() {
-        WebDriverUtils.waitForElementLoading(2);
+        WebDriverUtils.waitForElementLoading(5);
         backToDetail.click();
         return true;
     }
@@ -624,6 +624,15 @@ public class TechnologyPage extends BasePage {
         robot.keyRelease(KeyEvent.VK_ENTER);
         return true;
     }
+
+
+    public boolean VerifyThatItShouldNotAMandatoryField() {
+
+        return true;
+    }
+
+
+
  /*   public static String getCellValue(String fullPathToSavedFile, String sheetName, int rowNum, int cellNum) {
 
         FileInputStream in = null;
@@ -638,6 +647,8 @@ public class TechnologyPage extends BasePage {
         }
 
             }*/
+
+
 }
 
 
