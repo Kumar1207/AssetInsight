@@ -1,9 +1,10 @@
 @Feature_ProductsPage_9_9.1
 Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change or use the personal data is present in Data Governance section
 
+  Background:  Given Asset Insight Home page should be displayed
+
   @pageDisplay @AC_ProductPage_9_01
   Scenario Outline: Creating a New Product
-    Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     Then I create New Product in the product page for below mandatory fields
@@ -49,7 +50,6 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
 
   @pageDisplay @AC_ProductPage_02
   Scenario Outline: I Verify the Existing Product
-    Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" below the lists in the homepage
@@ -77,7 +77,6 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
 
   @pageDisplay @AC_ProductPage_03
   Scenario: I verify Excel should be downloaded with the updated values
-    Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" below the lists in the homepage
