@@ -1,6 +1,8 @@
 @Feature_TechnologyPage_3.1_1
 Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII Data Type - Other' is added as per the requirement for Applications of  Technology
 
+  Background:  Given Asset Insight Home page should be displayed
+
   @pageDisplay @AC_TechnologyPage_3.1_01
   Scenario: Creating a New Application
     Given Asset Insight Home page should be displayed
@@ -20,7 +22,6 @@ Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII 
 
   @pageDisplay @AC_TechnologyPage_3.1_02
   Scenario: I Verify new New field in the Existing Application
-    Given Asset Insight Home page should be displayed
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
     Then I click on the "Applications" present in the Technology page
@@ -58,7 +59,6 @@ Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII 
 
   @pageDisplay @AC_TechnologyPage_3.1_03
   Scenario: I verify Excel should be downloaded with the updated values
-    Given Asset Insight Home page should be displayed
     Then  I click on the "Technology" in the homepage
     Then  I verify the respective "Technology" page is displayed
     Then  I click on the "Applications" present in the Technology page
@@ -69,16 +69,6 @@ Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII 
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
-#   Then  Application- Full Extract should be downloaded
 
-
-
-  @pageDisplay @AC_TechnologyPage_3.1_05
-  Scenario: Navigating To The AssetInsight HomePage
-    Given Asset Insight Home page should be displayed
-    Then  I click on the "Technology" in the homepage
-    Then  I verify the respective "Technology" page is displayed
-    Then  I click on the "Applications" present in the Technology page
-    And   I select any Existing Application present in the Result Page
 
 

@@ -31,5 +31,4 @@ Feature: ProductsPage
     Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
-    And I click on "Gestion Legal Online" under most popular list on Product Page
     And I verify the respective "most popular product" page is displayed

@@ -1,9 +1,10 @@
 @Feature_TechnologyPage_16
 Feature: I verify Where possible please specify the retention period applied to personal data on your application and its basis is added.
 
+  Background:  Given Asset Insight Home page should be displayed
+
   @pageDisplay @AC_TechnologyPage_16_01
   Scenario: Creating a New Application
-    Given Asset Insight Home page should be displayed
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
     Then I create New Application in the Technology page for below mandatory fields
@@ -21,7 +22,6 @@ Feature: I verify Where possible please specify the retention period applied to 
 
   @pageDisplay @AC_TechnologyPage_16_02
   Scenario Outline: I Verify new New field in the Existing Application
-    Given Asset Insight Home page should be displayed
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
     Then I click on the "Applications" present in the Technology page
@@ -54,7 +54,6 @@ Feature: I verify Where possible please specify the retention period applied to 
 
   @pageDisplay @AC_TechnologyPage_16_03
   Scenario: I verify Excel should be downloaded with the updated values
-    Given Asset Insight Home page should be displayed
     Then  I click on the "Technology" in the homepage
     Then  I verify the respective "Technology" page is displayed
     Then  I click on the "Applications" present in the Technology page
@@ -65,16 +64,3 @@ Feature: I verify Where possible please specify the retention period applied to 
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
-#   Then  Application- Full Extract should be downloaded
-
-
-
-  @pageDisplay @AC_TechnologyPage_16_05
-  Scenario: Navigating To The AssetInsight HomePage
-    Given Asset Insight Home page should be displayed
-    Then  I click on the "Technology" in the homepage
-    Then  I verify the respective "Technology" page is displayed
-    Then  I click on the "Applications" present in the Technology page
-    And   I select any Existing Application present in the Result Page
-    Then  I verify that excel document "./Excel/Technology-Application.xlsx" with sheet name "Technology" , row number "1" and cell number "59" in report page and downloaded excel report are matching
-

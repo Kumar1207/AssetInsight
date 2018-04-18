@@ -1,9 +1,10 @@
 @Feature_ProductsPage_900
 Feature: I verify Please provide a short description of the product's use of personal data in the DataGovernance Tab Present in the Products Page
 
+  Background:  Given Asset Insight Home page should be displayed
+
   @pageDisplay @AC_ProductPage_01
   Scenario: Creating a New Product
-    Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     Then I create New Product in the product page for below mandatory fields
@@ -18,7 +19,6 @@ Feature: I verify Please provide a short description of the product's use of per
 
   @pageDisplay @AC_ProductPage_02
   Scenario Outline: I Verify the Existing Product
-    Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" below the lists in the homepage
@@ -46,7 +46,6 @@ Feature: I verify Please provide a short description of the product's use of per
 
   @pageDisplay @AC_ProductPage_03
   Scenario: I verify Excel should be downloaded with the updated values
-    Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" below the lists in the homepage
