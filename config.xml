@@ -1,9 +1,0 @@
-<config>
-    <main>
-        <browser>FF</browser>
-        <timeout>5</timeout>
-        <url>https://assetsdev.int.thomsonreuters.com/</url>
-    <!--    <userName>X012829</userName>
-        <password>Soft@2018</password>-->
-    </main>
-</config>
