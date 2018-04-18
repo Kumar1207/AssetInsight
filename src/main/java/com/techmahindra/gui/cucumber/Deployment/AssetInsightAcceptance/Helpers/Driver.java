@@ -53,7 +53,7 @@ public class Driver {
 
         switch(var3) {
             case 0:
-                System.setProperty("webdriver.gecko.driver", "tool/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "tools/geckodriver.exe");
                 File pathBinary = new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
                 FirefoxBinary firefoxBinary = new FirefoxBinary(pathBinary);
                 DesiredCapabilities desired = DesiredCapabilities.firefox();
