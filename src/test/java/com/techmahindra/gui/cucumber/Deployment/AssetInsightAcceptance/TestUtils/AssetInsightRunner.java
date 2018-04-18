@@ -17,8 +17,9 @@ import java.io.File;
         , plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
         , features = {"src/test/resources"}
         , monochrome = true
-        , tags = {"@AC_TechnologyPage_15_02"}
+        , tags = {"@Feature_TechnologyPage_15"}
 )
+
 
 public class AssetInsightRunner extends PageInstances {
     @BeforeClass
