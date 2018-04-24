@@ -91,6 +91,56 @@ public class Products_900_StepDef extends PageInstances{
     public void iVerifyUpdatedFieldsShouldGetDisplayedInTheDataGovernanceTabPresentInTheDetailsPage() throws Throwable {
         Assert.assertTrue(products_900_page.verifyUpdatedFieldInDataGovernance());
     }
+
+    @Then("^I verify \"([^\"]*)\" default value should be blank$")
+    public void iVerifyDefaultValueShouldBeBlank(String arg0) throws Throwable {
+        Assert.assertTrue(products_900_page.verifyDefaultValueShouldBeBlank());
+
     }
+
+
+    @When("^I do not select any option i verify validation message should be displayed$")
+    public void iDoNotSelectAnyOptionIVerifyValidationMessageShouldBeDisplayed() throws Throwable {
+        Assert.assertTrue(products_900_page.verifyValidationMessage());
+
+    }
+
+    @Then("^Validate whether any checkbox is selected for the options available from the list$")
+    public void validateWhetherAnyCheckBoxIsSelectedForTheOptionsAvailableFromTheList() throws Throwable {
+        Assert.assertTrue(products_900_page.validateWhetherAnyCheckBoxIsSelected());
+
+
+    }
+
+    @Then("^I verify with out selecting any option available from the list Validation message should be displayed$")
+    public void iVerifyWithOutSelectingAnyOptionAvailableFromTheListValidationMessageShouldBeDisplayed() throws Throwable {
+        Assert.assertTrue(products_900_page.verifyValidationMessageForCheckbox());
+
+    }
+
+    @And("^I select any checkbox and fill all mandatory fields$")
+    public void iSelectAnyCheckboxAndFillAllMandatoryFields() throws Throwable {
+        Assert.assertTrue(products_900_page.selectAnyCheckBox());
+
+    }
+
+    @And("^I fill below mandatory fields$")
+    public void iFillBelowMandatoryFields(DataTable requiredFields) throws Throwable {
+        Map<String, String> options = requiredFields.asMap(String.class, String.class);
+        products_900_page.fillMandatoryFields("RequiredFieldOptions", options);
+
+    }
+
+    @And("^I Check the type of the \"([^\"]*)\" filed$")
+    public void iCheckTheTypeOfTheFiled(String arg0) throws Throwable {
+        Assert.assertTrue(products_900_page.checkTheTypeOfTheField());
+    }
+
+    @And("^I verify field type of\"([^\"]*)\" should be same as Existing filed \"([^\"]*)\" type$")
+    public void iVerifyFieldTypeOfShouldBeSameAsExistingFiledType(String arg0, String arg1) throws Throwable {
+        Assert.assertTrue(products_900_page.verifyFieldTypeOfShouldBeSameAsExistingFiledType());
+
+    }
+}
 
 
