@@ -70,5 +70,8 @@ Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII 
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
 
-
+  @pageDisplay @AC_TechnologyPage_3.1_05
+  Scenario: Verifying Downloaded Excel data with GUI
+    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
+    When  I click on Application- Full Extract should be downloaded
 
