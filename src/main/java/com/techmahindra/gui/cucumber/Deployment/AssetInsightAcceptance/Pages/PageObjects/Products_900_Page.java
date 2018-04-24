@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.List;
 import java.util.Map;
 
 public class Products_900_Page extends BasePage {
@@ -74,6 +75,99 @@ public class Products_900_Page extends BasePage {
 
     @FindBy(xpath = "//*[contains(text(),'3E Product short description')]")
     private WebElement updatedFieldInDetailsPage;
+
+
+    @FindBy(xpath = "//*[@id='PersonalDataHasTRPermission']")
+    private WebElement radioBTNYesNo;
+
+    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission' and @type='radio'])")
+    private WebElement radioBtn;
+
+    @FindBy(xpath = "//*[@id='ProductSpecialFactor_StandardCustomerOrPartnerData']")
+    private WebElement existingFieldradioBtn;
+
+
+
+    @FindBy(xpath = "//*[@id='PersonalDataHasTRPermission-error']")
+    private WebElement validationMsg;
+
+
+    @FindBy(xpath = "//*[text()='View']/../../../../../..//input[@type='checkbox']")
+    private WebElement viewChekBox;
+
+    @FindBy(xpath = "//*[text()='Edit']/../../../../../..//input[@type='checkbox']")
+    private WebElement editChekBox;
+
+    @FindBy(xpath = "//*[text()='Delete']/../../../../../..//input[@type='checkbox']")
+    private WebElement deleteChekBox;
+
+    @FindBy(xpath = "//*[text()='Share']/../../../../../..//input[@type='checkbox']")
+    private WebElement shareChekBox;
+
+    @FindBy(xpath = "//*[text()='Change']/../../../../../..//input[@type='checkbox']")
+    private WebElement changeChekBox;
+
+    @FindBy(xpath = "//*[text()='Use']/../../../../../..//input[@type='checkbox']")
+    private WebElement useChekBox;
+
+    @FindBy(xpath = "//*[@id='PersonalDataTRActionIds-error']")
+    private WebElement checkBoxErrorMsg;
+
+
+    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_SensitivePIIData'])[2]")
+    private WebElement SensitivePIIData;
+
+    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_StandardPIIData'])[1]")
+    private WebElement StandardPIIData;
+
+    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_SensitiveCustomerOrPartnerData'])[2]")
+    private WebElement SensitiveCustomer;
+
+    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_StandardCustomerOrPartnerData'])[2]")
+    private WebElement StandardCustomer;
+
+    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_SensitiveThomsonReutersData'])[2]")
+    private WebElement sensitiveTrData;
+
+    @FindBy(xpath = "//*[@id='ProductSpecialFactor_RegulatedDataTypeId']")
+    private WebElement regulatedData;
+
+    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_DataSensitiveToHostingContext'])[2]")
+    private WebElement dataSensitive;
+
+    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[2]")
+    private WebElement TrData;
+
+    @FindBy(xpath = "(//*[@id='_PersonalDataCanTRDecideUsage_IDK'])")
+    private WebElement TrFreeToDecide;
+
+    @FindBy(xpath = "//*[@id='_PersonalDataIsSharedWithOthers_IDK']")
+    private WebElement idontKnowbtn;
+
+    @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_IDK']")
+    private WebElement TRJointlyDecide;
+
+    @FindBy(xpath = "//*[@id='_PersonalDataIsAvailableOutsideGeography_IDK']")
+    private WebElement GeographicLocation;
+
+    @FindBy(xpath = "//*[@id='_PersonalDataHasThirdPartyContract_IDK']")
+    private WebElement LegalDepart;
+
+    @FindBy(xpath = "(//*[@id='PersonalDataDoesRetentionPeriodVary'])[2]")
+    private WebElement typesOfData;
+
+    @FindBy(xpath = "//*[@id='DescriptionOfPersonalDataUsage']")
+    private WebElement personalData;
+
+    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[1]")
+    private WebElement radioBtnYes;
+
+    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[1]")
+    private WebElement radioBtnNo;
+
+
+
+
 
     public Products_900_Page() throws Exception {
         super();
@@ -158,8 +252,9 @@ public class Products_900_Page extends BasePage {
     }
 
     public boolean selectAnyExistingProduct() {
+        WebDriverUtils.waitForElementLoading(2);
         selectAnyProduct.click();
-        return selectAnyProduct.isSelected();
+        return true;
 
     }
 
@@ -168,15 +263,17 @@ public class Products_900_Page extends BasePage {
     }
 
     public boolean verifyTypeOfTheField() {
+        WebDriverUtils.waitForElementLoading(1);
         boolean flag = false;
-        if (newFieldtxtBox.getAttribute("tagName").equals("textarea")) {
+        if (newFieldtxtBox.getTagName().equals("textarea")) {
             flag = true;
         }
         return flag;
 
     }
 
-    public boolean verifyHelpText() {
+    public boolean verifyHelpText()
+    {
         return newFieldHelptxtBox.isDisplayed();
     }
 
@@ -223,4 +320,161 @@ public class Products_900_Page extends BasePage {
         updatedFieldInDetailsPage.isDisplayed();
         return true;
     }
-}
+
+    public boolean verifyDefaultValueShouldBeBlank() {
+        WebDriverUtils.waitForElementLoading(1);
+
+        boolean flag=false;
+        if (!radioBTNYesNo.isSelected()){
+            flag=true;
+        }
+      return flag;
+
+
+
+    }
+
+    public boolean verifyValidationMessage() {
+        WebDriverUtils.waitForElementLoading(2);
+
+        if (!radioBtnYes.isSelected() || !radioBtnNo.isSelected()) {
+            return validationMsg.isDisplayed();
+        }
+        else {
+            WebDriverUtils.waitForElementLoading(4);
+            radioBtnYes.click();
+        }
+        return true;
+    }
+
+  public boolean validateWhetherAnyCheckBoxIsSelected() {
+
+      WebDriverUtils.waitForElementLoading(1);
+        boolean flag=false;
+        if (!viewChekBox.isSelected() && !editChekBox.isSelected() && !changeChekBox.isSelected() && !shareChekBox.isSelected() && !deleteChekBox.isSelected() && !viewChekBox.isSelected() )
+        {
+        flag=true;
+    }
+    return flag;
+  }
+
+    public boolean verifyValidationMessageForCheckbox() {
+
+        WebDriverUtils.waitForElementLoading(1);
+        checkBoxErrorMsg.isDisplayed();
+        return true;
+    }
+
+    public boolean selectAnyCheckBox() {
+        WebDriverUtils.waitForElementLoading(1);
+        if (!viewChekBox.isSelected() && !editChekBox.isSelected()) {
+            viewChekBox.click();
+            editChekBox.click();
+        }
+
+        return true;
+    }
+
+    public boolean fillMandatoryFields(String RequiredFieldsOptions, Map<String,String> options) {
+
+        WebDriverUtils.waitForElementLoading(1);
+        String applicationFieldName = "";
+
+        switch (RequiredFieldsOptions.toLowerCase()) {
+            case "create":
+                for (String key : options.keySet()) {
+                    //applicationFieldName = createApplicationFields.get(key) + timeStamp;
+                    applicationFieldName = options.get(key) + "_" + Utility.genRand5DigitNum();
+                    switch (key.toLowerCase()) {
+                        case "Please provide a short description of the product's use of personal data":
+                            WebDriverUtils.waitForElementLoading(1);
+                            personalData.sendKeys(applicationFieldName);
+                            break;
+                        case "Sensitive PII Data":
+                            WebDriverUtils.waitForElementLoading(1);
+                            SensitivePIIData.click();
+                            break;
+                        case "Standard PII Data":
+                            WebDriverUtils.waitForElementLoading(1);
+                           StandardPIIData.click();
+                            break;
+                        case "Sensitive Customer or Partner Data":
+                            WebDriverUtils.waitForElementLoading(1);
+                          SensitiveCustomer.click();
+                            break;
+                        case " Sensitive Thomson Reuters Data":
+                            WebDriverUtils.waitForElementLoading(1);
+                            sensitiveTrData.click();
+                            break;
+                        case "Regulated Data":
+                            WebDriverUtils.waitForElementLoading(1);
+                            Select select=new Select(regulatedData);
+                            select.selectByVisibleText("FISMA");
+                            break;
+                        case "Data Sensitive to Hosting Context":
+                            WebDriverUtils.waitForElementLoading(1);
+                            dataSensitive.click();
+                            break;
+                        case "Is Thomson Reuters able to view, edit, delete, share, change or use the personal data":
+                            WebDriverUtils.waitForElementLoading(1);
+                            TrData.click();
+                            break;
+                        case "Is Thomson Reuters free to decide whether/how the personal data is viewed, edited, deleted, shared, changed or used":
+                            WebDriverUtils.waitForElementLoading(1);
+                            TrFreeToDecide.click();
+                            break;
+                        case "|If you answered \"No\" or \"I don't know\", please confirm if you share any personal data from your product with any sub-contractor/service provider used by Thomson Reuters":
+                            WebDriverUtils.waitForElementLoading(1);
+                            idontKnowbtn.click();
+                            break;
+                        case "Does Thomson Reuters jointly decide how to use personal data in your product with any other party?":
+                            WebDriverUtils.waitForElementLoading(1);
+                            TRJointlyDecide.click();
+                            break;
+                        case "Will any personal data be transferred to or accessed outside the geographic locations where it was originally collected":
+                            WebDriverUtils.waitForElementLoading(1);
+                            GeographicLocation.click();
+                            break;
+                        case "If your product involves the transfer of personal data to a third party (e.g. vendor, service provider, customer), is there a contract in place with the third party that contains data transfer privacy clauses approved by the Legal Department":
+                            WebDriverUtils.waitForElementLoading(1);
+                            LegalDepart.click();
+                            break;
+                        case "Does the retention period vary according to the types of data stored":
+                            WebDriverUtils.waitForElementLoading(1);
+                            typesOfData.click();
+                            break;
+                         default:
+                            return false;
+                    }
+                }
+                break;
+
+            default:
+                return false;
+
+        }
+        return true;
+    }
+
+    public boolean checkTheTypeOfTheField() {
+
+        boolean flag = false;
+        if (radioBtn.getAttribute("type").equals("radio")) {
+            flag = true;
+        }
+        return flag;
+
+    }
+
+    public boolean verifyFieldTypeOfShouldBeSameAsExistingFiledType() {
+
+        boolean flag = false;
+        if (radioBtn.getAttribute("type").equals(existingFieldradioBtn.getAttribute("type"))) {
+            flag = true;
+        }
+        return flag;
+
+    }
+
+    }
+
