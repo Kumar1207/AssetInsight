@@ -392,8 +392,10 @@ public class TechnologyPage extends BasePage {
 
 
     public boolean clickOnSaveButton() {
-        WebDriverUtils.waitForElementLoading(5);
-        saveButton.click();
+        WebDriverUtils.waitForElementLoading(3);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", saveButton);
+
         return true;
     }
 
@@ -410,10 +412,10 @@ public class TechnologyPage extends BasePage {
 
     public boolean verifyNewFieldPresentInThePage() {
         /*return text_Type.isDisplayed() && radioBtnYes.isSelected();*/
+        WebDriverUtils.waitForElementLoading(2);
         boolean flag = false;
         if (text_Type.isDisplayed()) {
             flag = true;
-            System.out.println("Text Found");
         }
         return flag;
     }
@@ -431,13 +433,13 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnEdit() {
-        WebDriverUtils.waitForElementLoading(7);
+        WebDriverUtils.waitForElementLoading(4);
         editButton.click();
         return true;
     }
 
     public boolean clickOnDataGoveranace() {
-        WebDriverUtils.waitForElementLoading(10);
+        WebDriverUtils.waitForElementLoading(4);
         dataGovernance.click();
         return true;
     }
@@ -475,6 +477,13 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnYes(String CheckListOptions, List<String> chekBoxList) {
+
+        WebDriverUtils.waitForElementLoading(2);
+
+        radioBtnYes.click();
+
+        WebDriverUtils.waitForElementLoading(1);
+
         switch (CheckListOptions) {
             case "checkBox":
                 for (String key : chekBoxList) {
