@@ -2,6 +2,7 @@ package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Stepdefi
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.PageInstances;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects.TechnologyPage;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -129,6 +130,7 @@ public class TechnologyPageStep extends PageInstances {
     @And("^I click on \"([^\"]*)\" button and Excel should be downloaded$")
     public void iClickOnButtonAndExcelShouldBeDownloaded(String arg0) throws Throwable {
         Assert.assertTrue(technologyPage.clickOnExport());
+
     }
 
 

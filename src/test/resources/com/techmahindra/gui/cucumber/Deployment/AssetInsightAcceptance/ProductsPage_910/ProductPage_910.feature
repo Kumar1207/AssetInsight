@@ -1,8 +1,10 @@
 @Feature_ProductsPage_16_1
 Feature: I verify a new field "Does the retention period vary according to the types of data stored?" for Product
-  @pageDisplay @AC_ProductPage_01
+  Background:  Given Asset Insight Home page should be displayed
+
+  @pageDisplay @AC_ProductPage_16_01
   Scenario: Creating a New Product
-    Given Asset Insight Home page should be displayed
+
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     Then I create New Product in the product page for below mandatory fields
@@ -11,44 +13,54 @@ Feature: I verify a new field "Does the retention period vary according to the t
       | Business Sub Segment | EBS                               |
       | Product Status       | Not Yet Launched                  |
       | Product Level        | Base                              |
-      | Marketing Contact    | Prasad Bhanupriya                 |
+      | Marketing Contact    | Modium, Prashanthi                |
     Then I click on "SAVE/VALIDATE" button
 
 
   @pageDisplay @AC_ProductPage_16_02
   Scenario Outline: I Verify the Existing Product
-    Given Asset Insight Home page should be displayed
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" in the homepage
-    And  I select any Existing Product present in the Result Page
+    Then I select any Existing Product present in the Result Page
     And  I click on "Edit This Record" Details Page
     And  I click on "Data Governance" tab
-#    Then I verify "<fieldName>" should present in the Data Governance" page
-#    And  I Check the type of  the "<fieldName>" field
-#    Then I verify that Help text should be displayed for the "<fieldName>"
-#    And  I click on information box present next to General section
-#    Then I verify the "<fieldName>"  and help text should be displayed
-#    And  I verify that "<fieldName>" should be mandatory field
-#    Then I Verify if the limit exceeds validation message should get displayed
-#      |3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short description 3E Product short desc|
-#    Then I click on "Save/Validate" button
-    And  I click on "Audit history"
-    Then I Verify the updated field should get displayed in the Audit History tab
-    Then I click on "Back to detail" button
-    Then I Verify the "<fieldName>" should be displayed in the Details Page
+    Then I verify "<Newfield>" field in the Data Governance page
+    And I check type of "<Newfield>" field for Product in the Data Governance page
+    And I verify field type of "<Newfield>" should be same as Existing field "<Existingfield>" type in the Data Governance page
+    And I verify Retention Product is mandatory field
+    #When I do not select any option for Product in Retention validation message should be displayed
+    When I click on No of Product Retention nothing should be displayed below the main question field
+    Then I click on yes of Product Retention subquestion should be displayed
+    And I click on product Retention yes radio button then subquestion should be displayed
+    When I click on Yes of product I verify the type of the new subquestion field
+    Then I Verify for product if the limit exceeds -validation message should get displayed
+    | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period |
 
-    Examples:
-      | fieldName                                                                |
-      | Please provide a short description of the product's use of personal data |
+
+
+    Then I click on "Save/Validate" button
+    And  I click on "Audit history"
+    And  I verify Updated field should get displayed in the Audit History tab
+    Then I click on "Back to detail" button respective application details page should be displayed
+    Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
+
+
+       Examples:
+      | Newfield                                                             | Existingfield                           |
+      | Does the retention period vary according to the types of data stored | Standard Customer or Partner Data field |
+
 
 
   @pageDisplay @AC_ProductPage_16_03
   Scenario: I verify Excel should be downloaded with the updated values
-    Given Asset Insight Home page should be displayed
-    Then I click on the Products in the homepage
-    Then I verify the respective Products page should be displayed
-    Then  I click on the Products present in the Products page
-    And   I click on "export to Excel" button and Excel should be downloaded
+    When I click on the "Products" in the homepage
+    Then I verify the respective "Products" page is displayed
+    When I click on the "Products" below the lists in the homepage
+    And  I click on "export to Excel" button and Excel should be downloaded
 
 
+  @pageDisplay @AC_ProductPage_16_04
+  Scenario: Verifying Downloaded Excel data with GUI
+    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
+    When  I click on Application- Full Extract should be downloaded
