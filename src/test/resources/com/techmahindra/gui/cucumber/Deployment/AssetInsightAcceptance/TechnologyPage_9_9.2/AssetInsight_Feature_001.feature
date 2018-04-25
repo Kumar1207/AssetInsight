@@ -1,7 +1,8 @@
 @Feature_TechnologyPage
-Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change or use the personal data
+Feature: I verify   Is Thomson Reuters able to view, edit, delete, share, change or use the personal data
 
-  Background:  Given Asset Insight Home page should be displayed
+  Background:
+    Given Asset Insight Home page should be displayed
 
   @pageDisplay @AC_TechnologyPage_01
   Scenario: Creating a New Application

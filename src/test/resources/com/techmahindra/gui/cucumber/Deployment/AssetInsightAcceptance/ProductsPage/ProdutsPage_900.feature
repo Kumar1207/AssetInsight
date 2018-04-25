@@ -1,7 +1,8 @@
 @Feature_ProductsPage_900
 Feature: I verify Please provide a short description of the product's use of personal data in the DataGovernance Tab Present in the Products Page
 
-  Background:  Given Asset Insight Home page should be displayed
+  Background:
+    Given Asset Insight Home page should be displayed
 
   @pageDisplay @AC_ProductPage_01
   Scenario: Creating a New Product

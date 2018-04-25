@@ -1,7 +1,8 @@
 @Feature_TechnologyPage_16
 Feature: I verify Where possible please specify the retention period applied to personal data on your application and its basis is added.
 
-  Background:  Given Asset Insight Home page should be displayed
+  Background:
+    Given Asset Insight Home page should be displayed
 
   @pageDisplay @AC_TechnologyPage_16_01
   Scenario: Creating a New Application
@@ -9,7 +10,7 @@ Feature: I verify Where possible please specify the retention period applied to 
     Then I verify the respective "Technology" page is displayed
     Then I create New Application in the Technology page for below mandatory fields
       | Application Name                | Data Management System   |
-      | Short Name                      | DM                       |
+      | Short  Name                      | DM                       |
       | Launch Year                     | 1998                     |
       | Business Unit (BU)              | Financial & Risk         |
       | Application Type                | Software Sale            |
@@ -18,7 +19,6 @@ Feature: I verify Where possible please specify the retention period applied to 
       | AML Business Contact            | Beaumont, Stewart (TRGR) |
       | Platform Classification         | No Intent to Migrate     |
     Then I click on "SAVE/VALIDATE" button
-
 
   @pageDisplay @AC_TechnologyPage_16_02
   Scenario Outline: I Verify new New field in the Existing Application
@@ -46,11 +46,9 @@ Feature: I verify Where possible please specify the retention period applied to 
     Then I click on "Back to detail" button respective application details page should be displayed
     Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
 
-
     Examples:
       | Newfield                                                             | Existingfield                           |
       | Does the retention period vary according to the types of data stored | Standard Customer or Partner Data field |
-
 
   @pageDisplay @AC_TechnologyPage_16_03
   Scenario: I verify Excel should be downloaded with the updated values
