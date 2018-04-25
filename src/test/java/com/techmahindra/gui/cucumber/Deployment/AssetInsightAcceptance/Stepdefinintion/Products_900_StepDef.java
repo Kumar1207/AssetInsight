@@ -11,6 +11,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -125,9 +126,14 @@ public class Products_900_StepDef extends PageInstances{
     }
 
     @And("^I fill below mandatory fields$")
-    public void iFillBelowMandatoryFields(DataTable requiredFields) throws Throwable {
-        Map<String, String> options = requiredFields.asMap(String.class, String.class);
-        products_900_page.fillMandatoryFields("RequiredFieldOptions", options);
+    public void iFillBelowMandatoryFields(List<String> requiredFields) throws Throwable {
+      /* List<String> values = requiredFields.asList(String.class);
+       products_900_page.fillMandatoryFields("create", values);*/
+        for(String text:requiredFields){
+            Assert.assertTrue(products_900_page.fillMandatoryFields(text));
+        }
+
+
 
     }
 
@@ -141,6 +147,37 @@ public class Products_900_StepDef extends PageInstances{
         Assert.assertTrue(products_900_page.verifyFieldTypeOfShouldBeSameAsExistingFiledType());
 
     }
+
+    @When("^I click on Yes option below subquestions should be displayed$")
+    public void iClickOnYesOptionBelowSubquestionsShouldBeDisplayed(DataTable ListItems) throws Throwable {
+        List<String> listitems = ListItems.asList(String.class);
+        products_900_page.clickOnYesOption("ListOptions", listitems);
+
+    }
+
+    @Then("^I verify Data Governance 'Sign off' button should be displayed$")
+    public void iVerifyDataGovernanceSignOffButtonShouldBeDisplayed() throws Throwable {
+        Assert.assertTrue(products_900_page.verifyDataGovernanceSignOffButton());
+    }
+
+    @And("^I click on 'Return to edit page' button$")
+    public void iCLickOnReturnToEditPageButton() throws Throwable {
+        Assert.assertTrue(products_900_page.clickOnReturnToEdit());
+    }
+
+    @And("^I click on 'Sign off' button$")
+    public void iClickOnSignOffButton() throws Throwable {
+        Assert.assertTrue(products_900_page.clickOnSignOff());
+    }
+
+
+    @Then("^I Verify if the limit exceeds \"([^\"]*)\" message should get displayed$")
+    public void iVerifyIfTheLimitExceedsMessageShouldGetDisplayed(String value) throws Throwable {
+        Assert.assertTrue(products_900_page.verifyingLimit(value));
+    }
+
+
+
 }
 
 
