@@ -161,12 +161,6 @@ public class Products_900_StepDef extends PageInstances{
         }
     }
 
-    @Then("^I verify \"([^\"]*)\" should present in the DataGovernance page$")
-    public void iVerifyShouldPresentInTheDataGovernancePage() throws Throwable {
-        Assert.assertTrue(products_900_page.verifyNewField());
-
-    }
-
     @And("^I Check the type of the \"([^\"]*)\" field$")
     public void iCheckTheTypeOfTheField(String arg0) throws Throwable {
         Assert.assertTrue(products_900_page.verifyTypeOfTheField());
@@ -178,6 +172,11 @@ public class Products_900_StepDef extends PageInstances{
         for (String limit : limitvalue) {
             Assert.assertTrue(products_900_page.verifyLimitValidationMessage(limit));
         }
+    }
+
+    @Then("^I verify \"([^\"]*)\" should present in the DataGovernance page$")
+    public void iVerifyShouldPresentInTheDataGovernancePage(String arg0) throws Throwable {
+        Assert.assertTrue(products_900_page.verifyNewField());
     }
 }
 
