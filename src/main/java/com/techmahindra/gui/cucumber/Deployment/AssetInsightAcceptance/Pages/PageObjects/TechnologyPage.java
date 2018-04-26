@@ -248,28 +248,6 @@ public class TechnologyPage extends BasePage {
     private WebElement clickOnFullExtract;
 
 
-//   public static String xlpath = "./Excel/Technology-Application.xlsx";
-//   public static String sheetName = "Technology";
-
-
-    /*String s = view.getText()+"; "+ edit.getText() +"; "+ share.getText()+"; "+ change.getText()+"; "+ delete.getText()+"; "+ use.getText();*/
-
-
-
-/*
-  public void select_list()
-   {
-       Select select=new Select();
-       select.selectByVisibleText("Bakken Alison");
-   }
-
-    public void selectAML()
-    {
-        Select select=new Select();
-        select.selectByVisibleText("No Intent to Migrate ");
-    }
-*/
-
     public TechnologyPage() throws Exception {
         super();
     }
@@ -326,21 +304,6 @@ public class TechnologyPage extends BasePage {
                         case "description":
                             description.sendKeys(createApplicationFields.get(key));
                             break;
-                      /*  case "enterprise owner":
-                                WebDriverUtils.waitForElementLoading(5);
-                                WebElement enterprise=driver.findElement(By.xpath("(//div[@class='k-multiselect-wrap k-floatwrap'])[1]"));
-                                WebDriverUtils.waitForElementLoading(4);
-                                enterprise.click();
-                                driver.findElement(By.xpath("(//li[contains(text(),'Beaumont, Stewart (TRGR)')])")).click();
-
-                            break;*/
-                      /*  case "application contact":
-                            WebDriverUtils.waitForElementLoading(10);
-                            applicationContact.sendKeys(createApplicationFields.get(key));
-                            applicationContact.sendKeys(Keys.ENTER);
-                            break;*/
-//                        case "application service contact":applicationServiceContact.sendKeys(createApplicationFields.get(key));
-//                            break;
                         case "application development contact":
                             WebDriverUtils.waitForElementLoading(5);
                             applicationDevolpmentContact.sendKeys(createApplicationFields.get(key));
@@ -392,7 +355,8 @@ public class TechnologyPage extends BasePage {
 
 
     public boolean clickOnSaveButton() {
-        WebDriverUtils.waitForElementLoading(3);
+        WebDriverUtils.waitForElementLoading(2);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", saveButton);
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", saveButton);
 
@@ -406,6 +370,7 @@ public class TechnologyPage extends BasePage {
     }
 
     public void clickOnEditInthedetailsPage() {
+
         editRecord.click();
     }
 
@@ -427,20 +392,22 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnExistingApplications() {
-        WebDriverUtils.waitForElementLoading(4);
+        WebDriverUtils.waitForElementLoading(2);
         anyApplication.click();
         return true;
     }
 
     public boolean clickOnEdit() {
-        WebDriverUtils.waitForElementLoading(4);
+        WebDriverUtils.waitForElementLoading(2);
         editButton.click();
         return true;
     }
 
     public boolean clickOnDataGoveranace() {
-        WebDriverUtils.waitForElementLoading(4);
-        dataGovernance.click();
+        WebDriverUtils.waitForElementLoading(2);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", dataGovernance);
+//        dataGovernance.click();
         return true;
     }
 
@@ -563,46 +530,13 @@ public class TechnologyPage extends BasePage {
         return flag;
     }
 
-    /* public boolean fillAllTheReqDetailsInGoveranance() {
-      personaldata.sendKeys("Application Description");
-      sensitivePII.click();
-      WebDriverUtils.waitForElementLoading(5);
-      sensitivePIIDataType.click();
-      WebDriverUtils.waitForElementLoading(5);
-      sensitivePIIDataContext.click();
-      WebDriverUtils.waitForElementLoading(5);
-      sensitivePIIPurpose.click();
-      WebDriverUtils.waitForElementLoading(5);
-      sensitivePIIDataSubjects.click();
-      WebDriverUtils.waitForElementLoading(5);
-      sensitivePIIDataSubjectResidency.click();
-      WebDriverUtils.waitForElementLoading(5);
-      signOffBtn.click();
 
-      standardPII.click();
-      sensitiveCustomer.click();
-      standaradCustomer.click();
-      sensitiveThomson.click();
-      regulatedData.click();
-      hostingContext.click();
-      ableToView.click();
-      freeToDecide.click();
-      jointlyDecide.click();
-      toBeTrasffered.click();
-      legalDepartment.click();
-      typesOfDtaStored.click();
-      saveButton.click();
-      return true;
-
-     }
- */
     public boolean clickOnAuditHistory() {
         WebDriverUtils.waitForElementLoading(5);
         WebElement audit = driver.findElement(By.xpath("//*[text()='Audit History']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", audit);
         WebDriverUtils.waitForElementLoading(5);
         audit.click();
-        /*   auditHistory.click();*/
         return true;
     }
 
@@ -628,9 +562,9 @@ public class TechnologyPage extends BasePage {
         WebDriverUtils.waitForElementLoading(2);
         Robot robot = new Robot();
         WebDriverUtils.waitForElementLoading(2);
-        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyPress(KeyEvent.VK_ESCAPE);
         WebDriverUtils.waitForElementLoading(2);
-        robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ESCAPE);
         return true;
     }
  /*   public static String getCellValue(String fullPathToSavedFile, String sheetName, int rowNum, int cellNum) {
