@@ -58,10 +58,7 @@ public class RetentionStepDef16 extends PageInstances {
         Assert.assertTrue(datGovernancePage.verifyTheTypeOfTheNewSubquestionField());
     }
 
-/*    @Then("^I verify that it should be same as existing \"([^\"]*)\" field$")
-    public void iVerifyThatItShouldBeSameAsExistingField(String arg0) throws Throwable {
-        Assert.assertTrue(datGovernancePage.VerifyThatItShouldBeSameAsExistingField());
-    }*/
+
 
     @And("^I verify that subquestion field should be mandatory field whenever main Question value is 'Yes'$")
     public void iVerifyThatSubquestionFieldShouldBeMandatoryFieldWheneverMainQuestionValueIsYes() throws Throwable {
@@ -71,7 +68,7 @@ public class RetentionStepDef16 extends PageInstances {
     @Then("^I Verify if the limit exceeds -validation message should get displayed$")
     public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(List<String> textList) throws Throwable {
         for(String text:textList){
-            Assert.assertTrue(datGovernancePage.verifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(text));
+            Assert.assertTrue(datGovernancePage.verifyIfTheLimitExceedsPRDValidationMessageShouldGetDisplayed(text));
         }
 
     }
@@ -176,12 +173,6 @@ public class RetentionStepDef16 extends PageInstances {
 
 
 
-    @And("^I check the Recipients of PData added should be a optional field$")
-    public void iCheckTheRecipientsOfPDataAddedShouldBeAOptionalField() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
     @And("^I verify that HelpText displayed for Recipients of PData fields$")
     public void iVerifyThatHelpTextDisplayedForRecipientsOfPDataFields() throws Throwable {
         Assert.assertTrue(datGovernancePage.verifyHelpTxtPDataField());
@@ -189,67 +180,76 @@ public class RetentionStepDef16 extends PageInstances {
     }
 
     @Then("^I search for \"([^\"]*)\" field in searchbox$")
-    public void iSearchForFieldInSearchbox(String arg0) throws Throwable {
+    public void iSearchForFieldInSearchbox(String pdataItems) throws Throwable {
+        Assert.assertTrue(datGovernancePage.searchPDataItem(pdataItems));
+
 
        }
 
     @And("^only search item in Recipients of PData should be displayed$")
     public void onlySearchItemInRecipientsOfPDataShouldBeDisplayed() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assert.assertTrue(datGovernancePage.searchItemPDATA());
     }
 
     @Then("^I verify the  Recipients of PData \"([^\"]*)\" field present in the \"([^\"]*)\" page$")
     public void iVerifyTheRecipientsOfPDataFieldPresentInThePage(String arg0, String arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
+        Assert.assertTrue(datGovernancePage.verifyPDataOtherfield());
+
     }
 
-    @And("^Validate each item present in SELECTED ITEMS box should have a 'X'$")
-    public void validateEachItemPresentInSELECTEDITEMSBoxShouldHaveAX() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
 
-    @And("^when i Click on 'X' symbol for \"([^\"]*)\" available in SELECTED ITEMS box$")
-    public void whenIClickOnXSymbolForAvailableInSELECTEDITEMSBox(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @Then("^I Check the type of Recipients of PData \"([^\"]*)\" field in the Data Governance page$")
-    public void iCheckTheTypeOfRecipientsOfPDataFieldInTheDataGovernancePage(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
 
     @And("^check Recipients of PData \"([^\"]*)\" field is manadatory$")
     public void checkRecipientsOfPDataFieldIsManadatory(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
+       Assert.assertTrue(datGovernancePage.checkPDataOthrMand());
+     }
 
     @And("^I verify that HelpText dispalyed for Recipients of PData Other in the Data Governance page$")
     public void iVerifyThatHelpTextDispalyedForRecipientsOfPDataOtherInTheDataGovernancePage() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assert.assertTrue(datGovernancePage.helpTxtPDataOthers());
     }
 
-    @When("^i click on Recipients of PData \"([^\"]*)\" should be available in SELECTED ITEMS box$")
-    public void iClickOnRecipientsOfPDataShouldBeAvailableInSELECTEDITEMSBox(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
+
+
+    @Then("^clear the search \"([^\"]*)\" field in searchbox$")
+    public void clearTheSearchFieldInSearchbox(String arg0) throws Throwable {
+        Assert.assertTrue(datGovernancePage.clearSearchItemPData());
+   }
+
+
+
+
+
+
+
+    @And("^I Select the below list of values under the \"([^\"]*)\" product sub field$")
+    public void iSelectTheBelowListOfValuesUnderTheProductSubField(String subField, List<String> items) throws Throwable {
+        Assert.assertTrue(datGovernancePage.selectBelowPDataUnderSubField(subField, items));
+
     }
 
-    @And("^Recipients of PData \"([^\"]*)\" should not be displayed in SELECTED ITEMS box$")
-    public void recipientsOfPDataShouldNotBeDisplayedInSELECTEDITEMSBox(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
+    @And("^I check Recipients of \"([^\"]*)\" field for PDATA Product in the Data Governance page$")
+    public void iCheckRecipientsOfFieldForPDATAProductInTheDataGovernancePage(String arg0) throws Throwable {
+        Assert.assertTrue(datGovernancePage.verifyPDataOtherfieldType());
     }
 
-    @And("^Recipients of PData \"([^\"]*)\" should under Recipients of PData sub field$")
-    public void recipientsOfPDataShouldUnderRecipientsOfPDataSubField(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @And("^Validate each item of \"([^\"]*)\" present in SELECTED ITEMS box should have a 'X'$")
+    public void validateEachItemOfPresentInSELECTEDITEMSBoxShouldHaveAX(String subField,List<String> items) throws Throwable {
+        Assert.assertTrue(datGovernancePage.verifyPdataPresentInSelectedBox(subField,items));
+    }
+
+    @And("^when i Click on 'X' symbol for \"([^\"]*)\" available in SELECT ITEMS box$")
+    public void whenIClickOnXSymbolForAvailableInSELECTITEMSBox(String other) throws Throwable {
+     Assert.assertTrue(datGovernancePage.clickonXOtherInSelectedBox(other));
+    }
+
+    @And("^Recipients of PData \"([^\"]*)\" textbox should not be displayed$")
+    public void recipientsOfPDataTextboxShouldNotBeDisplayed(String arg0) throws Throwable {
+    Assert.assertTrue(datGovernancePage.verifyPdataOthrSholdnotbeDisp());
+
     }
 }
+
