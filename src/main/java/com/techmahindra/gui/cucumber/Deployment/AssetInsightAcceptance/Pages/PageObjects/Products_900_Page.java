@@ -59,7 +59,7 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[contains(text(),'recipients of the personal data and a general statement on why and how the personal data is used.')])[2]")
     private WebElement newFieldHelptxtBox;
 
-    @FindBy(xpath = "(//*[@class='tipsLink2 navigate-away-disable'])[1]")
+    @FindBy(xpath = "//*[@tipid='_Tip_Edit_DataGovernanceGeneral']")
     private WebElement informationSymbol;
 
     @FindBy(xpath = "(//*[contains(text(),'Please provide a short description of the product')])[1]")
@@ -181,7 +181,6 @@ public class Products_900_Page extends BasePage {
     private WebElement retentionPeriodTextBox;
 
 
-
     public Products_900_Page() throws Exception {
         super();
     }
@@ -274,28 +273,32 @@ public class Products_900_Page extends BasePage {
 
     public boolean verifyHelpText() {
         WebDriverUtils.waitForElementLoading(1);
-         newFieldHelptxtBox.isDisplayed();
-         return true;
+        newFieldHelptxtBox.isDisplayed();
+        return true;
     }
 
     public boolean clickOnInformationNextToGeneralSection() {
-        WebDriverUtils.waitForElementLoading(1);
-        informationSymbol.click();
-        return informationSymbol.isSelected();
+        WebDriverUtils.waitForElementLoading(2);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", informationSymbol);
+        return true;
+
     }
 
     public boolean verifyNewFieldandHelpTextInInformatioBox() {
         WebDriverUtils.waitForElementLoading(1);
+
+        boolean flag = false;
         if (newFieldInInformationBox.isDisplayed() && helpTextInInformationBox.isDisplayed()) {
-            return true;
+            flag = true;
         }
-        return false;
+        return flag;
     }
 
     public boolean verifyNewFieldShouldBeMandatoryField() {
         WebDriverUtils.waitForElementLoading(1);
-         mandatorySymbol.isDisplayed();
-         return true;
+        mandatorySymbol.isDisplayed();
+        return true;
     }
 
     public boolean verifyUpdatedFieldInAuditHistory() {
@@ -323,10 +326,9 @@ public class Products_900_Page extends BasePage {
 
     public boolean verifyUpdatedFieldInDataGovernance() {
         WebDriverUtils.waitForElementLoading(1);
-        boolean flag=false;
-        if (newFieldInProducts.isDisplayed() && updatedFieldInAuditHistory.isDisplayed())
-        {
-            flag=true;
+        boolean flag = false;
+        if (newFieldInProducts.isDisplayed() && updatedFieldInAuditHistory.isDisplayed()) {
+            flag = true;
         }
         return flag;
     }
@@ -538,15 +540,22 @@ public class Products_900_Page extends BasePage {
 
     public boolean verifyLimitValidationMessage(String textBoxValue) {
         WebDriverUtils.waitForElementLoading(2);
-        CommonMethods.ValidateAndUpdateField(retentionPeriodTextBox,textBoxValue);
+        CommonMethods.ValidateAndUpdateField(retentionPeriodTextBox, textBoxValue);
         return true;
     }
+
     public boolean verifyNewField() {
 
         WebDriverUtils.waitForElementLoading(2);
-         newFieldInProducts.isDisplayed();
-        return true;
+
+        boolean flag = false;
+
+        if (newFieldInProducts.isDisplayed()) {
+            flag = true;
+        }
+        return flag;
     }
+
     public boolean verifyTypeOfTheField() {
         WebDriverUtils.waitForElementLoading(1);
         boolean flag = false;
