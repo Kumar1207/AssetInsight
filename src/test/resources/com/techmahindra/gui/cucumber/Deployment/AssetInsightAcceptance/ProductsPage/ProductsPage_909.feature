@@ -1,5 +1,5 @@
 @Feature_ProductsPage_909
-Feature: I verify Please provide a short description of the product's use of personal data in the DataGovernance Tab Present in the Products Page
+Feature: I verify where possible please specify the retention period applied to personal data on your product and its basis
 
   Background:
     Given Asset Insight Home page should be displayed

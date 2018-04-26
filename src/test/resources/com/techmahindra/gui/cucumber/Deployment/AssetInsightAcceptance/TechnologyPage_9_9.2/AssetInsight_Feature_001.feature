@@ -66,5 +66,3 @@ Feature: I verify   Is Thomson Reuters able to view, edit, delete, share, change
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
 
-
-
