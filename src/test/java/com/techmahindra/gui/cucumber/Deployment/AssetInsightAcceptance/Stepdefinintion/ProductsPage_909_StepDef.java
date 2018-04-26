@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class ProductsPage_909_StepDef extends PageInstances {
-    Products_909_Page products_909_page= PageFactory.initElements(driver, Products_909_Page.class);
+    Products_909_Page products_909_page = PageFactory.initElements(driver, Products_909_Page.class);
 
     @Then("^I verify the \"([^\"]*)\" should present in the Data Governance page$")
     public void iVerifyTheShouldPresentInTheDataGovernancePage(String arg0) throws Throwable {
@@ -29,13 +29,6 @@ public class ProductsPage_909_StepDef extends PageInstances {
         Assert.assertTrue(products_909_page.verifyNewFieldIsNotMandatory());
     }
 
-    @Then("^I Verify that if the \"([^\"]*)\" exceeds validation message should get displayed$")
-    public void iVerifyThatIfTheLimitExceedsValidationMessageShouldGetDisplayed(List<String> text) throws Throwable {
-        for(String msg:text){
-            Assert.assertTrue(products_909_page.verifyValidationMessage(msg));
-        }
-
-    }
 
     @Then("^I verify that Help text should be displayed for the new \"([^\"]*)\"$")
     public void iVerifyThatHelpTextShouldBeDisplayedForTheNew(String arg0) throws Throwable {
@@ -52,4 +45,14 @@ public class ProductsPage_909_StepDef extends PageInstances {
     public void iVerifyUpdatedShouldGetDisplayedInTheDataGovernanceTabPresentInTheDetailsPage(String arg0) throws Throwable {
         Assert.assertTrue(products_909_page.verifyUpdatedFieldInDataGovernance());
     }
+
+
+    @Then("^I Verify that if the limit exceeds validation -message should get displayed$")
+    public void iVerifyThatIfTheLimitExceedsValidationMessageShouldGetDisplayed(List<String> textvalue) throws Throwable {
+        for (String msg : textvalue) {
+            Assert.assertTrue(products_909_page.verifyValidationMessage(msg));
+        }
+    }
+
+
 }

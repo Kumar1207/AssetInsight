@@ -29,7 +29,7 @@ Feature: I verify Please provide a short description of the product's use of per
     Then I verify the "<fieldName>" should present in the Data Governance page
     And  I Check the type of the new "<fieldName>"
     And  I verify the"<fieldName>" should not be mandatory field
-    Then I Verify that if the "limit" exceeds validation message should get displayed
+    Then I Verify that if the limit exceeds validation -message should get displayed
       | Where possible specify the rp applied to personal data on your product Where possible specify the rp applied to personal data on your product Where possible specify the rp applied to personal data on your product Where possible specify the rp applied to personal data on your product Where possible specify the rp applied to personal data on your product Where possible specify the rp applied to personal data on your product Where possible specify the rp applied to personal data on your product Where possible spe |
     Then I verify that Help text should be displayed for the new "<fieldName>"
     Then I click on "Save/Validate" button
