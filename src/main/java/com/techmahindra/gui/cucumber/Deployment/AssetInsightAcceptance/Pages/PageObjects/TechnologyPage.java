@@ -305,20 +305,21 @@ public class TechnologyPage extends BasePage {
                             description.sendKeys(createApplicationFields.get(key));
                             break;
                         case "application development contact":
-                            WebDriverUtils.waitForElementLoading(5);
+                            WebDriverUtils.waitForElementLoading(2);
                             applicationDevolpmentContact.sendKeys(createApplicationFields.get(key));
-                            WebDriverUtils.waitForElementLoading(4);
+                            WebDriverUtils.waitForElementLoading(2);
                             WebElement appDev = driver.findElement(By.xpath(".//*[@id='ui-id-5']/li[1]/div"));
+                            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", appDev);
                             JavascriptExecutor executor = (JavascriptExecutor) driver;
                             executor.executeScript("arguments[0].click();", appDev);
                             break;
                         case "aml business contact":
-                            WebDriverUtils.waitForElementLoading(5);
+                            WebDriverUtils.waitForElementLoading(2);
                             // amlBusinessContact.sendKeys(createApplicationFields.get(key));
                             try {
                                 Robot robot = new Robot();
                                 robot.keyPress(KeyEvent.VK_TAB);
-                                WebDriverUtils.waitForElementLoading(5);
+                                WebDriverUtils.waitForElementLoading(2);
                                 robot.keyPress(KeyEvent.VK_TAB);
                                 /* WebElement ele = driver.findElement(By.xpath("(//div[@class='k-multiselect-wrap k-floatwrap'])[2]"));*/
                                 WebElement ele = driver.findElement(By.xpath("(//div[@class='k-multiselect-wrap k-floatwrap'])[2]"));
@@ -336,6 +337,7 @@ public class TechnologyPage extends BasePage {
                         case "platform classification":
                             WebDriverUtils.waitForElementLoading(5);
                             WebElement product = driver.findElement(By.id("ProductPlatformClassification"));
+                            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", product);
                             Select selectProduct = new Select(product);
                             selectProduct.selectByVisibleText("No Intent to Migrate");
                             break;
@@ -399,12 +401,14 @@ public class TechnologyPage extends BasePage {
 
     public boolean clickOnEdit() {
         WebDriverUtils.waitForElementLoading(2);
-        editButton.click();
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", editButton);
+//        editButton.click();
         return true;
     }
 
     public boolean clickOnDataGoveranace() {
-        WebDriverUtils.waitForElementLoading(2);
+        WebDriverUtils.waitForElementLoading(5);
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", dataGovernance);
 //        dataGovernance.click();
@@ -532,10 +536,10 @@ public class TechnologyPage extends BasePage {
 
 
     public boolean clickOnAuditHistory() {
-        WebDriverUtils.waitForElementLoading(5);
+        WebDriverUtils.waitForElementLoading(1);
         WebElement audit = driver.findElement(By.xpath("//*[text()='Audit History']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", audit);
-        WebDriverUtils.waitForElementLoading(5);
+        WebDriverUtils.waitForElementLoading(1);
         audit.click();
         return true;
     }
@@ -546,8 +550,15 @@ public class TechnologyPage extends BasePage {
         return true;
     }
 
-    public boolean clickOnExport() {
+    public boolean clickOnExport() throws AWTException {
+
         exportExcel.click();
+        WebDriverUtils.waitForElementLoading(14);
+        Robot robot = new Robot();
+        WebDriverUtils.waitForElementLoading(14);
+        robot.keyPress(KeyEvent.VK_ESCAPE);
+        WebDriverUtils.waitForElementLoading(14);
+        robot.keyRelease(KeyEvent.VK_ESCAPE);
         return true;
     }
 
@@ -557,13 +568,13 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean cliconApplicationFullExtract() throws AWTException {
-        WebDriverUtils.waitForElementLoading(1);
+
         clickOnFullExtract.click();
-        WebDriverUtils.waitForElementLoading(2);
+        WebDriverUtils.waitForElementLoading(20);
         Robot robot = new Robot();
-        WebDriverUtils.waitForElementLoading(2);
+        WebDriverUtils.waitForElementLoading(20);
         robot.keyPress(KeyEvent.VK_ESCAPE);
-        WebDriverUtils.waitForElementLoading(2);
+        WebDriverUtils.waitForElementLoading(20);
         robot.keyRelease(KeyEvent.VK_ESCAPE);
         return true;
     }
