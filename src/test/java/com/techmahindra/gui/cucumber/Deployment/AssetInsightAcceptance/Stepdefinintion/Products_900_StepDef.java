@@ -30,15 +30,7 @@ public class Products_900_StepDef extends PageInstances{
         Assert.assertTrue(products_900_page.selectAnyExistingProduct());
     }
 
-    @Then("^I verify \"([^\"]*)\" should present in the Data Governance\" page$")
-    public void iVerifyShouldPresentInTheDataGovernancePage(String arg0) throws Throwable {
-        Assert.assertTrue(products_900_page.verifyNewField());
-    }
 
-    @And("^I Check the type of the \"([^\"]*)\" field$")
-    public void iCheckTheTypeOfTheField(String arg0) throws Throwable {
-        Assert.assertTrue(products_900_page.verifyTypeOfTheField());
-    }
 
     @Then("^I verify that Help text should be displayed for the \"([^\"]*)\"$")
     public void iVerifyThatHelpTextShouldBeDisplayedForThe(String arg0) throws Throwable {
@@ -83,11 +75,6 @@ public class Products_900_StepDef extends PageInstances{
 
     }
 
-    @Then("^I Verify if the limit exceeds validation \"([^\"]*)\" should get displayed$")
-    public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(String text) throws Throwable {
-        Assert.assertTrue(products_900_page.verifyTheValidationMessage(text));
-    }
-
     @Then("^I verify Updated fields should get displayed in the Data Governance tab present in the Details page$")
     public void iVerifyUpdatedFieldsShouldGetDisplayedInTheDataGovernanceTabPresentInTheDetailsPage() throws Throwable {
         Assert.assertTrue(products_900_page.verifyUpdatedFieldInDataGovernance());
@@ -126,12 +113,9 @@ public class Products_900_StepDef extends PageInstances{
     }
 
     @And("^I fill below mandatory fields$")
-    public void iFillBelowMandatoryFields(List<String> requiredFields) throws Throwable {
-      /* List<String> values = requiredFields.asList(String.class);
-       products_900_page.fillMandatoryFields("create", values);*/
-        for(String text:requiredFields){
-            Assert.assertTrue(products_900_page.fillMandatoryFields(text));
-        }
+    public void iFillBelowMandatoryFields(DataTable requiredFields) throws Throwable {
+        Map<String, String> values = requiredFields.asMap(String.class, String.class);
+        products_900_page.fillMandatoryFields("Mandatory", values);
 
 
 
@@ -170,14 +154,35 @@ public class Products_900_StepDef extends PageInstances{
         Assert.assertTrue(products_900_page.clickOnSignOff());
     }
 
+    @Then("^I Verify if the -limit exceeds validation message should get displayed$")
+    public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(List<String> textbox) throws Throwable {
+        for (String validation : textbox) {
+            Assert.assertTrue(products_900_page.verifyLimitValidationMessage(validation));
+        }
+    }
 
-    @Then("^I Verify if the limit exceeds \"([^\"]*)\" message should get displayed$")
-    public void iVerifyIfTheLimitExceedsMessageShouldGetDisplayed(String value) throws Throwable {
-        Assert.assertTrue(products_900_page.verifyingLimit(value));
+    @Then("^I verify \"([^\"]*)\" should present in the DataGovernance page$")
+    public void iVerifyShouldPresentInTheDataGovernancePage() throws Throwable {
+        Assert.assertTrue(products_900_page.verifyNewField());
+
+    }
+
+    @And("^I Check the type of the \"([^\"]*)\" field$")
+    public void iCheckTheTypeOfTheField(String arg0) throws Throwable {
+        Assert.assertTrue(products_900_page.verifyTypeOfTheField());
     }
 
 
-
+    @Then("^I Verify if limit exceeds validation -message should get displayed$")
+    public void iVerifyIfLimitExceedsValidationMessageShouldGetDisplayed(List<String> limitvalue) throws Throwable {
+        for (String limit : limitvalue) {
+            Assert.assertTrue(products_900_page.verifyLimitValidationMessage(limit));
+        }
+    }
 }
+
+
+
+
 
 
