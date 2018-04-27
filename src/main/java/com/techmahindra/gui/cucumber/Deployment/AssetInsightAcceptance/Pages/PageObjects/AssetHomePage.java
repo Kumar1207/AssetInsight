@@ -43,6 +43,10 @@ public class AssetHomePage extends BasePage {
     @FindBy(xpath = ".//*[@id='searchResultTable']")
     private  WebElement resultPage;
 
+    @FindBy(xpath = "//*[@id='headerProductTitle']")
+    private  WebElement assetLogo;
+
+
 
     @FindBy(xpath = ".//*[@id='headerProductTitle']/a/img")
     private  WebElement assetInsightHeader;
@@ -54,6 +58,8 @@ public class AssetHomePage extends BasePage {
     }
 
     public boolean isPageDisplayed() throws Exception {
+        WebDriverUtils.waitForElementLoading(1);
+        assetLogo.click();
         assetIncitesHomePage.isDisplayed();
         return true;
     }

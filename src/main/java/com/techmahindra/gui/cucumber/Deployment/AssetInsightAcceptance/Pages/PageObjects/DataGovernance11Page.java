@@ -262,6 +262,43 @@ public class DataGovernance11Page extends BasePage {
         return flag;
 
     }
+
+    public boolean verifyItShouldBeMandatoryField() {
+        return true;
+
+    }
+
+    public boolean dontSelectYesNo() {
+        return true;
+    }
+
+    public boolean clickOnYes() {
+        return true;
+    }
+
+    public boolean clickOnNo() {
+        return true;
+    }
+
+    public boolean clickOnIdontKnow() {
+        return true;
+    }
+
+    public boolean verifyTypeOftheSubFields() {
+        return true;
+    }
+
+    public boolean verifyTypeWithExistingField() {
+        return true;
+    }
+
+    public boolean limitValidationForSubField1() {
+        return true;
+    }
+
+    public boolean limitValidationForSubField2() {
+        return true;
+    }
 }
 
 

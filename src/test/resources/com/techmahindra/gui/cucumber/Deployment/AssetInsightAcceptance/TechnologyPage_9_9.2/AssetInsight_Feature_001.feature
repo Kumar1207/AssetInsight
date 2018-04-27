@@ -1,7 +1,8 @@
 @Feature_TechnologyPage
-Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change or use the personal data
+Feature: I verify   Is Thomson Reuters able to view, edit, delete, share, change or use the personal data
 
-  Background:  Given Asset Insight Home page should be displayed
+  Background:
+    Given Asset Insight Home page should be displayed
 
   @pageDisplay @AC_TechnologyPage_01
   Scenario: Creating a New Application
@@ -64,6 +65,4 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
-
-
 

@@ -1,5 +1,6 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
+import com.cucumber.listener.Reporter;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Helpers.CommonMethods;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Util.Utility;
@@ -58,7 +59,7 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[contains(text(),'recipients of the personal data and a general statement on why and how the personal data is used.')])[2]")
     private WebElement newFieldHelptxtBox;
 
-    @FindBy(xpath = "(//*[@class='tipsLink2 navigate-away-disable'])[1]")
+    @FindBy(xpath = "//*[@tipid='_Tip_Edit_DataGovernanceGeneral']")
     private WebElement informationSymbol;
 
     @FindBy(xpath = "(//*[contains(text(),'Please provide a short description of the product')])[1]")
@@ -70,7 +71,7 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "//*[contains(text(),'Please provide a short description of the product')]//span")
     private WebElement mandatorySymbol;
 
-    @FindBy(xpath = "//*[text()='short description of the product use of personal data']")
+    @FindBy(xpath = "//*[contains(text(),'products use of personal data')]")
     private WebElement updatedFieldInAuditHistory;
 
     @FindBy(xpath = "//*[contains(text(),'3E Product short description')]")
@@ -85,7 +86,6 @@ public class Products_900_Page extends BasePage {
 
     @FindBy(xpath = "//*[@id='ProductSpecialFactor_StandardCustomerOrPartnerData']")
     private WebElement existingFieldradioBtn;
-
 
 
     @FindBy(xpath = "//*[@id='PersonalDataHasTRPermission-error']")
@@ -117,7 +117,7 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[@id='ProductSpecialFactor_SensitivePIIData'])[2]")
     private WebElement SensitivePIIData;
 
-    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_StandardPIIData'])[1]")
+    @FindBy(xpath = "(//*[@id='ProductSpecialFactor_StandardPIIData'])[2]")
     private WebElement StandardPIIData;
 
     @FindBy(xpath = "(//*[@id='ProductSpecialFactor_SensitiveCustomerOrPartnerData'])[2]")
@@ -135,10 +135,16 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[@id='ProductSpecialFactor_DataSensitiveToHostingContext'])[2]")
     private WebElement dataSensitive;
 
-    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[2]")
-    private WebElement TrData;
 
-    @FindBy(xpath = "(//*[@id='_PersonalDataCanTRDecideUsage_IDK'])")
+
+
+
+/*
+    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[2]")
+    private WebElement TrNoBtn;
+*/
+
+    @FindBy(xpath = "//*[@id='_PersonalDataCanTRDecideUsage_IDK']")
     private WebElement TrFreeToDecide;
 
     @FindBy(xpath = "//*[@id='_PersonalDataIsSharedWithOthers_IDK']")
@@ -157,7 +163,7 @@ public class Products_900_Page extends BasePage {
     private WebElement typesOfData;
 
     @FindBy(xpath = "//*[@id='DescriptionOfPersonalDataUsage']")
-    private WebElement personalData;
+    private WebElement productUseOfPersonalData;
 
     @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[1]")
     private WebElement radioBtnYes;
@@ -165,8 +171,14 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[1]")
     private WebElement radioBtnNo;
 
+    @FindBy(xpath = "//*[@id='btnSignOff']")
+    private WebElement signOffBtn;
 
+    @FindBy(xpath = "//*[@id='btnSignOffCancel']")
+    private WebElement signOffCancelBtn;
 
+    @FindBy(xpath = "//*[@id='PersonalDataRetentionPeriod']")
+    private WebElement retentionPeriodTextBox;
 
 
     public Products_900_Page() throws Exception {
@@ -258,49 +270,46 @@ public class Products_900_Page extends BasePage {
 
     }
 
-    public boolean verifyNewField() {
-        return newFieldInProducts.isDisplayed();
-    }
 
-    public boolean verifyTypeOfTheField() {
+    public boolean verifyHelpText() {
         WebDriverUtils.waitForElementLoading(1);
-        boolean flag = false;
-        if (newFieldtxtBox.getTagName().equals("textarea")) {
-            flag = true;
-        }
-        return flag;
-
-    }
-
-    public boolean verifyHelpText()
-    {
-        return newFieldHelptxtBox.isDisplayed();
+        newFieldHelptxtBox.isDisplayed();
+        return true;
     }
 
     public boolean clickOnInformationNextToGeneralSection() {
-        informationSymbol.click();
+        WebDriverUtils.waitForElementLoading(2);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", informationSymbol);
+        return true;
 
-        return informationSymbol.isSelected();
     }
 
     public boolean verifyNewFieldandHelpTextInInformatioBox() {
+        WebDriverUtils.waitForElementLoading(1);
+
+        boolean flag = false;
         if (newFieldInInformationBox.isDisplayed() && helpTextInInformationBox.isDisplayed()) {
-            return true;
+            flag = true;
         }
-        return false;
+        return flag;
     }
 
     public boolean verifyNewFieldShouldBeMandatoryField() {
-        return mandatorySymbol.isDisplayed();
+        WebDriverUtils.waitForElementLoading(1);
+        mandatorySymbol.isDisplayed();
+        return true;
     }
 
     public boolean verifyUpdatedFieldInAuditHistory() {
-        return updatedFieldInAuditHistory.isDisplayed();
+        updatedFieldInAuditHistory.isDisplayed();
+        return true;
 
     }
 
     public boolean verifyUpdatedFieldInDetailsPage() {
-        return updatedFieldInDetailsPage.isDisplayed();
+        updatedFieldInDetailsPage.isDisplayed();
+        return true;
     }
 
     public boolean ClickOnTheBelowTheListsInTheHomepage() {
@@ -311,52 +320,44 @@ public class Products_900_Page extends BasePage {
 
     public boolean verifyTheValidationMessage(String textvalue) {
         WebDriverUtils.waitForElementLoading(1);
-        CommonMethods.ValidateAndUpdateField(newFieldtxtBox,textvalue);
+        CommonMethods.ValidateAndUpdateField(newFieldtxtBox, textvalue);
         return true;
     }
 
     public boolean verifyUpdatedFieldInDataGovernance() {
         WebDriverUtils.waitForElementLoading(1);
-        updatedFieldInDetailsPage.isDisplayed();
-        return true;
+        boolean flag = false;
+        if (newFieldInProducts.isDisplayed() && updatedFieldInAuditHistory.isDisplayed()) {
+            flag = true;
+        }
+        return flag;
     }
 
     public boolean verifyDefaultValueShouldBeBlank() {
         WebDriverUtils.waitForElementLoading(1);
 
-        boolean flag=false;
-        if (!radioBTNYesNo.isSelected()){
-            flag=true;
+        boolean flag = false;
+        if (!radioBTNYesNo.isSelected()) {
+            flag = true;
         }
-      return flag;
-
+        return flag;
 
 
     }
 
     public boolean verifyValidationMessage() {
-        WebDriverUtils.waitForElementLoading(2);
-
-        if (!radioBtnYes.isSelected() || !radioBtnNo.isSelected()) {
-            return validationMsg.isDisplayed();
-        }
-        else {
-            WebDriverUtils.waitForElementLoading(4);
-            radioBtnYes.click();
-        }
         return true;
     }
 
-  public boolean validateWhetherAnyCheckBoxIsSelected() {
+    public boolean validateWhetherAnyCheckBoxIsSelected() {
 
-      WebDriverUtils.waitForElementLoading(1);
-        boolean flag=false;
-        if (!viewChekBox.isSelected() && !editChekBox.isSelected() && !changeChekBox.isSelected() && !shareChekBox.isSelected() && !deleteChekBox.isSelected() && !viewChekBox.isSelected() )
-        {
-        flag=true;
+        WebDriverUtils.waitForElementLoading(1);
+        boolean flag = false;
+        if (!viewChekBox.isSelected() && !editChekBox.isSelected() && !changeChekBox.isSelected() && !shareChekBox.isSelected() && !deleteChekBox.isSelected() && !viewChekBox.isSelected()) {
+            flag = true;
+        }
+        return flag;
     }
-    return flag;
-  }
 
     public boolean verifyValidationMessageForCheckbox() {
 
@@ -375,83 +376,84 @@ public class Products_900_Page extends BasePage {
         return true;
     }
 
-    public boolean fillMandatoryFields(String RequiredFieldsOptions, Map<String,String> options) {
+    public boolean fillMandatoryFields(String mandatoryFileds, Map<String, String> fillrequiredfields) {
 
-        WebDriverUtils.waitForElementLoading(1);
-        String applicationFieldName = "";
+        WebDriverUtils.waitForElementLoading(2);
+        String productFieldName = "";
 
-        switch (RequiredFieldsOptions.toLowerCase()) {
-            case "create":
-                for (String key : options.keySet()) {
+        switch (mandatoryFileds.toLowerCase()) {
+            case "mandatory":
+                for (String key : fillrequiredfields.keySet()) {
                     //applicationFieldName = createApplicationFields.get(key) + timeStamp;
-                    applicationFieldName = options.get(key) + "_" + Utility.genRand5DigitNum();
+                    productFieldName = fillrequiredfields.get(key) + "_" + Utility.genRand5DigitNum();
                     switch (key.toLowerCase()) {
-                        case "Please provide a short description of the product's use of personal data":
-                            WebDriverUtils.waitForElementLoading(1);
-                            personalData.sendKeys(applicationFieldName);
+                        case "please provide a short description of the product's use of personal data":
+                            WebDriverUtils.waitForElementLoading(2);
+                            productUseOfPersonalData.sendKeys(productFieldName);
                             break;
-                        case "Sensitive PII Data":
+                     /*   case "sensitive pii data":
                             WebDriverUtils.waitForElementLoading(1);
                             SensitivePIIData.click();
                             break;
-                        case "Standard PII Data":
+                        case "standard pii data":
                             WebDriverUtils.waitForElementLoading(1);
-                           StandardPIIData.click();
+                            StandardPIIData.click();
                             break;
-                        case "Sensitive Customer or Partner Data":
+                        case "sensitive customer or partner data":
                             WebDriverUtils.waitForElementLoading(1);
-                          SensitiveCustomer.click();
+                            SensitiveCustomer.click();
                             break;
-                        case " Sensitive Thomson Reuters Data":
+                        case "sensitive thomson reuters data":
                             WebDriverUtils.waitForElementLoading(1);
                             sensitiveTrData.click();
-                            break;
-                        case "Regulated Data":
-                            WebDriverUtils.waitForElementLoading(1);
-                            Select select=new Select(regulatedData);
+                            break;*/
+                        case "regulated data":
+                            WebDriverUtils.waitForElementLoading(2);
+                            WebElement rd = driver.findElement(By.xpath("//*[@id='ProductSpecialFactor_RegulatedDataTypeId']"));
+                            Select select = new Select(rd);
                             select.selectByVisibleText("FISMA");
                             break;
-                        case "Data Sensitive to Hosting Context":
-                            WebDriverUtils.waitForElementLoading(1);
+                        case "data Sensitive to hosting Context":
+                            WebDriverUtils.waitForElementLoading(2);
                             dataSensitive.click();
                             break;
-                        case "Is Thomson Reuters able to view, edit, delete, share, change or use the personal data":
-                            WebDriverUtils.waitForElementLoading(1);
-                            TrData.click();
+                        case "is thomson reuters able to view, edit, delete, share, change or use the personal data":
+                            WebDriverUtils.waitForElementLoading(2);
+                            WebElement noBtn = driver.findElement(By.xpath("(//*[@id='PersonalDataHasTRPermission'])[2]"));
+                            noBtn.click();
                             break;
-                        case "Is Thomson Reuters free to decide whether/how the personal data is viewed, edited, deleted, shared, changed or used":
-                            WebDriverUtils.waitForElementLoading(1);
-                            TrFreeToDecide.click();
+                        case "is thomson reuters  free to decide whether/how the personal data is viewed, edited, deleted, shared, changed or used":
+                            WebDriverUtils.waitForElementLoading(2);
+                            WebElement ele = driver.findElement(By.xpath("//*[@id='_PersonalDataCanTRDecideUsage_IDK']"));
+                            ele.click();
                             break;
-                        case "|If you answered \"No\" or \"I don't know\", please confirm if you share any personal data from your product with any sub-contractor/service provider used by Thomson Reuters":
-                            WebDriverUtils.waitForElementLoading(1);
+                        case "if you answered \"No\" or \"I don't know\", please confirm if you share any personal data from your product with any sub-contractor/service provider used by Thomson Reuters":
+                            WebDriverUtils.waitForElementLoading(2);
                             idontKnowbtn.click();
                             break;
-                        case "Does Thomson Reuters jointly decide how to use personal data in your product with any other party?":
-                            WebDriverUtils.waitForElementLoading(1);
+                        case "does thomson reuters jointly decide how to use personal data in your product with any other party?":
+                            WebDriverUtils.waitForElementLoading(2);
                             TRJointlyDecide.click();
                             break;
-                        case "Will any personal data be transferred to or accessed outside the geographic locations where it was originally collected":
-                            WebDriverUtils.waitForElementLoading(1);
+                        case "will any personal data be transferred to or accessed outside the geographic locations where it was originally collected":
+                            WebDriverUtils.waitForElementLoading(2);
                             GeographicLocation.click();
                             break;
-                        case "If your product involves the transfer of personal data to a third party (e.g. vendor, service provider, customer), is there a contract in place with the third party that contains data transfer privacy clauses approved by the Legal Department":
-                            WebDriverUtils.waitForElementLoading(1);
+                        case "if your product involves the transfer of personal data to a third party (e.g. vendor, service provider, customer), is there a contract in place with the third party that contains data transfer privacy clauses approved by the Legal Department":
+                            WebDriverUtils.waitForElementLoading(2);
                             LegalDepart.click();
                             break;
-                        case "Does the retention period vary according to the types of data stored":
-                            WebDriverUtils.waitForElementLoading(1);
+                        case "does the retention period vary according to the types of data stored":
+                            WebDriverUtils.waitForElementLoading(2);
                             typesOfData.click();
                             break;
-                         default:
+                        default:
                             return false;
                     }
                 }
                 break;
-
             default:
                 return false;
-
         }
         return true;
     }
@@ -476,5 +478,93 @@ public class Products_900_Page extends BasePage {
 
     }
 
+    public boolean clickOnYesOption(String ListOptions, List<String> ListItems) {
+        WebDriverUtils.waitForElementLoading(2);
+        radioBtnYes.click();
+        switch (ListOptions) {
+            case "checkBox":
+                for (String key : ListItems) {
+                    switch (key.toLowerCase()) {
+                        case "view":
+                            viewChekBox.isDisplayed();
+                            break;
+                        case "edit":
+                            editChekBox.isDisplayed();
+                            break;
+                        case "delete":
+                            deleteChekBox.isDisplayed();
+                            break;
+                        case "share":
+                            shareChekBox.isDisplayed();
+                            break;
+                        case "change":
+                            changeChekBox.isDisplayed();
+                            break;
+                        default:
+                            return false;
+                    }
+                }
+                break;
+
+            default:
+                return false;
+
+        }
+        return true;
     }
+
+    public boolean verifyDataGovernanceSignOffButton() {
+        WebDriverUtils.waitForElementLoading(1);
+        signOffBtn.isDisplayed();
+        return true;
+    }
+
+    public boolean clickOnReturnToEdit() {
+        WebDriverUtils.waitForElementLoading(1);
+        signOffCancelBtn.click();
+        return true;
+    }
+
+    public boolean clickOnSignOff() {
+        WebDriverUtils.waitForElementLoading(1);
+        signOffBtn.click();
+        return true;
+    }
+
+    public boolean verifyingLimit(String value) {
+        WebDriverUtils.waitForElementLoading(1);
+        CommonMethods.ValidateAndUpdateField(newFieldHelptxtBox, value);
+        return true;
+    }
+
+
+    public boolean verifyLimitValidationMessage(String textBoxValue) {
+        WebDriverUtils.waitForElementLoading(2);
+        CommonMethods.ValidateAndUpdateField(retentionPeriodTextBox, textBoxValue);
+        return true;
+    }
+
+    public boolean verifyNewField() {
+
+        WebDriverUtils.waitForElementLoading(2);
+
+        boolean flag = false;
+
+        if (newFieldInProducts.isDisplayed()) {
+            flag = true;
+        }
+        return flag;
+    }
+
+    public boolean verifyTypeOfTheField() {
+        WebDriverUtils.waitForElementLoading(1);
+        boolean flag = false;
+        if (newFieldtxtBox.getTagName().equals("textarea")) {
+            flag = true;
+        }
+        return flag;
+
+    }
+
+}
 
