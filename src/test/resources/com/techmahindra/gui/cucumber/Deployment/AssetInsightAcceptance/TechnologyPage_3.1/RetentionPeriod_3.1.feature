@@ -35,7 +35,6 @@ Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII 
     Then I verify the "Standard PII Data Type - Other" field present in the "Data Governance" page
      Then I click on "Standard PII Data Type - Other" field in the Data Governance page
     Then  I Check the type of Standard PII Data Type - Other field in the Data Governance page
-    #Then I Verify if the limit exceeds a validation message should get displayed for 255 characters
     Then I Verify if the limit exceeds -validation message should get displayed
     | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box |
     And  I verify that it should be a mandatory field for Standard PII Data Type - Other field in the Data Governance page
@@ -70,8 +69,5 @@ Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII 
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
 
-  @pageDisplay @AC_TechnologyPage_3.1_05
-  Scenario: Verifying Downloaded Excel data with GUI
-    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    When  I click on Application- Full Extract should be downloaded
+
 

@@ -23,6 +23,7 @@ Feature: I verify Where possible please specify the retention period applied to 
 
   @pageDisplay @AC_TechnologyPage_2.1_02
   Scenario Outline: I Verify new New field in the Existing Application
+    Given Asset Insight Home page should be displayed
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
     Then I click on the "Applications" present in the Technology page
@@ -31,16 +32,20 @@ Feature: I verify Where possible please specify the retention period applied to 
     And  I click on "Data Governance" tab
     Then I verify "<NewfieldName>" field is present in the Data Governance page
     And  I Check the type of "<NewfieldName>" in the Data Governance page
-    When I click on "Yes" button All the subquestions under 'Sensitive PII Data' field should get displayed
-    Then I verify All the subquestions under 'Sensitive PII Data' field should get displayed
-    And  I verify that "Help text" should get displayed in the same format as 'Standard PII Data'
-    Then I verify existing list of values should remain same
-    And  I verify new values which are given in the requirement document also should be added to the picklist.
-    And  I Select all the newly added values
+    When I click on "Yes" button for "<NewfieldName>" field
+    Then I verify All the sub questions under "<NewfieldName>" field should get displayed
+    Then I verify "Sensitive PII Data Type" sub field is present under "<NewfieldName>" the Data Governance page
+    And  I verify that 'Help text' displayed for "Sensitive PII Data Type"
+
+    Then I verify below list of values should be present under "Sensitive PII Data Type" sub field:
+      |Sex life or sexual orientation|
+      |Observations of behavior or conduct of persons (including personal preferences, interests, reliability)|
+    #And  I Select the below list of values under "Sensitive PII Data Type" sub field:
+    #  |Sex life or sexual orientation|
+     # |Observations of behavior or conduct of persons (including personal preferences, interests, reliability)|
     Then I click on "Save/Validate" button
     Then I click on "Back to detail" button respective application details page should be displayed
     Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
-
 
     Examples:
       | NewfieldName       |
@@ -49,6 +54,7 @@ Feature: I verify Where possible please specify the retention period applied to 
   @pageDisplay @AC_TechnologyPage_2.1_03
   Scenario: I verify Excel should be downloaded with the updated values
     Then  I click on the "Technology" in the homepage
+
     Then  I verify the respective "Technology" page is displayed
     Then  I click on the "Applications" present in the Technology page
     And   I click on "export to Excel" button and Excel should be downloaded

@@ -118,4 +118,42 @@ public class DataGovernanceTab11StepDef extends PageInstances {
     public void iVerifyThatHelpTextDispalyedForInTheDataGovernancePageDisplay(String arg0) throws Throwable {
         Assert.assertTrue(dataGovernance11Page.verifyHelpTxtSTDPIIDataOthers());
     }
+
+    //Prachi code
+
+    @Then("^I verify \"([^\"]*)\" field is present in the Data Governance page$")
+    public void iVerifyFieldIsPresentInTheDataGovernancePage(String fieldName) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyFieldPrescenceInDataGovernancePage(fieldName));
+    }
+
+    @And("^I Check the type of \"([^\"]*)\" in the Data Governance page$")
+    public void iCheckTheTypeOfInTheDataGovernancePage(String fieldName) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.checkTypeOfField(fieldName));
+    }
+
+    @When("^I click on \"([^\"]*)\" button for \"([^\"]*)\" field$")
+    public void iClickOnButtonForField(String buttonValue, String fieldName) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.clickOnRadioButtonForFieldName(buttonValue,fieldName));
+    }
+
+    @Then("^I verify All the sub questions under \"([^\"]*)\" field should get displayed$")
+    public void iVerifyAllTheSubQuestionsUnderFieldShouldGetDisplayed(String fieldName) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifySubQuestionsUnderFieldNameIsDisplayed(fieldName));
+    }
+
+    @Then("^I verify \"([^\"]*)\" sub field is present under \"([^\"]*)\" the Data Governance page$")
+    public void iVerifySubFieldIsPresentUnderTheDataGovernancePage(String subField, String field) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyPrescenceOfSubFieldUnderField(subField,field));
+    }
+
+    @And("^I verify that 'Help text' displayed for \"([^\"]*)\"$")
+    public void iVerifyThatHelpTextDisplayedFor(String subField) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyHelpTextDisplayedForSubField(subField));
+    }
+
+    @Then("^I verify below list of values should be present under \"([^\"]*)\" sub field:$")
+    public void iVerifyBelowListOfValuesShouldBePresentUnderSubField(String subField, List<String> items) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyListOfValuesBePresentUnderSubField(subField,items));
+    }
+
 }
