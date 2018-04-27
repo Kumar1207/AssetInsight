@@ -84,6 +84,7 @@ Feature: I verify a new field "Who receives personal data from your product?" fo
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
 
+    
 
 
 
