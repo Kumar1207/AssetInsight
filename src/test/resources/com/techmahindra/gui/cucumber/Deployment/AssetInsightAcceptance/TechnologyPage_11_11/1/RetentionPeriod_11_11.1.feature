@@ -39,7 +39,9 @@ Feature: I verify Where possible please specify the retention period applied to 
     When I click on Yes I verify the type of the "<SubQueField1>" and "<SubQueField2>"
     Then I verify type of "<SubQueField1>" and "<SubQueField2>" should be same as existing "Data Sensitive to Hosting Context Description" field
     Then I Verify if the limit exceeds for "<SubQueField1>" validation message should get displayed
+      | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period |
     Then I Verify if the limit exceeds "<SubQueField2>" validation message should get displayed
+      | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period |
     Then I click on "Save/Validate" button
     And  I click on "Audit history"
     And  I verify Updated field should get displayed in the Audit History tab

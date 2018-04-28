@@ -1,5 +1,6 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Helpers.CommonMethods;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import org.openqa.selenium.Alert;
@@ -22,43 +23,77 @@ public class DataGovernance11Page extends BasePage {
     @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party? ']/..//td//div//input")
     private WebElement typeOfnewField;
 
-    @FindBy(xpath="//*[@id='BusinessCriticalitySpecialFactor_StandardPIIData']")
+    @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_StandardPIIData']")
     private WebElement typeOfnewSTDPIIField;
 
-    @FindBy(xpath="//div[contains(@id, 'divPickListStandardPIIDataType')]//li[@title='Other']")
+    @FindBy(xpath = "//div[contains(@id, 'divPickListStandardPIIDataType')]//li[@title='Other']")
     private WebElement newFieldOtherSTD;
 
-   // @FindBy(xpath="//div[contains(@id, 'divPickListStandardPIIDataType')]//span[@class='ui-corner-all ui-icon ui-icon-plus']")
-   @FindBy(xpath="//div[contains(@id, 'divPickListStandardPIIDataType')]//li[@title='Other']//span[@class='ui-corner-all ui-icon ui-icon-plus']")
+    // @FindBy(xpath="//div[contains(@id, 'divPickListStandardPIIDataType')]//span[@class='ui-corner-all ui-icon ui-icon-plus']")
+    @FindBy(xpath = "//div[contains(@id, 'divPickListStandardPIIDataType')]//li[@title='Other']//span[@class='ui-corner-all ui-icon ui-icon-plus']")
     private WebElement newFieldOther;
 
 
-    @FindBy(xpath="//textarea[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
+    @FindBy(xpath = "//textarea[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
     private WebElement othernewSTDPIIField;
 
     @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_StandardPIIData'][1]")
     private WebElement stdPIIDataYes;
 
 
-
     @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_StandardPIIData'][2]")
     private WebElement stdPIIDataNo;
 
 
-    @FindBy(xpath="//div[contains(@id,'divStandardPIIData')]//div[text()='Standard PII Data Type ']")
+    @FindBy(xpath = "//div[contains(@id,'divStandardPIIData')]//div[text()='Standard PII Data Type ']")
     private WebElement stdPIIType;
 
 
-    private static final String XPATH_ITEM_LIST=".//*[contains(@id,'%s')]//li[@title='%s']";
+    private static final String XPATH_ITEM_LIST = ".//*[contains(@id,'%s')]//li[@title='%s']";
 
-    @FindBy(xpath="//*[text()='Standard PII Data Type - Other ']//span")
+    @FindBy(xpath = "//*[text()='Standard PII Data Type - Other ']//span")
     private WebElement stdOthrmandatoryfield;
 
-    @FindBy(xpath="//*[contains(text(),'please select \"Other\" and specify these other types of Standard PII Data')]")
+    @FindBy(xpath = "//*[contains(text(),'please select \"Other\" and specify these other types of Standard PII Data')]")
     private WebElement helpSTDPIIData;
 
-    @FindBy(xpath="//*[contains(text(),'Please specify these other types of Standard PII Data')]")
+    @FindBy(xpath = "//*[contains(text(),'Please specify these other types of Standard PII Data')]")
     private WebElement helpSTDPIIOthers;
+
+    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party?']//span")
+    private WebElement mandatoryField;
+
+
+    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party?']/..//*[@type='radio']")
+    private WebElement radioButton;
+
+    @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_Yes']")
+    private WebElement clikOnYes;
+
+    @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_No']")
+    private WebElement clikOnNo;
+
+    @FindBy(xpath = "//*[text()='Provide a brief description as to why you think this is ']")
+    private WebElement subQueField1;
+
+    @FindBy(xpath = "//*[text()='If you answered \"Yes\", please identify the name and contact details of the customer, reseller, partner or other party who jointly decides how to use personal data.  Please include for example the contract number and/or TR personnel that negotiated the contract. ']")
+    private WebElement subQueField2;
+
+    @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_IDK']")
+    private WebElement clickOnIdontKnow;
+
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionDescription']")
+    private WebElement SubQueField1Type;
+
+    @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_DataSensitiveToHostingContextDescription']")
+    private WebElement ExistingFieldType;
+
+
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionDescription']")
+    private WebElement SubQueField1txtbox;
+
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionContact']")
+    private WebElement SubQueField2txtbox;
 
 
     public DataGovernance11Page() throws Exception {
@@ -66,12 +101,15 @@ public class DataGovernance11Page extends BasePage {
     }
 
     public boolean verifyNewField() {
-        return newField.isDisplayed();
+        WebDriverUtils.waitForElementLoading(1);
+        newField.isDisplayed();
+        return true;
     }
 
 
     @Override
     protected WebElement elementForLoading() throws Exception {
+
         return technologyHomePage;
     }
 
@@ -126,7 +164,6 @@ public class DataGovernance11Page extends BasePage {
     }
 
 
-
     public boolean VerifyFieldPresentInTheDataGovernancePage() {
         WebDriverUtils.waitForElementLoading(3);
         boolean flag = false;
@@ -150,9 +187,9 @@ public class DataGovernance11Page extends BasePage {
     public boolean checkOtherSTDPIIField() {
 
         boolean flag = false;
-               // if (othernewSTDPIIField.getAttribute("id").equals("textarea")) {
+        // if (othernewSTDPIIField.getAttribute("id").equals("textarea")) {
 
-        if (othernewSTDPIIField.isDisplayed()){
+        if (othernewSTDPIIField.isDisplayed()) {
             flag = true;
         }
         return flag;
@@ -210,28 +247,28 @@ public class DataGovernance11Page extends BasePage {
         boolean flag = false;
 
         // if (othernewSTDPIIField.getAttribute("id").equals("textarea")) {
-        if (!(othernewSTDPIIField.isDisplayed())){
+        if (!(othernewSTDPIIField.isDisplayed())) {
             flag = true;
         }
         return flag;
     }
 
     public boolean selectBelowListOfValuesUnderSubField(String subField, List<String> items) {
-        boolean flag=false;
-       String fieldName = subField.replaceAll("\\s","");
-    for(String item:items){
-        WebElement stdPII = driver.findElement(By.xpath("//*[text()='Standard PII Data Context ']"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", stdPII);
-        //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", item);
-    //driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).isDisplayed();
-        flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item))).isDisplayed();
+        boolean flag = false;
+        String fieldName = subField.replaceAll("\\s", "");
+        for (String item : items) {
+            WebElement stdPII = driver.findElement(By.xpath("//*[text()='Standard PII Data Context ']"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", stdPII);
+            //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", item);
+            //driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).isDisplayed();
+            flag = driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST, fieldName, item))).isDisplayed();
 //flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).getAttribute("class").contains("minus");
- //commented
+            //commented
         /*driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).click();
         flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item)+"/a/span")).getAttribute("class").contains("minus");*/
 
-    }
-    return flag;
+        }
+        return flag;
     }
 
 
@@ -242,20 +279,20 @@ public class DataGovernance11Page extends BasePage {
     }
 
     public boolean verifyHelpTxtSTDPIIData() {
-    WebDriverUtils.waitForElementLoading(2);
-        boolean flag=false;
-       if(helpSTDPIIData.isDisplayed()){
-            flag=true;
-       }
+        WebDriverUtils.waitForElementLoading(2);
+        boolean flag = false;
+        if (helpSTDPIIData.isDisplayed()) {
+            flag = true;
+        }
 
-            return flag;
+        return flag;
 
 
     }
 
     public boolean verifyHelpTxtSTDPIIDataOthers() {
         boolean flag = false;
-        if(helpSTDPIIOthers.isDisplayed()){
+        if (helpSTDPIIOthers.isDisplayed()) {
             flag = true;
         }
 
@@ -263,7 +300,92 @@ public class DataGovernance11Page extends BasePage {
 
     }
 
-    public boolean verifyItShouldBeMandatoryField() {
+    public boolean verifyMandatoryField() {
+
+        return mandatoryField.isDisplayed();
+    }
+
+    public boolean verifyValidationMessage() {
+        boolean flag = true;
+        if (!radioButton.isSelected()) {
+            flag = false;
+        }
+        return flag;
+
+    }
+
+    public boolean verifySubQuestionFields() {
+        WebDriverUtils.waitForElementLoading(2);
+
+        clikOnYes.click();
+
+        if (clikOnYes.isSelected())
+            return subQueField1.isDisplayed();
+        if (clikOnYes.isSelected())
+            return subQueField2.isDisplayed();
+        else return false;
+    }
+
+    public boolean clickonNO() {
+        WebDriverUtils.waitForElementLoading(2);
+
+        clikOnNo.click();
+
+        if (clikOnNo.isSelected())
+            return !subQueField1.isDisplayed();
+        if (clikOnYes.isSelected())
+            return !subQueField2.isDisplayed();
+        else return false;
+
+    }
+
+    public boolean clickonIDontKnow() {
+        WebDriverUtils.waitForElementLoading(2);
+
+        clickOnIdontKnow.click();
+        if (clickOnIdontKnow.isSelected())
+            return !subQueField1.isDisplayed();
+        if (clickOnIdontKnow.isSelected())
+            return !subQueField2.isDisplayed();
+        else return false;
+
+
+    }
+
+    public boolean verifyTheTypeOfSubQueFields() {
+
+        boolean flag = false;
+        if (SubQueField1Type.getAttribute("tagName").equals("textarea")) {
+            flag = true;
+        }
+        return flag;
+
+    }
+
+    public boolean verifyTypeOfSubQueShouldBeSameAsExistingField() {
+
+        boolean flag = false;
+        if (ExistingFieldType.getAttribute("tagName").equals("textarea")) {
+            flag = true;
+        }
+        return flag;
+    }
+
+    public boolean verifySubQue1FieldLimit(String subQueLimit) {
+        WebDriverUtils.waitForElementLoading(1);
+        clikOnYes.click();
+        WebDriverUtils.waitForElementLoading(1);
+        CommonMethods.ValidateAndUpdateField(SubQueField1txtbox, subQueLimit);
+        return true;
+    }
+
+    public boolean verifySubQue2FieldLimit(String subQue2Limit) {
+        WebDriverUtils.waitForElementLoading(1);
+        CommonMethods.ValidateAndUpdateField(SubQueField2txtbox, subQue2Limit);
+        WebDriverUtils.waitForElementLoading(1);
+        return true;
+    }
+   /* public boolean verifyItShouldBeMandatoryField() {
         return true;
 
     }
@@ -289,6 +411,7 @@ public class DataGovernance11Page extends BasePage {
     }
 
     public boolean verifyTypeWithExistingField() {
+
         return true;
     }
 
@@ -299,6 +422,9 @@ public class DataGovernance11Page extends BasePage {
     public boolean limitValidationForSubField2() {
         return true;
     }
+
+*/
+
 }
 
 

@@ -121,7 +121,7 @@ public class DataGovernanceTab11StepDef extends PageInstances {
 
     //Prachi code
 
-    @Then("^I verify \"([^\"]*)\" field is present in the Data Governance page$")
+   /* @Then("^I verify \"([^\"]*)\" field is present in the Data Governance page$")
     public void iVerifyFieldIsPresentInTheDataGovernancePage(String fieldName) throws Throwable {
         Assert.assertTrue(dataGovernance11Page.verifyFieldPrescenceInDataGovernancePage(fieldName));
     }
@@ -154,6 +154,53 @@ public class DataGovernanceTab11StepDef extends PageInstances {
     @Then("^I verify below list of values should be present under \"([^\"]*)\" sub field:$")
     public void iVerifyBelowListOfValuesShouldBePresentUnderSubField(String subField, List<String> items) throws Throwable {
         Assert.assertTrue(dataGovernance11Page.verifyListOfValuesBePresentUnderSubField(subField,items));
+    }
+*/
+
+    @And("^I verify that it should be mandatory field$")
+    public void iVerifyThatItShouldBeMandatoryField() throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyMandatoryField());
+    }
+
+
+    @When("^I dont select Yes/No option validation message should be displayed$")
+    public void iDontSelectYesNoOptionValidationMessageShouldBeDisplayed() throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyValidationMessage());
+    }
+    @When("^I click on Yes \"([^\"]*)\" and \"([^\"]*)\" should be displayed$")
+    public void iClickOnYesAndShouldBeDisplayed(String arg0, String arg1) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifySubQuestionFields());
+    }
+    @When("^I click on No option nothing should be displayed below the main question field$")
+    public void iClickOnNoOptionNothingShouldBeDisplayedBelowTheMainQuestionField() throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.clickonNO());
+    }
+    @When("^I click on I dont Know option nothing should be displayed below the main question field$")
+    public void iClickOnIDontKnowOptionNothingShouldBeDisplayedBelowTheMainQuestionField() throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.clickonIDontKnow());
+    }
+    @When("^I click on Yes I verify the type of the \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void iClickOnYesIVerifyTheTypeOfTheAnd(String arg0, String arg1) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyTheTypeOfSubQueFields());
+    }
+    @Then("^I verify type of \"([^\"]*)\" and \"([^\"]*)\" should be same as existing \"([^\"]*)\" field$")
+    public void iVerifyTypeOfAndShouldBeSameAsExistingField(String arg0, String arg1, String arg2) throws Throwable {
+        Assert.assertTrue(dataGovernance11Page.verifyTypeOfSubQueShouldBeSameAsExistingField());
+    }
+    @Then("^I Verify if the limit exceeds for \"([^\"]*)\" validation message should get displayed$")
+    public void iVerifyIfTheLimitExceedsForValidationMessageShouldGetDisplayed(List<String> subQue1LimitValue) throws Throwable {
+        for(String subque1limit:subQue1LimitValue){
+            Assert.assertTrue(dataGovernance11Page.verifySubQue1FieldLimit(subque1limit));
+        }
+
+    }
+    @Then("^I Verify if the limit exceeds \"([^\"]*)\" validation message should get displayed$")
+    public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayed(List<String> subQue2LimitValue) throws Throwable {
+        for(String subque2limit:subQue2LimitValue){
+            Assert.assertTrue(dataGovernance11Page.verifySubQue2FieldLimit(subque2limit));
+        }
+
+
     }
 
 }
