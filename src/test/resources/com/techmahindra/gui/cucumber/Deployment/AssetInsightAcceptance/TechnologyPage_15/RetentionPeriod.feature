@@ -1,4 +1,4 @@
-@Feature_RetentionPeriodPage
+    @Feature_RetentionPeriodPage
 Feature: I verify Where possible please specify the retention period applied to personal data on your application and its basis is added.
 
   Background:  Given Asset Insight Home page should be displayed

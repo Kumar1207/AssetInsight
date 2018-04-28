@@ -1,7 +1,8 @@
 @Feature_TechnologyPage_14
 Feature: I verify Where possible please specify the retention period applied to personal data on your application and its basis is added.
 
-  Background:  Given Asset Insight Home page should be displayed
+  Background:
+    Given Asset Insight Home page should be displayed
 
   @pageDisplay @AC_TechnologyPage_14_01
   Scenario: Creating a New Application
@@ -38,10 +39,10 @@ Feature: I verify Where possible please specify the retention period applied to 
     When I click on I dont Know option nothing should be displayed below the main question field
     When I click on Yes I verify the type of the "<SubQueField1>" and "<SubQueField2>"
     Then I verify type of "<SubQueField1>" and "<SubQueField2>" should be same as existing "Data Sensitive to Hosting Context Description" field
-    Then I Verify if the limit exceeds for "<SubQueField1>" validation message should get displayed
-      | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period |
-    Then I Verify if the limit exceeds "<SubQueField2>" validation message should get displayed
-      | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period |
+    Then I Verify if the limit exceeds for first -SubQueField validation message should get displayed
+      | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for |
+    Then I Verify if the limit exceeds second -SubQueField validation message should get displayed
+      | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for |
     Then I click on "Save/Validate" button
     And  I click on "Audit history"
     And  I verify Updated field should get displayed in the Audit History tab
@@ -50,12 +51,8 @@ Feature: I verify Where possible please specify the retention period applied to 
 
 
     Examples:
-      | NewfieldName                                                                                           | ExistingfieldName                 |
-      | Does Thomson Reuters jointly decide how to use personal data in your application with any other party? | Standard Customer or Partner Data |
-
-    Examples:
-      | SubQueField1                                            | SubQueField2                                                                                                                                                                                                                                   |
-      | Provide a brief description as to why you think this is | please identify the name and contact details of the customer, reseller, partner or other party who jointly decides how to use personal data.  Please include for example the contract number and/or TR personnel that negotiated the contract. |
+      | NewfieldName                                                                                           | ExistingfieldName                 | SubQueField1                                            | SubQueField2                                                                                                                                                                                                                                   |
+      | Does Thomson Reuters jointly decide how to use personal data in your application with any other party? | Standard Customer or Partner Data | Provide a brief description as to why you think this is | please identify the name and contact details of the customer, reseller, partner or other party who jointly decides how to use personal data.  Please include for example the contract number and/or TR personnel that negotiated the contract. |
 
 
   @pageDisplay @AC_TechnologyPage_14_03
