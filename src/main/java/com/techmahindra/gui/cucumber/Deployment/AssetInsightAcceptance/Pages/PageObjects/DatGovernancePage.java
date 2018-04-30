@@ -120,6 +120,7 @@ public class DatGovernancePage extends BasePage {
 
     private static final String XPATH_ITEM_LIST1 = ".//*[contains(@id,'divPickListPersonalDataRecipient')]//li[@title='%s']";
 
+
     private static final String XPATH_ITEM_LIST2 = ".//*[contains(@id,'divPickListPersonalDataRecipient')]//div[2]//li[@title='%s']";
 
     @FindBy(xpath = ".//*[@id='tblDGPPersonalDataRecipientOther']//span")
@@ -131,10 +132,21 @@ public class DatGovernancePage extends BasePage {
     @FindBy(xpath = "//*[@id = 'PersonalDataRecipientOther']" )
     private WebElement PDataOtherFieldType;
 
-    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataRetentionPeriodVaryDescription']" )
-    private WebElement textbox;
+    @FindBy(xpath = "//*[conatins(text(),'Character limit exceeded. Please shorten text.')]")
+    private WebElement PDataErr;
 
 
+    @FindBy(xpath = "//*[@id = 'PersonalDataRecipientOther-error']")
+    private WebElement PDataOtherErr;
+
+    @FindBy(xpath = "//*[@id = 'ProductSpecialFactor_StandardPIIDataTypeDescription-error']")
+    private WebElement PDataOther;
+
+    @FindBy(xpath = "*[@id = 'BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
+    private WebElement OtherSTDErr;
+
+    @FindBy(xpath="//textarea[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
+    private WebElement othernewSTDPIIField;
 
     public DatGovernancePage() throws Exception {
         super();
@@ -422,9 +434,8 @@ public class DatGovernancePage extends BasePage {
 
         WebDriverUtils.waitForElementLoading(5);
         driver.navigate().refresh();
-        WebDriverUtils.waitForElementLoading(5);
-        //WebElement element = driver.findElement(By.xpath(searchPDTxt));
-        //element.clear();
+        WebDriverUtils.waitForElementLoading(10);
+
 
         return true;
 
@@ -531,15 +542,9 @@ public class DatGovernancePage extends BasePage {
     }
 
     public boolean verifyIfTheLimitExceedsPRDValidationMessageShouldGetDisplayed(String text) {
-
-            CommonMethods.ValidateAndUpdateField(PDataOtherFieldType, text);
+          WebDriverUtils.waitForElementLoading(2);
+            CommonMethods.ValidateAndUpdateField(othernewSTDPIIField, text);
             return true;
 
-    }
-
-    public boolean verifyingValidationMessage(String limit) {
-        WebDriverUtils.waitForElementLoading(1);
-        CommonMethods.ValidateAndUpdateField(textbox,limit);
-        return true;
     }
 }

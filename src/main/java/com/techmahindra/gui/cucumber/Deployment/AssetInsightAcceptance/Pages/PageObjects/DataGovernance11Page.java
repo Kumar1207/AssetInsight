@@ -399,6 +399,78 @@ public class DataGovernance11Page extends BasePage {
 
     }
 
+    private static final String XPATH_FIELD_NAME_TYPE=".//input[@id='BusinessCriticalitySpecialFactor_%s']";
+    private static final String XPATH_FIELD_NAMES="//table[@class='ai-edit-field w100']//*[contains(text(),'%s')]";
+
+
+
+
+    public boolean verifyFieldPrescenceInDataGovernancePage(String fieldName) {
+        WebDriverUtils.waitForElementLoading(10);
+        WebElement element=driver.findElement(By.xpath(String.format(XPATH_FIELD_NAMES,fieldName)));
+        return element.isDisplayed();
+    }
+
+    public boolean checkTypeOfField(String fieldName) {
+        String fieldNameNew = fieldName.replaceAll("\\s", "");
+        WebDriverUtils.waitForElementLoading(8);
+        return driver.findElement(By.xpath(String.format(XPATH_FIELD_NAME_TYPE, fieldNameNew))).getAttribute("type").equals("radio");
+    }
+
+    public boolean clickOnRadioButtonForFieldName(String buttonValue, String fieldName) {
+        String fieldNameNew = fieldName.replaceAll("\\s", "");
+        switch (buttonValue.toLowerCase()){
+            case "yes":
+                return driver.findElement(By.xpath(String.format(XPATH_FIELD_NAME_TYPE, fieldNameNew)+"[@value='True']")).isSelected();
+            case "no":
+                return driver.findElement(By.xpath(String.format(XPATH_FIELD_NAME_TYPE, fieldNameNew)+"[@value='False']")).isSelected();
+            default:
+                System.out.println("Wrong radio type value entered in the scenario file");
+                return false;
+        }
+
+    }
+
+    public boolean verifySubQuestionsUnderFieldNameIsDisplayed(String fieldName) {
+        WebDriverUtils.waitForElementLoading(10);
+        String newFieldName="div"+fieldName.replaceAll("\\s","");
+        WebElement subQuestion=driver.findElement(By.xpath(".//*[@id='"+newFieldName+"']"));
+//        return subQuestion.getAttribute("style").contains("block");
+        return subQuestion.isDisplayed();
+    }
+
+    public boolean verifyPrescenceOfSubFieldUnderField(String subField, String field) {
+        WebDriverUtils.waitForElementLoading(10);
+        boolean flag=false;
+        String newFieldName="div"+field.replaceAll("\\s","");
+        return driver.findElement(By.xpath(".//*[@id='"+newFieldName+"']//div[contains(@class,'ai-edit-field')]/div[contains(text(),'"+subField+"')]")).isDisplayed();
+    }
+
+    public boolean verifyHelpTextDisplayedForSubField(String subField) {
+        String newFieldName = "div" + subField.replaceAll("\\s", "");
+        switch (subField.toLowerCase()) {
+            case "sensitive pii data type":
+                return driver.findElement(By.xpath("//div[@class='ai-edit-hint' and contains(text(),'"+"Data protection legislation requires that we know what Sensitive PII data we are processing.')]")).isDisplayed();
+            case "sensitive pii data context ":
+            default:
+                System.out.println("Wrong sub field name is mentioned in feature file");
+                return false;
+        }
+
+
+    }
+    public boolean verifyListOfValuesBePresentUnderSubField(String subField, List<String> items) {
+        Boolean flag=false;
+        String fieldName = subField.replaceAll("\\s", "");
+        for(String item:items){
+            flag=driver.findElement(By.xpath(String.format(XPATH_ITEM_LIST,fieldName,item))).isDisplayed();
+        }
+        return flag;
+    }
+
+
+
+
     public boolean dontSelectYesNo() {
         return true;
     }
