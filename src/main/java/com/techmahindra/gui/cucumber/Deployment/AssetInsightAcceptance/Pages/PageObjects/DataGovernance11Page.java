@@ -394,7 +394,7 @@ public class DataGovernance11Page extends BasePage {
         WebDriverUtils.waitForElementLoading(1);
         return true;
     }
-   /* public boolean verifyItShouldBeMandatoryField() {
+    public boolean verifyItShouldBeMandatoryField() {
         return true;
 
     }
@@ -504,7 +504,7 @@ public class DataGovernance11Page extends BasePage {
         return true;
     }
 
-*/
+
 
 }
 

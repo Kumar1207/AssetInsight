@@ -63,6 +63,6 @@ Feature: I verify Where possible please specify the retention period applied to 
   @pageDisplay @AC_TechnologyPage_2.1_04
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    #When  I click on Application- Full Extract should be downloaded
-#   Then  Application- Full Extract should be downloaded
+    When  I click on Application- Full Extract should be downloaded
+  # Then  Application- Full Extract should be downloaded
 

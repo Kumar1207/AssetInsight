@@ -132,6 +132,12 @@ public class DatGovernancePage extends BasePage {
     @FindBy(xpath = "//*[@id = 'PersonalDataRecipientOther']" )
     private WebElement PDataOtherFieldType;
 
+
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataRetentionPeriodVaryDescription']" )
+    private WebElement textbox;
+
+
+
     @FindBy(xpath = "//*[conatins(text(),'Character limit exceeded. Please shorten text.')]")
     private WebElement PDataErr;
 
@@ -147,6 +153,7 @@ public class DatGovernancePage extends BasePage {
 
     @FindBy(xpath="//textarea[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
     private WebElement othernewSTDPIIField;
+
 
     public DatGovernancePage() throws Exception {
         super();
@@ -546,5 +553,11 @@ public class DatGovernancePage extends BasePage {
             CommonMethods.ValidateAndUpdateField(othernewSTDPIIField, text);
             return true;
 
+    }
+
+    public boolean verifyingValidationMessage(String limit) {
+        WebDriverUtils.waitForElementLoading(1);
+        CommonMethods.ValidateAndUpdateField(textbox,limit);
+        return true;
     }
 }

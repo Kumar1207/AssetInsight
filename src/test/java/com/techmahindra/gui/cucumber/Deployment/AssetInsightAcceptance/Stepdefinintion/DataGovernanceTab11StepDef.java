@@ -120,9 +120,9 @@ public class DataGovernanceTab11StepDef extends PageInstances {
         Assert.assertTrue(dataGovernance11Page.verifyHelpTxtSTDPIIDataOthers());
     }
 
-    //Prachi code
 
-   /* @Then("^I verify \"([^\"]*)\" field is present in the Data Governance page$")
+
+    @Then("^I verify \"([^\"]*)\" field is present in the Data Governance page$")
     public void iVerifyFieldIsPresentInTheDataGovernancePage(String fieldName) throws Throwable {
         Assert.assertTrue(dataGovernance11Page.verifyFieldPrescenceInDataGovernancePage(fieldName));
     }
@@ -156,7 +156,7 @@ public class DataGovernanceTab11StepDef extends PageInstances {
     public void iVerifyBelowListOfValuesShouldBePresentUnderSubField(String subField, List<String> items) throws Throwable {
         Assert.assertTrue(dataGovernance11Page.verifyListOfValuesBePresentUnderSubField(subField,items));
     }
-*/
+
 
     @And("^I verify that it should be mandatory field$")
     public void iVerifyThatItShouldBeMandatoryField() throws Throwable {
