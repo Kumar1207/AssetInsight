@@ -38,7 +38,7 @@ Feature: I verify Where possible please specify the retention period applied to 
     When I click on Yes I verify the type of the new subquestion field
     Then I verify that subquestion field should be same as existing "Data Sensitive to Hosting Context Description" field
     And  I verify that subquestion field should be mandatory field whenever main Question value is 'Yes'
-    Then I Verify if the limit exceeds -validation message should get displayed
+    Then I Verify if limit -exceed validation message should be displayed
       | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period |
     Then I click on "Save/Validate" button
     And  I click on "Audit history"

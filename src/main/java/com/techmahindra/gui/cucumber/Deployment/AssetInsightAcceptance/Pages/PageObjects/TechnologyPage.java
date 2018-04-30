@@ -451,7 +451,12 @@ public class TechnologyPage extends BasePage {
 
         WebDriverUtils.waitForElementLoading(2);
 
-        radioBtnYes.click();
+        WebElement radio=driver.findElement(By.xpath("(//*[@id='ApplicationDataPrivacySecurity_PersonalDataHasTRPermission'])[1]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", radio);
+        WebDriverUtils.waitForElementLoading(2);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", radio);
+//        radio.click();
 
         WebDriverUtils.waitForElementLoading(1);
 
@@ -570,12 +575,12 @@ public class TechnologyPage extends BasePage {
     public boolean cliconApplicationFullExtract() throws AWTException {
 
         clickOnFullExtract.click();
-        WebDriverUtils.waitForElementLoading(20);
-        Robot robot = new Robot();
-        WebDriverUtils.waitForElementLoading(20);
-        robot.keyPress(KeyEvent.VK_ESCAPE);
-        WebDriverUtils.waitForElementLoading(20);
-        robot.keyRelease(KeyEvent.VK_ESCAPE);
+//        WebDriverUtils.waitForElementLoading(20);
+//        Robot robot = new Robot();
+//        WebDriverUtils.waitForElementLoading(20);
+//       robot.keyPress(KeyEvent.VK_ESCAPE);
+//        WebDriverUtils.waitForElementLoading(20);
+//        robot.keyRelease(KeyEvent.VK_ESCAPE);
         return true;
     }
  /*   public static String getCellValue(String fullPathToSavedFile, String sheetName, int rowNum, int cellNum) {

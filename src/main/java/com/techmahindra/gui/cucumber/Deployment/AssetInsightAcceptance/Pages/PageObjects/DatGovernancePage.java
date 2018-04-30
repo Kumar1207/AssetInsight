@@ -131,6 +131,10 @@ public class DatGovernancePage extends BasePage {
     @FindBy(xpath = "//*[@id = 'PersonalDataRecipientOther']" )
     private WebElement PDataOtherFieldType;
 
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataRetentionPeriodVaryDescription']" )
+    private WebElement textbox;
+
+
 
     public DatGovernancePage() throws Exception {
         super();
@@ -531,5 +535,11 @@ public class DatGovernancePage extends BasePage {
             CommonMethods.ValidateAndUpdateField(PDataOtherFieldType, text);
             return true;
 
+    }
+
+    public boolean verifyingValidationMessage(String limit) {
+        WebDriverUtils.waitForElementLoading(1);
+        CommonMethods.ValidateAndUpdateField(textbox,limit);
+        return true;
     }
 }

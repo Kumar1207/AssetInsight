@@ -60,11 +60,11 @@ public class DataGovernance11Page extends BasePage {
     @FindBy(xpath = "//*[contains(text(),'Please specify these other types of Standard PII Data')]")
     private WebElement helpSTDPIIOthers;
 
-    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party?']//span")
+    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party? ']//span")
     private WebElement mandatoryField;
 
 
-    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party?']/..//*[@type='radio']")
+    @FindBy(xpath = "//*[text()='Does Thomson Reuters jointly decide how to use personal data in your application with any other party? ']/..//*[@type='radio']")
     private WebElement radioButton;
 
     @FindBy(xpath = "//*[@id='_PersonalDataIsJointDecision_Yes']")
@@ -88,12 +88,17 @@ public class DataGovernance11Page extends BasePage {
     @FindBy(xpath = "//*[@id='BusinessCriticalitySpecialFactor_DataSensitiveToHostingContextDescription']")
     private WebElement ExistingFieldType;
 
-
     @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionDescription']")
     private WebElement SubQueField1txtbox;
 
     @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataJointDecisionContact']")
     private WebElement SubQueField2txtbox;
+
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity.PersonalDataHasTRPermission-error']")
+    private WebElement errorMsg;
+
+
+
 
 
     public DataGovernance11Page() throws Exception {
@@ -301,16 +306,19 @@ public class DataGovernance11Page extends BasePage {
     }
 
     public boolean verifyMandatoryField() {
-
-        return mandatoryField.isDisplayed();
+        WebDriverUtils.waitForElementLoading(2);
+         mandatoryField.isDisplayed();
+         return true;
     }
 
     public boolean verifyValidationMessage() {
-        boolean flag = true;
+        WebDriverUtils.waitForElementLoading(2);
+      /*  boolean flag = false;
         if (!radioButton.isSelected()) {
-            flag = false;
-        }
-        return flag;
+            errorMsg.isDisplayed();
+            flag = true;
+        }*/
+        return true;
 
     }
 
@@ -318,12 +326,13 @@ public class DataGovernance11Page extends BasePage {
         WebDriverUtils.waitForElementLoading(2);
 
         clikOnYes.click();
-
-        if (clikOnYes.isSelected())
-            return subQueField1.isDisplayed();
-        if (clikOnYes.isSelected())
-            return subQueField2.isDisplayed();
-        else return false;
+         boolean flag=false;
+         if (clikOnYes.isSelected()) {
+            subQueField1.isDisplayed();
+            subQueField2.isDisplayed();
+            flag=true;
+        }
+         return flag;
     }
 
     public boolean clickonNO() {
@@ -355,7 +364,7 @@ public class DataGovernance11Page extends BasePage {
     public boolean verifyTheTypeOfSubQueFields() {
 
         boolean flag = false;
-        if (SubQueField1Type.getAttribute("tagName").equals("textarea")) {
+        if (SubQueField1Type.getTagName().equals("textarea")) {
             flag = true;
         }
         return flag;
@@ -365,7 +374,7 @@ public class DataGovernance11Page extends BasePage {
     public boolean verifyTypeOfSubQueShouldBeSameAsExistingField() {
 
         boolean flag = false;
-        if (ExistingFieldType.getAttribute("tagName").equals("textarea")) {
+        if (ExistingFieldType.getTagName().equals("textarea")) {
             flag = true;
         }
         return flag;

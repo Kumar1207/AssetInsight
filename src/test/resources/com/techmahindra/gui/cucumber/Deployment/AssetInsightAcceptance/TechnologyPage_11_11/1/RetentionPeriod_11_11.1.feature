@@ -1,10 +1,10 @@
-@Feature_TechnologyPage_14
+@Feature_TechnologyPage_11
 Feature: I verify Where possible please specify the retention period applied to personal data on your application and its basis is added.
 
   Background:
     Given Asset Insight Home page should be displayed
 
-  @pageDisplay @AC_TechnologyPage_14_01
+  @pageDisplay @AC_TechnologyPage_11_01
   Scenario: Creating a New Application
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
@@ -21,7 +21,7 @@ Feature: I verify Where possible please specify the retention period applied to 
     Then I click on "SAVE/VALIDATE" button
 
 
-  @pageDisplay @AC_TechnologyPage_14_02
+  @pageDisplay @AC_TechnologyPage_11_02
   Scenario Outline: I Verify new New field in the Existing Application
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
@@ -55,7 +55,7 @@ Feature: I verify Where possible please specify the retention period applied to 
       | Does Thomson Reuters jointly decide how to use personal data in your application with any other party? | Standard Customer or Partner Data | Provide a brief description as to why you think this is | please identify the name and contact details of the customer, reseller, partner or other party who jointly decides how to use personal data.  Please include for example the contract number and/or TR personnel that negotiated the contract. |
 
 
-  @pageDisplay @AC_TechnologyPage_14_03
+  @pageDisplay @AC_TechnologyPage_11_03
   Scenario: I verify Excel should be downloaded with the updated values
     Then  I click on the "Technology" in the homepage
     Then  I verify the respective "Technology" page is displayed
@@ -63,7 +63,7 @@ Feature: I verify Where possible please specify the retention period applied to 
     And   I click on "export to Excel" button and Excel should be downloaded
 
 
-  @pageDisplay @AC_TechnologyPage_14_04
+  @pageDisplay @AC_TechnologyPage_11_04
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded
