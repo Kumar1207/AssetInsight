@@ -56,18 +56,18 @@ Feature: To check whether new fields 'Standard PII Data Type' and 'Standard PII 
     Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
 
 
-  @pageDisplay @AC_TechnologyPage_3.1_03
-  Scenario: I verify Excel should be downloaded with the updated values
-    Then  I click on the "Technology" in the homepage
-    Then  I verify the respective "Technology" page is displayed
-    Then  I click on the "Applications" present in the Technology page
-    And   I click on "export to Excel" button and Excel should be downloaded
-
-
-  @pageDisplay @AC_TechnologyPage_3.1_04
-  Scenario: Verifying Downloaded Excel data with GUI
-    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    When  I click on Application- Full Extract should be downloaded
+#  @pageDisplay @AC_TechnologyPage_3.1_03
+#  Scenario: I verify Excel should be downloaded with the updated values
+#    Then  I click on the "Technology" in the homepage
+#    Then  I verify the respective "Technology" page is displayed
+#    Then  I click on the "Applications" present in the Technology page
+#    And   I click on "export to Excel" button and Excel should be downloaded
+#
+#
+#  @pageDisplay @AC_TechnologyPage_3.1_04
+#  Scenario: Verifying Downloaded Excel data with GUI
+#    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
+#    When  I click on Application- Full Extract should be downloaded
 
 
 

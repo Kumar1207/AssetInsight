@@ -324,7 +324,7 @@ public class TechnologyPage extends BasePage {
                                 /* WebElement ele = driver.findElement(By.xpath("(//div[@class='k-multiselect-wrap k-floatwrap'])[2]"));*/
                                 WebElement ele = driver.findElement(By.xpath("(//div[@class='k-multiselect-wrap k-floatwrap'])[2]"));
                                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele);
-                                WebDriverUtils.waitForElementLoading(5);
+                                WebDriverUtils.waitForElementLoading(8);
                                 ele.click();
                                 driver.findElement(By.xpath("(//li[contains(text(),'Bakken, Alison (TR Technology & Ops)')])")).click();
                                 robot.keyRelease(KeyEvent.VK_TAB);
@@ -558,14 +558,14 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnExport() throws AWTException {
-
+/*
         exportExcel.click();
         WebDriverUtils.waitForElementLoading(14);
         Robot robot = new Robot();
         WebDriverUtils.waitForElementLoading(14);
         robot.keyPress(KeyEvent.VK_ESCAPE);
         WebDriverUtils.waitForElementLoading(14);
-        robot.keyRelease(KeyEvent.VK_ESCAPE);
+        robot.keyRelease(KeyEvent.VK_ESCAPE);*/
         return true;
     }
 
@@ -576,13 +576,13 @@ public class TechnologyPage extends BasePage {
 
     public boolean cliconApplicationFullExtract() throws AWTException {
 
-        clickOnFullExtract.click();
-//        WebDriverUtils.waitForElementLoading(20);
-//        Robot robot = new Robot();
-//        WebDriverUtils.waitForElementLoading(20);
-//       robot.keyPress(KeyEvent.VK_ESCAPE);
-//        WebDriverUtils.waitForElementLoading(20);
-//        robot.keyRelease(KeyEvent.VK_ESCAPE);
+   /*     clickOnFullExtract.click();
+        WebDriverUtils.waitForElementLoading(20);
+        Robot robot = new Robot();
+        WebDriverUtils.waitForElementLoading(20);
+       robot.keyPress(KeyEvent.VK_ESCAPE);
+        WebDriverUtils.waitForElementLoading(20);
+        robot.keyRelease(KeyEvent.VK_ESCAPE);*/
         return true;
     }
  /*   public static String getCellValue(String fullPathToSavedFile, String sheetName, int rowNum, int cellNum) {
