@@ -286,7 +286,7 @@ public class Products_900_Page extends BasePage {
     }
 
     public boolean verifyNewFieldandHelpTextInInformatioBox() {
-        WebDriverUtils.waitForElementLoading(1);
+        WebDriverUtils.waitForElementLoading(2);
 
         boolean flag = false;
         if (newFieldInInformationBox.isDisplayed() && helpTextInInformationBox.isDisplayed()) {
@@ -296,7 +296,7 @@ public class Products_900_Page extends BasePage {
     }
 
     public boolean verifyNewFieldShouldBeMandatoryField() {
-        WebDriverUtils.waitForElementLoading(1);
+        WebDriverUtils.waitForElementLoading(2);
         mandatorySymbol.isDisplayed();
         return true;
     }

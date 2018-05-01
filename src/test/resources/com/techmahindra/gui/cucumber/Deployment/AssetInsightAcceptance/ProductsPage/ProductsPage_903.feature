@@ -34,7 +34,7 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
       | Use    |
     Then I click on "SAVE/VALIDATE" button
 
-  @pageDisplay @AC_ProductPage_02
+  @pageDisplay @AC_ProductPage_9_02
   Scenario Outline: I Verify the Existing Product
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
@@ -61,14 +61,14 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
       | Please provide a short description of the product's use of personal data |
 
 
-  @pageDisplay @AC_ProductPage_03
+  @pageDisplay @AC_ProductPage_9_03
   Scenario: I verify Excel should be downloaded with the updated values
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" below the lists in the homepage
     And  I click on "export to Excel" button and Excel should be downloaded
 
-  @pageDisplay @AC_ProductPage_04
+  @pageDisplay @AC_ProductPage_9_04
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
     When  I click on Application- Full Extract should be downloaded

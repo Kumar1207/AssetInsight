@@ -541,11 +541,13 @@ public class TechnologyPage extends BasePage {
 
 
     public boolean clickOnAuditHistory() {
-        WebDriverUtils.waitForElementLoading(1);
+        WebDriverUtils.waitForElementLoading(8);
         WebElement audit = driver.findElement(By.xpath("//*[text()='Audit History']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", audit);
-        WebDriverUtils.waitForElementLoading(1);
-        audit.click();
+        WebDriverUtils.waitForElementLoading(5);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", audit);
+//        audit.click();
         return true;
     }
 
