@@ -17,7 +17,6 @@ Feature: I verify where possible please specify the retention period applied to 
       | Marketing Contact    | Modium, Prashanthi                |
     Then I click on "SAVE/VALIDATE" button
 
-
   @pageDisplay @AC_ProductPage_15_02
   Scenario Outline: I Verify the Existing Product
     When I click on the "Products" in the homepage
