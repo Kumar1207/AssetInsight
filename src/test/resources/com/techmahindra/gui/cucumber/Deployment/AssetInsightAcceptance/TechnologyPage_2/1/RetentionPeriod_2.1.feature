@@ -37,6 +37,7 @@ Feature: I verify Where possible please specify the retention period applied to 
     Then I verify "Sensitive PII Data Type" sub field is present under "<NewfieldName>" the Data Governance page
     And  I verify that 'Help text' displayed for "Sensitive PII Data Type"
 
+
     Then I verify below list of values should be present under "Sensitive PII Data Type" sub field:
       |Sex life or sexual orientation|
       |Observations of behavior or conduct of persons (including personal preferences, interests, reliability)|
