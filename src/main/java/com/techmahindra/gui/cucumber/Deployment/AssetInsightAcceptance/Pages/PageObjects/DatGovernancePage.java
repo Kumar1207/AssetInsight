@@ -148,7 +148,10 @@ public class DatGovernancePage extends BasePage {
     @FindBy(xpath = "//*[@id = 'ProductSpecialFactor_StandardPIIDataTypeDescription-error']")
     private WebElement PDataOther;
 
-    @FindBy(xpath = "*[@id = 'BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
+    @FindBy(xpath = "//*[@id = 'ProductSpecialFactor_StandardPIIDataTypeDescription']")
+    private WebElement PDMsgOthr;
+
+    @FindBy(xpath = "//*[@id = 'BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
     private WebElement OtherSTDErr;
 
     @FindBy(xpath="//textarea[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']")
@@ -559,6 +562,13 @@ public class DatGovernancePage extends BasePage {
     public boolean verifyingValidationMessage(String limit) {
         WebDriverUtils.waitForElementLoading(1);
         CommonMethods.ValidateAndUpdateField(textbox,limit);
+        return true;
+    }
+
+    public boolean verifyLimitmsgPSTDPII(String text) {
+
+        WebDriverUtils.waitForElementLoading(2);
+        CommonMethods.ValidateAndUpdateField(OtherSTDErr, text);
         return true;
     }
 }

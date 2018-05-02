@@ -245,5 +245,15 @@ public class RetentionStepDef16 extends PageInstances {
             Assert.assertTrue(datGovernancePage.verifyingValidationMessage(limit));
         }
     }
+
+    @Then("^I Verify if the limit exceeds -validation message should get displayed STDPII Data$")
+    public void iVerifyIfTheLimitExceedsValidationMessageShouldGetDisplayedSTDPIIData(List<String> textList) throws Throwable {
+        for (String text : textList) {
+            Assert.assertTrue(datGovernancePage.verifyLimitmsgPSTDPII(text));
+        }
+    }
+
+
+
 }
 

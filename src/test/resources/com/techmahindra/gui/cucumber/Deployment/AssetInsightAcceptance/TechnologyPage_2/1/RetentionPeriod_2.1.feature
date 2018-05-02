@@ -58,7 +58,7 @@ Feature: I verify Where possible please specify the retention period applied to 
 
     Then  I verify the respective "Technology" page is displayed
     Then  I click on the "Applications" present in the Technology page
-    And   I click on "export to Excel" button and Excel should be downloaded
+#    And   I click on "export to Excel" button and Excel should be downloaded
 
 
 

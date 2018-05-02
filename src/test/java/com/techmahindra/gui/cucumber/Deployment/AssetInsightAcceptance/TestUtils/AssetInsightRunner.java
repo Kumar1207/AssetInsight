@@ -17,8 +17,9 @@ import java.io.File;
         , plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
         , features = {"src/test/resources"}
         , monochrome = true
-       , tags = {"@Feature_RetentionPeriodPage,@Feature_TechnologyPage_16,@Feature_ProductsPage_909,@Feature_RetentionPeriodPage,@Feature_TechnologyPage"}
-//       , tags = {"@Feature_ProductsPage_12_1,@Feature_ProductsPage_900,@Feature_ProductsPage_909,@Feature_ProductsPage_903,@Feature_ProductsPage_16_1,@Feature_TechnologyPage_3.1_1,@Feature_TechnologyPage_16,@Feature_TechnologyPage,@Feature_TechnologyPage_11,@Feature_RetentionPeriodPage"}
+        , tags = {"@AC_TechnologyPage_3.1_02"}
+
+      // , tags = {"@Feature_ProductsPage_12_1,@Feature_ProductsPage_900,@Feature_ProductsPage_909,@Feature_ProductsPage_903,@Feature_ProductsPage_16_1,@Feature_TechnologyPage_3.1_1,@Feature_TechnologyPage_16,@Feature_TechnologyPage,@Feature_TechnologyPage_11,@Feature_RetentionPeriodPage,@Feature_TechnologyPage_2.1_1"}
 )
 
 

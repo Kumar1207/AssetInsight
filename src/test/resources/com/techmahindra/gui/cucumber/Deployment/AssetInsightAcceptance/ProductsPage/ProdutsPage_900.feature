@@ -45,11 +45,11 @@ Feature: I verify Please provide a short description of the product's use of per
       | Please provide a short description of the product's use of personal data |
 
 
-#  @pageDisplay @AC_ProductPage_03
-#  Scenario: I verify Excel should be downloaded with the updated values
-#    When I click on the "Products" in the homepage
-#    Then I verify the respective "Products" page is displayed
-#    When I click on the "Products" below the lists in the homepage
+  @pageDisplay @AC_ProductPage_03
+  Scenario: I verify Excel should be downloaded with the updated values
+    When I click on the "Products" in the homepage
+    Then I verify the respective "Products" page is displayed
+    When I click on the "Products" below the lists in the homepage
 #    And  I click on "export to Excel" button and Excel should be downloaded
 
 

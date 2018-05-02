@@ -42,11 +42,11 @@ Feature: I verify where possible please specify the retention period applied to 
       | Where possible please specify the retention period applied to personal data on your product and its basis. |
 
 
-#  @pageDisplay @AC_ProductPage_09_03
-#  Scenario: I verify Excel should be downloaded with the updated values
-#    When I click on the "Products" in the homepage
-#    Then I verify the respective "Products" page is displayed
-#    When I click on the "Products" below the lists in the homepage
+  @pageDisplay @AC_ProductPage_09_03
+  Scenario: I verify Excel should be downloaded with the updated values
+    When I click on the "Products" in the homepage
+    Then I verify the respective "Products" page is displayed
+    When I click on the "Products" below the lists in the homepage
 #    And  I click on "export to Excel" button and Excel should be downloaded
 
 
