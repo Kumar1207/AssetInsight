@@ -191,7 +191,8 @@ public class DatGovernancePage extends BasePage {
 
     public boolean verifyThatItShouldBeAMandatoryField() {
 
-        return mandatoryfield.isDisplayed();
+         mandatoryfield.isDisplayed();
+          return true;
     }
 
     public boolean DoNotSelectAnyOption() {

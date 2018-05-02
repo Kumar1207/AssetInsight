@@ -53,7 +53,6 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
       | fieldName                                                                              | ExistingfieldName |
       | Is Thomson Reuters able to view, edit, delete, share, change or use the personal data? | Standard Customer |
 
-
 #  @pageDisplay @AC_TechnologyPage_03
 #  Scenario: I verify Excel should be downloaded with the updated values
 #    Then  I click on the "Technology" in the homepage

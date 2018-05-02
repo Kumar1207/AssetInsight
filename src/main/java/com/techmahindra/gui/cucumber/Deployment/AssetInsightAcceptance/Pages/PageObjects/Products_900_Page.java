@@ -47,8 +47,12 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[text()='Products'])[2]")
     private WebElement products;
 
-    @FindBy(xpath = "//*[text()='3E']")
+  /*  @FindBy(xpath = "//*[text()='3E']")
+    private WebElement selectAnyProduct;*/
+
+    @FindBy(xpath = "//*[text()='Abacus']")
     private WebElement selectAnyProduct;
+
 
     @FindBy(xpath = "(//*[contains(text(),'Please provide a short description of the product')])[2]")
     private WebElement newFieldInProducts;
@@ -540,7 +544,7 @@ public class Products_900_Page extends BasePage {
 
     public boolean verifyLimitValidationMessage(String textBoxValue) {
         WebDriverUtils.waitForElementLoading(2);
-        CommonMethods.ValidateAndUpdateField(retentionPeriodTextBox, textBoxValue);
+       CommonMethods.ValidateAndUpdateField(retentionPeriodTextBox, textBoxValue);
         return true;
     }
 
