@@ -47,7 +47,8 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[text()='Products'])[2]")
     private WebElement products;
 
-    @FindBy(xpath = "//*[text()='3E']")
+   // @FindBy(xpath = "//*[text()='3E']")
+   @FindBy(xpath = "//*[text()='']")
     private WebElement selectAnyProduct;
 
     @FindBy(xpath = "(//*[contains(text(),'Please provide a short description of the product')])[2]")
