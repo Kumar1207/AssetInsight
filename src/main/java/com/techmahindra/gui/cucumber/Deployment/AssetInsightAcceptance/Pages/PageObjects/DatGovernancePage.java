@@ -550,7 +550,7 @@ public class DatGovernancePage extends BasePage {
 
     public boolean verifyIfTheLimitExceedsPRDValidationMessageShouldGetDisplayed(String text) {
           WebDriverUtils.waitForElementLoading(2);
-            CommonMethods.ValidateAndUpdateField(othernewSTDPIIField, text);
+            CommonMethods.ValidateAndUpdateField(PDataOtherFieldType, text);
             return true;
 
     }
