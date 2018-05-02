@@ -72,17 +72,17 @@ Feature: I verify a new field "Who receives personal data from your product?" fo
       | NewfieldName                                 | Searchfield               |Items |
       | Who receives personal data from your product | Thomson Reuters customers | Other |
 
-  @pageDisplay @AC_ProductPage_12_03
-  Scenario: I verify Excel should be downloaded with the updated values
-    When I click on the "Products" in the homepage
-    Then I verify the respective "Products" page is displayed
-    When I click on the "Products" below the lists in the homepage
-    And  I click on "export to Excel" button and Excel should be downloaded
-
-  @pageDisplay @AC_ProductPage_12_04
-  Scenario: Verifying Downloaded Excel data with GUI
-    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    When  I click on Application- Full Extract should be downloaded
+#  @pageDisplay @AC_ProductPage_12_03
+#  Scenario: I verify Excel should be downloaded with the updated values
+#    When I click on the "Products" in the homepage
+#    Then I verify the respective "Products" page is displayed
+#    When I click on the "Products" below the lists in the homepage
+#    And  I click on "export to Excel" button and Excel should be downloaded
+#
+#  @pageDisplay @AC_ProductPage_12_04
+#  Scenario: Verifying Downloaded Excel data with GUI
+#    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
+#    When  I click on Application- Full Extract should be downloaded
 
 
 

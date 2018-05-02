@@ -52,15 +52,15 @@ Feature: I verify a new field "Does the retention period vary according to the t
 
 
 
-  @pageDisplay @AC_ProductPage_16_03
-  Scenario: I verify Excel should be downloaded with the updated values
-    When I click on the "Products" in the homepage
-    Then I verify the respective "Products" page is displayed
-    When I click on the "Products" below the lists in the homepage
-    And  I click on "export to Excel" button and Excel should be downloaded
-
-
-  @pageDisplay @AC_ProductPage_16_04
-  Scenario: Verifying Downloaded Excel data with GUI
-    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-   When  I click on Application- Full Extract should be downloaded
+#  @pageDisplay @AC_ProductPage_16_03
+#  Scenario: I verify Excel should be downloaded with the updated values
+#    When I click on the "Products" in the homepage
+#    Then I verify the respective "Products" page is displayed
+#    When I click on the "Products" below the lists in the homepage
+#    And  I click on "export to Excel" button and Excel should be downloaded
+#
+#
+#  @pageDisplay @AC_ProductPage_16_04
+#  Scenario: Verifying Downloaded Excel data with GUI
+#    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
+#    When  I click on Application- Full Extract should be downloaded

@@ -45,18 +45,18 @@ Feature: I verify Where possible please specify the retention period applied to 
       | NewfieldName                                                                                                  | ExistingfieldName                                      |
       | Where possible please specify the retention period applied to personal data on your application and its basis | Data Sensitive to Hosting Context Description Customer |
 
-
-  @pageDisplay @AC_TechnologyPage_15_03
-  Scenario: I verify Excel should be downloaded with the updated values
-    Then  I click on the "Technology" in the homepage
-    Then  I verify the respective "Technology" page is displayed
-    Then  I click on the "Applications" present in the Technology page
-    And   I click on "export to Excel" button and Excel should be downloaded
-
-  @pageDisplay @AC_TechnologyPage_15_04
-  Scenario: Verifying Downloaded Excel data with GUI
-    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    When  I click on Application- Full Extract should be downloaded
-
+#
+#  @pageDisplay @AC_TechnologyPage_15_03
+#  Scenario: I verify Excel should be downloaded with the updated values
+#    Then  I click on the "Technology" in the homepage
+#    Then  I verify the respective "Technology" page is displayed
+#    Then  I click on the "Applications" present in the Technology page
+#    And   I click on "export to Excel" button and Excel should be downloaded
+#
+#  @pageDisplay @AC_TechnologyPage_15_04
+#  Scenario: Verifying Downloaded Excel data with GUI
+#    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
+#    When  I click on Application- Full Extract should be downloaded
+#
 
 
