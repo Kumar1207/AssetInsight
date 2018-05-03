@@ -567,6 +567,11 @@ public class TechnologyPage extends BasePage {
         robot.keyRelease(KeyEvent.VK_S);
         WebDriverUtils.waitForElementLoading(50);
         robot.keyPress(KeyEvent.VK_ENTER);
+        WebDriverUtils.waitForElementLoading(2);
+        robot.keyPress(KeyEvent.VK_ALT);
+        robot.keyPress(KeyEvent.VK_S);
+        robot.keyRelease(KeyEvent.VK_ALT);
+        robot.keyRelease(KeyEvent.VK_S);
 
         return true;
     }
