@@ -1,7 +1,8 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
-import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Util.Utility;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.Utility;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.excelapche.Apache_POI_TC;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 /*import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -19,16 +20,14 @@ import java.text.SimpleDateFormat;
 import java.awt.datatransfer.StringSelection;
 import java.util.concurrent.TimeUnit;*/
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.List;
 
@@ -111,14 +110,8 @@ public class TechnologyPage extends BasePage {
     @FindBy(xpath = "(//*[@id='ApplicationDataPrivacySecurity_PersonalDataHasTRPermission'])[2]")
     private WebElement radioBtnNo;
 
-/*
     @FindBy(xpath = "//*[text()='" +
             "170 Systems (Markview)']")
-    //@FindBy(xpath = "//*[text()='1C Local Kortes Accounting System']")
-    private WebElement anyApplication;
-*/
-
-    @FindBy(xpath = "//*[text()='170 Systems (Markview)']")
     private WebElement anyApplication;
 
 
@@ -563,18 +556,17 @@ public class TechnologyPage extends BasePage {
     }
 
     public boolean clickOnExport() throws AWTException {
-
+        WebDriverUtils.waitForElementLoading(2);
         exportExcel.click();
-        WebDriverUtils.waitForElementLoading(25000);
+        WebDriverUtils.waitForElementLoading(25);
         Robot robot = new Robot();
-        WebDriverUtils.waitForElementLoading(55000);
+        WebDriverUtils.waitForElementLoading(55);
         robot.keyPress(KeyEvent.VK_ALT);
         robot.keyPress(KeyEvent.VK_S);
         robot.keyRelease(KeyEvent.VK_ALT);
         robot.keyRelease(KeyEvent.VK_S);
-        WebDriverUtils.waitForElementLoading(5000);
+        WebDriverUtils.waitForElementLoading(50);
         robot.keyPress(KeyEvent.VK_ENTER);
-
 
         return true;
     }
@@ -584,33 +576,54 @@ public class TechnologyPage extends BasePage {
         return true;
     }
 
-    public boolean cliconApplicationFullExtract() throws AWTException {
+    public boolean cliconApplicationFullExtract() throws Exception {
+
+        WebDriverUtils.waitForElementLoading(2);
         clickOnFullExtract.click();
-        WebDriverUtils.waitForElementLoading(25000);
+        WebDriverUtils.waitForElementLoading(25);
         Robot robot = new Robot();
-        WebDriverUtils.waitForElementLoading(55000);
+        WebDriverUtils.waitForElementLoading(55);
         robot.keyPress(KeyEvent.VK_ALT);
         robot.keyPress(KeyEvent.VK_S);
         robot.keyRelease(KeyEvent.VK_ALT);
         robot.keyRelease(KeyEvent.VK_S);
-        WebDriverUtils.waitForElementLoading(5000);
+        WebDriverUtils.waitForElementLoading(50);
         robot.keyPress(KeyEvent.VK_ENTER);
         return true;
     }
- /*   public static String getCellValue(String fullPathToSavedFile, String sheetName, int rowNum, int cellNum) {
 
-        FileInputStream in = null;
-        try {
-            in = new FileInputStream(fullPathToSavedFile);
-            Workbook workbook = new HSSFWorkbook(in);
-            Sheet s1 = workbook.getSheet(sheetName);
-            String v = s1.getRow(rowNum).getCell(cellNum).getStringCellValue();
-            return v;
-        } catch (Exception e) {
-            return "";
+    public boolean verifyUpdatedFieldInAuditHistory() {
+        WebDriverUtils.waitForElementLoading(2);
+
+        boolean flag=false;
+        if (view.isDisplayed() && edit.isDisplayed() && change.isDisplayed())
+        {
+            flag=true;
         }
+        return flag;
+    }
 
-            }*/
+    public boolean verifyUpdatedFieldDetailsPage() {
+        WebDriverUtils.waitForElementLoading(2);
+
+        WebElement dg=driver.findElement(By.xpath("//*[text()='DATA GOVERNANCE']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", dg);
+        dg.click();
+        WebDriverUtils.waitForElementLoading(1);
+        boolean flag=false;
+        if (view.isDisplayed() && edit.isDisplayed() && change.isDisplayed())
+        {
+            flag=true;
+        }
+        return flag;
+    }
+
+    public boolean verifydatainExcelandDeatailsPage() throws Exception {
+
+        Apache_POI_TC.data();
+        return true;
+    }
 }
+
 
 

@@ -34,8 +34,15 @@ public class RetentionPeriodPage extends BasePage {
     @FindBy(xpath = "//*[contains(text(),'Text Box for Retention period')]")
     private WebElement updatedField;
 
+/*
     @FindBy(xpath = "//*[@id='tblAH']//tr[2]//td[2]")
     private WebElement updatedNameInAH;
+*/
+
+    @FindBy(xpath = "//*[contains(text(),'Text Box for Retention period Text Box for Retention')]")
+    private WebElement updatedNameInAH;
+
+
 
 
     @FindBy(xpath = "//*[text()='DATA GOVERNANCE']")
@@ -178,26 +185,26 @@ public class RetentionPeriodPage extends BasePage {
     }
 
     public boolean verifyUpdatedFieldInAuditHistory() {
-      /*  WebDriverUtils.waitForElementLoading(4);
-        String name = updatedNameInAH.getText();
+     WebDriverUtils.waitForElementLoading(5);
+    /*    String name = updatedNameInAH.getText();
         System.out.println(name);
-
+*/
         boolean flag = false;
         if (updatedNameInAH.isDisplayed()) {
             flag = true;
-        }*/
-        return true;
+        }
+        return flag;
 
     }
 
     public boolean verifyUpdatedFieldInDataGovernance() {
-       /* WebDriverUtils.waitForElementLoading(8);
+       WebDriverUtils.waitForElementLoading(8);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", UpdatedFieldInDG);
         boolean flag = false;
         if (newField.isDisplayed() && UpdatedFieldInDG.isDisplayed() && updatedNameInAH.isDisplayed()) {
             flag = true;
-        }*/
-        return true;
+        }
+        return flag;
 
 
     }
