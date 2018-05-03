@@ -2,6 +2,17 @@
 Feature: I verify a new field "Does the retention period vary according to the types of data stored?" for Product
   Background:  Given Asset Insight Home page should be displayed
 
+  @pageDisplay @AC_HomePage_16
+  Scenario: Given Asset Insight Home page should be displayed
+    When I click on the "Home" in the homepage
+    Then I verify the respective "Home" page is displayed
+    When I click on the "Content" in the homepage
+    Then I verify the respective "Content" page is displayed
+    When I click on the "Technology" in the homepage
+    Then I verify the respective "Technology" page is displayed
+    When I click on the "Products" in the homepage
+    Then I verify the respective "Products" page is displayed
+
   @pageDisplay @AC_ProductPage_16_01
   Scenario: Creating a New Product
 

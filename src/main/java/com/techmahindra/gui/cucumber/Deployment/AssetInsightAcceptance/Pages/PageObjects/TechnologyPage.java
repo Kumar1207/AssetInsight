@@ -118,7 +118,7 @@ public class TechnologyPage extends BasePage {
     private WebElement anyApplication;
 */
 
-    @FindBy(xpath = "//*[text()='3000 XTRA']")
+    @FindBy(xpath = "//*[text()='170 Systems (Markview)']")
     private WebElement anyApplication;
 
 

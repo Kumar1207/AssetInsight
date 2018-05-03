@@ -4,6 +4,17 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
   Background:
     Given Asset Insight Home page should be displayed
 
+  @pageDisplay @AC_HomePage_903
+  Scenario: Given Asset Insight Home page should be displayed
+    When I click on the "Home" in the homepage
+    Then I verify the respective "Home" page is displayed
+    When I click on the "Content" in the homepage
+    Then I verify the respective "Content" page is displayed
+    When I click on the "Technology" in the homepage
+    Then I verify the respective "Technology" page is displayed
+    When I click on the "Products" in the homepage
+    Then I verify the respective "Products" page is displayed
+
   @pageDisplay @AC_ProductPage_9_01
   Scenario: Creating a New Product
     When I click on the "Products" in the homepage
@@ -44,7 +55,7 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
     And  I click on "Data Governance" tab
     Then I verify "<fieldName>" should present in the DataGovernance page
     And  I Check the type of the "<fieldName>" field
-    Then I verify that Help text should be displayed for the "<fieldName>"
+    #Then I verify that Help text should be displayed for the "<fieldName>"
     And  I click on information box present next to General section
     Then I verify the "<fieldName>" and help text should be displayed in information textbox
     And  I verify that "<fieldName>" should be mandatory field
@@ -65,7 +76,7 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
   Scenario: I verify Excel should be downloaded with the updated values
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
-    When I click on the "Products" below the lists in the homepage
+    #When I click on the "Products" below the lists in the homepage
 #    And  I click on "export to Excel" button and Excel should be downloaded
 
   @pageDisplay @AC_ProductPage_9_04

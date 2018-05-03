@@ -3,6 +3,20 @@ Feature: I verify Where possible please specify the retention period applied to 
 
   Background:  Given Asset Insight Home page should be displayed
 
+
+  @pageDisplay @AC_HomePage_2.1
+  Scenario: Given Asset Insight Home page should be displayed
+    When I click on the "Home" in the homepage
+    Then I verify the respective "Home" page is displayed
+    When I click on the "Content" in the homepage
+    Then I verify the respective "Content" page is displayed
+    When I click on the "Technology" in the homepage
+    Then I verify the respective "Technology" page is displayed
+    When I click on the "Products" in the homepage
+    Then I verify the respective "Products" page is displayed
+
+
+
   @pageDisplay @AC_TechnologyPage_2.1_01
   Scenario: Creating a New Application
     Given Asset Insight Home page should be displayed
@@ -65,6 +79,6 @@ Feature: I verify Where possible please specify the retention period applied to 
   @pageDisplay @AC_TechnologyPage_2.1_04
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    When  I click on Application- Full Extract should be downloaded
+    #When  I click on Application- Full Extract should be downloaded
   # Then  Application- Full Extract should be downloaded
 

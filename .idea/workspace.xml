@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc372165-0338-4663-8db2-2c256f0e4f75" name="Default" comment="DG Additional Questions- 2.1- Changes to existing field, Additional values">
+    <list default="true" id="dc372165-0338-4663-8db2-2c256f0e4f75" name="Default" comment="Commiting AssetInsight">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DatGovernancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DatGovernancePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionStepDef16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionStepDef16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_900_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_900_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/HomePageStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/HomePageStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/AssetInsightRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/AssetInsightRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductPage_12_12.1/ProductPage_12_12.1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductPage_12_12.1/ProductPage_12_12.1.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature" afterDir="false" />
@@ -57,71 +58,43 @@
       <file leaf-file-name="RetentionPeriod_3.1.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_3.1/RetentionPeriod_3.1.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+            <state relative-caret-position="292">
+              <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataGovernanceTab11StepDef.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/DataGovernanceTab11StepDef.java">
+      <file leaf-file-name="TechnologyPage.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/HompePage/TechnologyPage.feature">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="ProductPage_12_12.1.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductPage_12_12.1/ProductPage_12_12.1.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+            <state relative-caret-position="190">
+              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataGovernance11Page.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DataGovernance11Page.java">
+      <file leaf-file-name="RetentionPeriodPageStep.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionPeriodPageStep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="102" />
+            <state relative-caret-position="203">
+              <caret line="58" column="97" selection-start-line="58" selection-start-column="97" selection-end-line="58" selection-end-column="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TechnologyPageStep.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/TechnologyPageStep.java">
+      <file leaf-file-name="ProductsPage_903.feature" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RetentionPeriod_2.1.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_2/1/RetentionPeriod_2.1.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePageStepDef.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/HomePageStepDef.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AssetHomePage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/AssetHomePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="119" column="19" lean-forward="true" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AssetInsightRunner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/AssetInsightRunner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            <state relative-caret-position="241">
+              <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -129,20 +102,47 @@
       <file leaf-file-name="RetentionStepDef16.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionStepDef16.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="251" column="57" selection-start-line="251" selection-start-column="57" selection-end-line="251" selection-end-column="57" />
+            <state relative-caret-position="188">
+              <caret line="236" column="16" selection-start-line="236" selection-start-column="16" selection-end-line="236" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatGovernancePage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DatGovernancePage.java">
+      <file leaf-file-name="TechnologyPageStep.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/TechnologyPageStep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="153" column="23" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+            <state relative-caret-position="101">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetentionPeriodPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/RetentionPeriodPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="179" column="19" selection-start-line="179" selection-start-column="19" selection-end-line="179" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TechnologyPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="318" lean-forward="true" selection-start-line="318" selection-end-line="318" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataGovernance11Page.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DataGovernance11Page.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="462" column="19" selection-start-line="462" selection-start-column="19" selection-end-line="462" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -162,36 +162,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>verifyPDataOther</find>
-      <find>text</find>
-      <find>other</find>
-      <find>texta</find>
-      <find>scrol</find>
-      <find>verifyPDataOtherfieldType</find>
-      <find>XPATH_ITEM_LIST1</find>
-      <find>XPATH_ITEM_LIST2</find>
-      <find>click</find>
-      <find>type</find>
-      <find>newSubQuetextField</find>
-      <find>comm</find>
-      <find>3E</find>
-      <find>Excee</find>
-      <find>3e</find>
-      <find>//*[@id='_ac_ContactsMarketingCSV']</find>
-      <find>marketingCOntact</find>
-      <find>limit</find>
-      <find>limi</find>
-      <find>ST</find>
-      <find>sl</find>
       <find>pra</find>
       <find>excel</find>
       <find>170</find>
       <find>PersonalDataRecipientOther</find>
       <find>ProductSpecialFactor_StandardPIIDataTypeDescription</find>
-      <find>@Feature_TechnologyPage_2.1_1</find>
       <find>BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription</find>
-      <find>[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']</find>
       <find>verifyIfTheLimitExceedsPRDValidationMessageShouldGetDisplayed</find>
+      <find>(//*[contains(text(),'Please provide a short description of the product')])[2]</find>
+      <find>[@id='BusinessCriticalitySpecialFactor_StandardPIIDataTypeDescription']</find>
+      <find>newFieldInProducts</find>
+      <find>Please provide a short description of the</find>
+      <find>@AC_TechnologyPage_15_01</find>
+      <find>I verify Where possible please specify the retention period applied to personal data on your application and its basis is added.</find>
+      <find>Then I verify Updated fields should get displayed in the Data Governance tab present in the Details page</find>
+      <find>Then I verify that Help text should be displayed for the</find>
+      <find>I verify Please provide a short description of the product's use of personal data in the DataGovernance Tab Present in the Products Page</find>
+      <find>newFieldHelptxtBox</find>
+      <find>AC_ProductPage_9_02</find>
+      <find>verifyUpdatedFieldInDataGovernance</find>
+      <find>up</find>
+      <find>Aba</find>
+      <find>ru</find>
+      <find>help</find>
+      <find>//*[contains(text(),'Actions TR can take with Personal Data')]</find>
+      <find>@Feature_TechnologyPage_2.1_1</find>
+      <find>verifyUpdatedFieldInAuditHistory</find>
+      <find>Audit</find>
+      <find>updatedFieldPRDInAuditHistory</find>
+      <find>runn</find>
+      <find>PersonalDataHasTRPermission</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -212,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/output/Run_1522305826682/report.html" />
         <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/TestUtils/BeforeAfter.java" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/TestUtils/AssetInsightRunner.java" />
@@ -242,27 +241,28 @@
         <option value="$PROJECT_DIR$/src/test/resources/ProductPage_12_12.1/ProductPage_12_12.1.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionPeriodPageStep.java" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage_12/ProductPage_12.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/TechnologyPageStep.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_900_Page.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Helpers/CommonMethods.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_11_11/1/RetentionPeriod_11_11.1.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/DataGovernanceTab11StepDef.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DataGovernance11Page.java" />
+        <option value="$PROJECT_DIR$/output/report.html" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionStepDef16.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DatGovernancePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/HomePageStepDef.java" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductPage_12_12.1/ProductPage_12_12.1.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_909.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProdutsPage_900.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage_910/ProductPage_910.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_2/1/RetentionPeriod_2.1.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_3.1/RetentionPeriod_3.1.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_9_9.2/AssetInsight_Feature_001.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_11_11/1/RetentionPeriod_11_11.1.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_15/RetentionPeriod.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_16_16.1/RetentionPeriod_16_16.1.feature" />
-        <option value="$PROJECT_DIR$/output/report.html" />
-        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_3.1/RetentionPeriod_3.1.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionStepDef16.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_2/1/RetentionPeriod_2.1.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/AssetInsightRunner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DatGovernancePage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature" />
+        <option value="$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_900_Page.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/TechnologyPageStep.java" />
       </list>
     </option>
   </component>
@@ -609,16 +609,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DatGovernancePage.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_900_Page.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_909_Page.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductPage_12_12.1/ProductPage_12_12.1.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/AssetInsightRunner.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_909.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProdutsPage_900.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_11_11/1/RetentionPeriod_11_11.1.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_15/RetentionPeriod.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_16_16.1/RetentionPeriod_16_16.1.feature</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_3.1/RetentionPeriod_3.1.feature</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_9_9.2/AssetInsight_Feature_001.feature</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -663,8 +659,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/AssetInsightRunner.java</PATH>
-        <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage_910/ProductPage_910.feature</PATH>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Merged with tree conflicts" />
@@ -880,7 +874,7 @@
       <workItem from="1523944869296" duration="2295000" />
       <workItem from="1523947775492" duration="200868000" />
       <workItem from="1525015854382" duration="15389000" />
-      <workItem from="1525079744423" duration="28907000" />
+      <workItem from="1525079744423" duration="48375000" />
     </task>
     <task id="LOCAL-00001" summary="Added Feature file">
       <created>1522933414988</created>
@@ -1001,43 +995,64 @@
       <option name="project" value="LOCAL" />
       <updated>1525238217897</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="DG Additional Questions- 3.1- Changes to existing field, Additional values">
+      <created>1525256872394</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1525256872394</updated>
+    </task>
+    <task id="LOCAL-00019" summary="DG Additional Questions- 3.1- Changes to existing field, Additional values">
+      <created>1525256893442</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1525256893442</updated>
+    </task>
+    <task id="LOCAL-00020" summary="DG Additional Questions- 3.1- Changes to existing field, Additional values">
+      <created>1525256918813</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1525256918813</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AssetInsightRunner_(1) - 2018.04.30 at 16h 50m 47s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 00m 43s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.01 at 14h 11m 52s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 08m 04s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.01 at 17h 16m 20s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 21m 11s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.01 at 18h 32m 34s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 28m 04s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 10h 10m 59s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 39m 14s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 10h 45m 42s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 51m 10s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 12h 00m 56s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 55m 58s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 13h 57m 23s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 19h 59m 33s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 15h 14m 17s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.03 at 03h 42m 23s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssetInsightRunner_(1) - 2018.05.02 at 15h 23m 14s.xml">
+    <history-entry file="AssetInsightRunner_(1) - 2018.05.03 at 05h 49m 39s.xml">
       <configuration name="AssetInsightRunner (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="607503000" />
+    <option name="totallyTimeSpent" value="626971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1049,7 +1064,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -1062,12 +1077,12 @@
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.2375189" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.8040847" weight="0.3378608" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.8774584" visible="true" weight="0.39898133" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8774584" visible="true" weight="0.39898133" />
       <window_info anchor="bottom" id="Spring" order="10" sideWeight="0.49621785" weight="0.3293718" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4924357" weight="0.32767403" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6006098" visible="true" weight="0.2708018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6006098" visible="true" weight="0.2602118" />
       <window_info anchor="right" id="Database" order="1" weight="0.32980332" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.34125638" />
       <window_info id="Structure" order="1" sideWeight="0.39939025" side_tool="true" weight="0.22541603" />
@@ -1083,38 +1098,6 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.24962178" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="Spring" order="10" sideWeight="0.49621785" weight="0.3293718" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8774584" visible="true" weight="0.39898133" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32980332" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.39728352" side_tool="true" weight="0.33812407" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4924357" weight="0.32767403" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.12254161" side_tool="true" weight="0.39898133" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4969743" weight="0.37691003" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.8040847" weight="0.3378608" />
-      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.2375189" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6006098" visible="true" weight="0.2708018" />
-      <window_info anchor="right" id="Database" order="1" weight="0.32980332" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49848714" weight="0.3293718" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Structure" order="1" sideWeight="0.39939025" side_tool="true" weight="0.22541603" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.34125638" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.8895613" weight="0.37181664" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1170,7 +1153,8 @@
     <MESSAGE value="DG Product Additional Questions- 12 and 12.1- Add two new field" />
     <MESSAGE value="ProductsPage-900 Class" />
     <MESSAGE value="DG Additional Questions- 2.1- Changes to existing field, Additional values" />
-    <option name="LAST_COMMIT_MESSAGE" value="DG Additional Questions- 2.1- Changes to existing field, Additional values" />
+    <MESSAGE value="DG Additional Questions- 3.1- Changes to existing field, Additional values" />
+    <option name="LAST_COMMIT_MESSAGE" value="DG Additional Questions- 3.1- Changes to existing field, Additional values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1185,34 +1169,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_16_16.1/RetentionPeriod_16_16.1.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RententionPeriodStepDef16.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/ContentPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/BeforeAfter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/appium/java-client/5.0.0-BETA9/java-client-5.0.0-BETA9.jar!/org/openqa/selenium/WebElement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -1279,13 +1235,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage_12/ProductPage_12.feature" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/Base/PageInstances.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/event/KeyEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1314,86 +1263,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/ProductsPage_909_StepDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/RetentionPeriodPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionPeriodPageStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/Products_900_StepDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="172" column="64" selection-start-line="172" selection-start-column="64" selection-end-line="172" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_900_Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="541" column="8" selection-start-line="541" selection-start-column="8" selection-end-line="541" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Helpers/CommonMethods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_909.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProdutsPage_900.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="51" column="66" lean-forward="true" selection-start-line="47" selection-end-line="51" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage_910/ProductPage_910.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_9_9.2/AssetInsight_Feature_001.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1404,121 +1277,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_15/RetentionPeriod.feature">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/Base/PageInstances.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_16_16.1/RetentionPeriod_16_16.1.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/HompePage/ContentPage.feature">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_11_11/1/RetentionPeriod_11_11.1.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/ProductsPage_909_StepDef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="1397" column="24" selection-start-line="1397" selection-start-column="24" selection-end-line="1397" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="286">
+          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductPage_12_12.1/ProductPage_12_12.1.feature">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_909_Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_2/1/RetentionPeriod_2.1.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+        <state relative-caret-position="167">
+          <caret line="106" column="20" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/AssetHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="119" column="19" lean-forward="true" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
+        <state relative-caret-position="84">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/HomePageStepDef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        <state relative-caret-position="101">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/HompePage/HomePage.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="23" selection-start-line="14" selection-start-column="2" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_15/RetentionPeriod.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_11_11/1/RetentionPeriod_11_11.1.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TestUtils/AssetInsightRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        <state relative-caret-position="187">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/TechnologyPageStep.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_16_16.1/RetentionPeriod_16_16.1.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        <state relative-caret-position="221">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/DataGovernanceTab11StepDef.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_9_9.2/AssetInsight_Feature_001.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+        <state relative-caret-position="17">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DataGovernance11Page.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage_910/ProductPage_910.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="102" />
+        <state relative-caret-position="170">
+          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_3.1/RetentionPeriod_3.1.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_909.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        <state relative-caret-position="170">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionStepDef16.java">
+    <entry file="file://$PROJECT_DIR$/output/report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="251" column="57" selection-start-line="251" selection-start-column="57" selection-end-line="251" selection-end-column="57" />
+        <state relative-caret-position="204">
+          <caret line="284" column="26" lean-forward="true" selection-start-line="284" selection-start-column="26" selection-end-line="284" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DatGovernancePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="153" column="23" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+        <state relative-caret-position="84">
+          <caret line="517" column="19" selection-start-line="517" selection-start-column="19" selection-end-line="517" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProdutsPage_900.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/Products_900_StepDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="57" column="51" lean-forward="true" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/Products_900_Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="315" column="10" selection-start-line="315" selection-start-column="10" selection-end-line="315" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_2/1/RetentionPeriod_2.1.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/DataGovernanceTab11StepDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="157" column="56" lean-forward="true" selection-start-line="157" selection-start-column="56" selection-end-line="157" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/DataGovernance11Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="462" column="19" selection-start-line="462" selection-start-column="19" selection-end-line="462" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/TechnologyPage_3.1/RetentionPeriod_3.1.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/HompePage/TechnologyPage.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionStepDef16.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="236" column="16" selection-start-line="236" selection-start-column="16" selection-end-line="236" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/TechnologyPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="318" lean-forward="true" selection-start-line="318" selection-end-line="318" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/TechnologyPageStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductPage_12_12.1/ProductPage_12_12.1.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Pages/PageObjects/RetentionPeriodPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="179" column="19" selection-start-line="179" selection-start-column="19" selection-end-line="179" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/Stepdefinintion/RetentionPeriodPageStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="58" column="97" selection-start-line="58" selection-start-column="97" selection-end-line="58" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/com/techmahindra/gui/cucumber/Deployment/AssetInsightAcceptance/ProductsPage/ProductsPage_903.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
         </state>
       </provider>
     </entry>

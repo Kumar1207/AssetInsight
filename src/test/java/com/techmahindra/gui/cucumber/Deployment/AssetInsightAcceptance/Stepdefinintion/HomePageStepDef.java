@@ -2,6 +2,7 @@ package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Stepdefi
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.PageInstances;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects.AssetHomePage;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -50,6 +51,7 @@ public class HomePageStepDef extends PageInstances {
 
     @Then("^I verify the respective \"([^\"]*)\" page is displayed$")
     public void iVerifyTheRespectivePageIsDisplayed(String option) throws Throwable {
+        WebDriverUtils.waitForElementLoading(5);
         Assert.assertTrue(assetHomePage.verifyRespectivePage(option,"header"));
     }
 
