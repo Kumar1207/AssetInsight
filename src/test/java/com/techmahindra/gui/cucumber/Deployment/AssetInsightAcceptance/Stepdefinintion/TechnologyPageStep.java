@@ -2,8 +2,10 @@ package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Stepdefi
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.PageInstances;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects.TechnologyPage;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.ExcelUtils;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,8 +13,10 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.StringTokenizer;
 
 public class TechnologyPageStep extends PageInstances {
 
@@ -139,8 +143,8 @@ public class TechnologyPageStep extends PageInstances {
         Assert.assertTrue(technologyPage.navigateToURL());
     }
 
-   @When("^I click on Application- Full Extract should be downloaded$")
-    public void iClickOnApplicationFullExtractShouldShouldBeDownloaded() throws Throwable {
+   @When("^I click on Application- Full \"([^\"]*)\" should be downloaded$")
+    public void iClickOnApplicationFullShouldShouldBeDownloaded() throws Throwable {
         Assert.assertTrue(technologyPage.cliconApplicationFullExtract());
 
     }
@@ -162,19 +166,25 @@ public class TechnologyPageStep extends PageInstances {
         Assert.assertTrue(technologyPage.clickOnAuditHistory());
     }
 
+    @Then("^I verify \"([^\"]*)\" file is Saved$")
+    public void iVerifyFileIsSaved(String arg0) throws Throwable {
+        Assert.assertTrue(technologyPage.clickOnAuditHistory());
+    }
 
+    @Then("^I verify updated field should be displayed in audit History tab$")
+    public void iVerifyUpdatedFieldShouldBeDisplayedInAuditHistoryTab() throws Throwable {
+        Assert.assertTrue(technologyPage.verifyUpdatedFieldInAuditHistory());
+    }
 
+    @Then("^I verify updated field should be displayed in Data Governance tab present in the Details page$")
+    public void iVerifyUpdatedFieldShouldBeDisplayedInDataGovernanceTabPresentInTheDetailsPage() throws Throwable {
+        Assert.assertTrue(technologyPage.verifyUpdatedFieldDetailsPage());
+    }
 
-   /* @Then("^Application- Full Extract should be downloaded$")
-    public void applicationFullExtractShouldBeDownloaded() throws Throwable {
-        technologyPage.downloadApplicationFullExtract();
-    }*/
-
-
- /*   @Then("^I verify below filed names which should be present in excel$")
-    public void iVerifyBelowFiledNamesWhichShouldBePresentInExcel() throws Throwable {
-        technologyPage.getCellValue();
-    }*/
+    @Then("^I verify the values present in the excel and in details page should be same$")
+    public void iVerifyTheValuesPresentInTheExcelAndInDetailsPageShouldBeSame() throws Throwable {
+        Assert.assertTrue(technologyPage.verifydatainExcelandDeatailsPage());
+    }
 }
 
 

@@ -46,22 +46,25 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
     Then I verify that "Help text" should be displayed below the radio button for the main question filed
     Then I click on "Save/Validate" button
     And  I click on "Audit history"
+    Then I verify updated field should be displayed in audit History tab
     Then I click on "Back to detail" button respective application details page should be displayed
+    Then I verify updated field should be displayed in Data Governance tab present in the Details page
 
 
     Examples:
       | fieldName                                                                              | ExistingfieldName |
       | Is Thomson Reuters able to view, edit, delete, share, change or use the personal data? | Standard Customer |
 
-#  @pageDisplay @AC_TechnologyPage_03
-#  Scenario: I verify Excel should be downloaded with the updated values
-#    Then  I click on the "Technology" in the homepage
-#    Then  I verify the respective "Technology" page is displayed
-#    Then  I click on the "Applications" present in the Technology page
-#    And   I click on "export to Excel" button and Excel should be downloaded
-#
-#  @pageDisplay @AC_TechnologyPage_04
-#  Scenario: Verifying Downloaded Excel data with GUI
-#    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-#    When  I click on Application- Full Extract should be downloaded
+  @pageDisplay @AC_TechnologyPage_03
+  Scenario: I verify Excel should be downloaded with the updated values
+    Then  I click on the "Technology" in the homepage
+    Then  I verify the respective "Technology" page is displayed
+    Then  I click on the "Applications" present in the Technology page
+    And   I click on "export to Excel" button and Excel should be downloaded
+
+  @pageDisplay @AC_TechnologyPage_04
+  Scenario: Verifying Downloaded Excel data with GUI
+    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
+    When  I click on Application- Full "Extract" should be downloaded
+    Then  I verify the values present in the excel and in details page should be same
 
