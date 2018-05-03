@@ -177,6 +177,7 @@ public class DatGovernancePage extends BasePage {
     }
 
     public boolean DoNotSelectAnyOption() {
+        WebDriverUtils.waitForElementLoading(2);
 
         boolean flag = true;
         if (!radioButtonNewField.isSelected()) {

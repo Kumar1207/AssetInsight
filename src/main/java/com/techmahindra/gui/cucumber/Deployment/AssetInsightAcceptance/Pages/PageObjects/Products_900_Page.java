@@ -325,7 +325,8 @@ public class Products_900_Page extends BasePage {
         return true;
     }
 
-    public boolean verifyUpdatedFieldInDataGovernance() {
+    public boolean
+    verifyUpdatedFieldInDataGovernance() {
         WebDriverUtils.waitForElementLoading(1);
         boolean flag = false;
         if (newFieldInProducts.isDisplayed() && updatedFieldInAuditHistory.isDisplayed()) {
