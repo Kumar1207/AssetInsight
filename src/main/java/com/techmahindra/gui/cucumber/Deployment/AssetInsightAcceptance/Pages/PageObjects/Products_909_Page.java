@@ -102,20 +102,20 @@ public class Products_909_Page extends BasePage {
     }
 
     public boolean verifyUpdatedFieldInAuditHistory() {
-        WebDriverUtils.waitForElementLoading(2);
-//        updatedFieldInAH.isDisplayed();
+        WebDriverUtils.waitForElementLoading(4);
+        updatedFieldInAH.isDisplayed();
         return true;
     }
 
     public boolean verifyUpdatedFieldInDataGovernance() {
-        WebDriverUtils.waitForElementLoading(2);
-        return true;
-      /*  boolean flag=false;
+        WebDriverUtils.waitForElementLoading(4);
+
+        boolean flag=false;
         if (newField.isDisplayed() && updatedFieldInAH.isDisplayed()) {
             flag = true;
         }
         return flag;
-    */
+
     }
 }
 

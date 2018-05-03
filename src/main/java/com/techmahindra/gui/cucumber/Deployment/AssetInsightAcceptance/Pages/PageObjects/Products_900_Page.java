@@ -1,20 +1,17 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
-import com.cucumber.listener.Reporter;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Helpers.CommonMethods;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
-import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Util.Utility;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.Utility;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.util.List;
 import java.util.Map;
 
@@ -47,11 +44,11 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[text()='Products'])[2]")
     private WebElement products;
 
-  /*  @FindBy(xpath = "//*[text()='3E']")
-    private WebElement selectAnyProduct;*/
-
-    @FindBy(xpath = "//*[text()='Abacus']")
+    @FindBy(xpath = "//*[text()='3E']")
     private WebElement selectAnyProduct;
+
+/*    @FindBy(xpath = "//*[text()='Abacus']")
+    private WebElement selectAnyProduct;*/
 
 
     @FindBy(xpath = "(//*[contains(text(),'Please provide a short description of the product')])[2]")
@@ -80,7 +77,6 @@ public class Products_900_Page extends BasePage {
 
     @FindBy(xpath = "//*[contains(text(),'3E Product short description')]")
     private WebElement updatedFieldInDetailsPage;
-
 
     @FindBy(xpath = "//*[@id='PersonalDataHasTRPermission']")
     private WebElement radioBTNYesNo;
@@ -306,6 +302,7 @@ public class Products_900_Page extends BasePage {
     }
 
     public boolean verifyUpdatedFieldInAuditHistory() {
+        WebDriverUtils.waitForElementLoading(4);
         updatedFieldInAuditHistory.isDisplayed();
         return true;
 
