@@ -168,7 +168,7 @@ public class Products_900_Page extends BasePage {
     @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[1]")
     private WebElement radioBtnYes;
 
-    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[1]")
+    @FindBy(xpath = "(//*[@id='PersonalDataHasTRPermission'])[2]")
     private WebElement radioBtnNo;
 
     @FindBy(xpath = "//*[@id='btnSignOff']")
@@ -481,8 +481,9 @@ public class Products_900_Page extends BasePage {
     }
 
     public boolean clickOnYesOption(String ListOptions, List<String> ListItems) {
-        WebDriverUtils.waitForElementLoading(2);
-        radioBtnYes.click();
+        WebDriverUtils.waitForElementLoading(4);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", radioBtnYes);
         switch (ListOptions) {
             case "checkBox":
                 for (String key : ListItems) {
