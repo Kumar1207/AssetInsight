@@ -54,6 +54,7 @@ Feature: I verify a new field "Does the retention period vary according to the t
     And  I click on "Audit history"
     And  I verify Updated field should get displayed in the Audit History tab
     Then I click on "Back to detail" button respective application details page should be displayed
+
    # Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
 
 
