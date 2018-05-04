@@ -65,6 +65,13 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
   @pageDisplay @AC_TechnologyPage_04
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    When  I click on Application- Full "Extract" should be downloaded
-    Then  I verify the values present in the excel and in details page should be same
+    When  I click on Application- Full Extract should be downloaded
 
+
+  @pageDisplay @AC_TechnologyPage_05
+  Scenario: I verify data present in both Excel and details Page should be same
+    Then  I click on the "Technology" in the homepage
+    Then  I verify the respective "Technology" page is displayed
+    Then  I click on the "Applications" present in the Technology page
+    And   I select any Existing Application present in the Result Page
+    Then  I verify the values present in the excel and in details page should be same

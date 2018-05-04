@@ -4,17 +4,6 @@ Feature: I verify where possible please specify the retention period applied to 
   Background:
     Given Asset Insight Home page should be displayed
 
-  @pageDisplay @AC_HomePage_15
-  Scenario: Given Asset Insight Home page should be displayed
-    When I click on the "Home" in the homepage
-    Then I verify the respective "Home" page is displayed
-    When I click on the "Content" in the homepage
-    Then I verify the respective "Content" page is displayed
-    When I click on the "Technology" in the homepage
-    Then I verify the respective "Technology" page is displayed
-    When I click on the "Products" in the homepage
-    Then I verify the respective "Products" page is displayed
-
   @pageDisplay @AC_ProductPage_15_01
   Scenario: Creating a New Product
     When I click on the "Products" in the homepage
@@ -58,6 +47,12 @@ Feature: I verify where possible please specify the retention period applied to 
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" below the lists in the homepage
-#    And  I click on "export to Excel" button and Excel should be downloaded
+    And  I click on "export to Excel" button and Excel should be downloaded
 
-
+  @pageDisplay @AC_ProductPage_09_04
+  Scenario: I Verify Values in Excel and in Details Page
+    When I click on the "Products" in the homepage
+    Then I verify the respective "Products" page is displayed
+    When I click on the "Products" below the lists in the homepage
+    And  I select any Existing Product present in the Result Page
+    Then I verify values present in the excel and in details page should be same
