@@ -47,14 +47,14 @@ Feature: I verify a new field "Does the retention period vary according to the t
     When I click on Yes of product I verify the type of the new subquestion field
     Then I Verify for product if the limit exceeds -validation message should get displayed
     | Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box for Retention period Text Box for Retention period Text Box for Retention period |
-
+    |Text Box for Retention period Text Box for Retention period Text Box for Retention Text Box|
 
 
     Then I click on "Save/Validate" button
     And  I click on "Audit history"
     And  I verify Updated field should get displayed in the Audit History tab
     Then I click on "Back to detail" button respective application details page should be displayed
-    Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
+   # Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
 
 
        Examples:
