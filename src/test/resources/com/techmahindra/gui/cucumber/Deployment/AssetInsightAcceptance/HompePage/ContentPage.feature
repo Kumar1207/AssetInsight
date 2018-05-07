@@ -2,7 +2,7 @@
 Feature: ContentPage
   This page provides the search operation based on the Contenttype, Business Unit and Region
 
-  Background:  Given Asset Insight Home page should be displayed
+  Background: Given Asset Insight Home page should be displayed
 
   @deployment @pageDisplay @AC_ContentPage_1
   Scenario: I verify on click of the links under Content Type/Businessunit/Region will navigate to respective result page

@@ -2,6 +2,7 @@ package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Pa
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Helpers.CommonMethods;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.excelapche.Apache_POI_TC;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -116,6 +117,11 @@ public class Products_909_Page extends BasePage {
         }
         return flag;
 
+    }
+
+    public boolean verifyValuesInExcelAndInDetailsPage() throws Exception {
+        Apache_POI_TC.getProductdata();
+        return true;
     }
 }
 
