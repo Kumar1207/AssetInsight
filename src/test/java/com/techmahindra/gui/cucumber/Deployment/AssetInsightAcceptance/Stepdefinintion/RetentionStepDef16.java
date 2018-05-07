@@ -255,6 +255,25 @@ public class RetentionStepDef16 extends PageInstances {
     }
 
 
+    @And("^Validate each item \"([^\"]*)\" of present in Audit History$")
+    public boolean validateEachItemOfPresentInAuditHistory(List<String> textList) throws Throwable {
+        boolean flag = false;
 
+        flag = datGovernancePage.verifyPRDDinAudit(textList);
+
+        return  flag;
+    }
+
+
+
+    @And("^Validate each item of present in Audit History values$")
+    public boolean validateEachItemOfPresentInAuditHistoryValues(List<String> textList) throws Throwable {
+        boolean flag = false;
+
+        flag = datGovernancePage.verifyPRDDinAudit(textList);
+        System.out.println("Audit History");
+
+        return  flag;
+    }
 }
 
