@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -517,6 +518,7 @@ public class DatGovernancePage extends BasePage {
 
 
     public boolean verifyPdataPresentInSelectedBox(String subField, List<String> items) {
+        ArrayList persnData = new ArrayList(items);
         boolean flag = false;
         String fieldName = subField.replaceAll("\\s", "");
         for (String item : items) {
@@ -572,5 +574,38 @@ public class DatGovernancePage extends BasePage {
 
         CommonMethods.ValidateAndUpdateField(OtherSTDErr, text);
         return true;
+    }
+
+    public boolean verifyPRDDinAudit(List<String> textList) {
+
+
+        WebDriverUtils.waitForElementLoading(10);
+        List<WebElement> newValueList=driver.findElements(By.xpath("//*[@id='tblAH']//td[7]") );
+        ArrayList<String>  valueList = new ArrayList<String>();
+
+        System.out.println(newValueList.size());
+        System.out.println("Audit");
+
+        System.out.println(newValueList);
+
+
+
+       for(int i=0;i<textList.size();i++){
+           System.out.println(newValueList.get(i).getText());
+           String ele=newValueList.get(i).getText();
+           System.out.println(i+"  "+ele);
+
+            valueList.add(i,ele);
+       }
+
+
+
+
+                   valueList.contains(textList);
+
+                    return true;
+
+
+
     }
 }
