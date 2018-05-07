@@ -68,14 +68,18 @@ Feature: I verify a new field "Who receives personal data from your product?" fo
 
     And when i Click on 'X' symbol for "<Items>" available in SELECT ITEMS box
     And Recipients of PData "Other" textbox should not be displayed
-
-
-
     Then I click on "Save/Validate" button
     And  I click on "Audit history"
-    And  I verify Updated field should get displayed in the Audit History tab
+    And Validate each item of present in Audit History values
+      | Thomson Reuters customers                                                         |
+      | Thomson Reuters service providers                                                 |
+      | Thomson Reuters partners                                                          |
+      | Third parties in connection with the sale of a Thomson Reuters business or assets |
+      | Authorities and tribunals (e.g. courts, regulators)                               |
+      | International organizations (e.g. United Nations)                                 |
+
+
     Then I click on "Back to detail" button respective application details page should be displayed
-    Then I verify Updated field should get displayed in the Data Governance tab present in the Details page
 
 
 
@@ -88,12 +92,12 @@ Feature: I verify a new field "Who receives personal data from your product?" fo
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
     When I click on the "Products" below the lists in the homepage
-#    And  I click on "export to Excel" button and Excel should be downloaded
+    And  I click on "export to Excel" button and Excel should be downloaded
 
   @pageDisplay @AC_ProductPage_12_04
   Scenario: Verifying Downloaded Excel data with GUI
     Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-#    When  I click on Application- Full Extract should be downloaded
+    #When  I click on Application- Full Extract should be downloaded
 
 
 
