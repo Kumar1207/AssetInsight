@@ -80,16 +80,7 @@ public class DataGovernanceTab11StepDef extends PageInstances {
     }
 
 
-    /*@And("^I verify new values which are given in the requirement document also should be added to the picklist:$")
-    public void iVerifyNewValuesWhichAreGivenInTheRequirementDocumentAlsoShouldBeAddedToThePicklist(List<String> stdPIIItems) throws Throwable {
 
-    }*/
-
-    /*@And("^I below values which are given in the requirement document also should be added to the picklist:$")
-    public void iBelowValuesWhichAreGivenInTheRequirementDocumentAlsoShouldBeAddedToThePicklist(String subField,List<String> stdPIIItems) throws Throwable {
-
-        Assert.assertTrue(dataGovernance11Page.verifyBelowListOfValuesUnderSubField(subField, stdPIIItems));
-    }*/
 
 
     @And("^I verify that it should be a mandatory field for Standard PII Data Type - Other field in the Data Governance page$")
@@ -212,4 +203,9 @@ public class DataGovernanceTab11StepDef extends PageInstances {
     }
 
 
+
+    @Then("^I verify Updated field should get displayed in the Data Governance tab present in the Details page Who receives personal data from your product$")
+    public void iVerifyUpdatedFieldShouldGetDisplayedInTheDataGovernanceTabPresentInTheDetailsPageWhoReceivesPersonalDataFromYourProduct() throws Throwable {
+
+    }
 }
