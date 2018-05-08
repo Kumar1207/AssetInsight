@@ -55,9 +55,7 @@ Feature: I verify Where possible please specify the retention period applied to 
     Then I verify below list of values should be present under "Sensitive PII Data Type" sub field:
       |Sex life or sexual orientation|
       |Observations of behavior or conduct of persons (including personal preferences, interests, reliability)|
-   #And  I Select the below list of values under "Sensitive PII Data Type" sub field:
-    #|Sex life or sexual orientation|
-    #|Observations of behavior or conduct of persons (including personal preferences, interests, reliability)|
+
     Then I click on "Save/Validate" button
     Then I click on "Back to detail" button respective application details page should be displayed
     Then I verify Updated field should get displayed in the Data Governance tab present in the Details page

@@ -275,5 +275,27 @@ public class RetentionStepDef16 extends PageInstances {
 
         return  flag;
     }
+
+    @And("^I verify Updated field should get displayed in the Audit History$")
+    public boolean I_verify_Updated_field_should_get_displayed_in_the_Audit_History(List<String> textList) throws Throwable {
+
+        boolean flag = false;
+
+        flag = datGovernancePage.verifyPRDDinAudit(textList);
+        System.out.println("Audit History");
+
+        return  flag;
+
+    }
+
+    @Then("^I Verify for product new subquestion field save with$")
+    public void I_Verify_for_product_new_subquestion_field_save_with(List<String> txt) throws Throwable {
+
+        for (String text : txt) {
+            Assert.assertTrue(datGovernancePage.verifyPRDdataSaved(text));
+        }
+
+
+    }
 }
 

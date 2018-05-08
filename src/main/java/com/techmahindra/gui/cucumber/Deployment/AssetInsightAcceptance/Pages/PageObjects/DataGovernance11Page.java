@@ -411,6 +411,7 @@ public class DataGovernance11Page extends BasePage {
         return element.isDisplayed();
     }
 
+
     public boolean checkTypeOfField(String fieldName) {
         String fieldNameNew = fieldName.replaceAll("\\s", "");
         WebDriverUtils.waitForElementLoading(8);
@@ -436,7 +437,7 @@ public class DataGovernance11Page extends BasePage {
         WebDriverUtils.waitForElementLoading(10);
         String newFieldName="div"+fieldName.replaceAll("\\s","");
         WebElement subQuestion=driver.findElement(By.xpath(".//*[@id='"+newFieldName+"']"));
-//        return subQuestion.getAttribute("style").contains("block");
+
         return subQuestion.isDisplayed();
     }
 
