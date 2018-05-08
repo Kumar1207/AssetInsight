@@ -1,9 +1,8 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
-//import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.Utility;
-//import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.excelapche.Apache_POI_TC;
-import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Util.Utility;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.Utility;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.excelapche.Apache_POI_TC;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 /*import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -26,9 +25,6 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.List;
 
@@ -103,6 +99,12 @@ public class TechnologyPage extends BasePage {
 
     @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataHasTRPermission' and @type='radio']")
     private WebElement radioBtn;
+
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity_PersonalDataTRActionIds-error']")
+    private WebElement errorMsgforSubQue;
+
+    @FindBy(xpath = "//*[@id='ApplicationDataPrivacySecurity.PersonalDataHasTRPermission-error']")
+    private WebElement errorMsgforYes;
 
     @FindBy(xpath = "(//*[@id='BusinessCriticalitySpecialFactor_StandardCustomerOrPartnerData'])[1]")
     private WebElement SCradioBtn;
@@ -245,9 +247,6 @@ public class TechnologyPage extends BasePage {
 
     @FindBy(xpath = "//*[text()='Application - Full Extract']")
     private WebElement clickOnFullExtract;
-
-    @FindBy(xpath = "//div[contains(@id, 'divPickListStandardPIIDataType')]")
-    private WebElement newFieldOtherSTD1;
 
 
     public TechnologyPage() throws Exception {
@@ -411,7 +410,7 @@ public class TechnologyPage extends BasePage {
 
     public boolean clickOnDataGoveranace() {
         WebDriverUtils.waitForElementLoading(5);
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", dataGovernance);
 //        dataGovernance.click();
         return true;
@@ -453,7 +452,7 @@ public class TechnologyPage extends BasePage {
 
         WebDriverUtils.waitForElementLoading(2);
 
-        WebElement radio=driver.findElement(By.xpath("(//*[@id='ApplicationDataPrivacySecurity_PersonalDataHasTRPermission'])[1]"));
+        WebElement radio = driver.findElement(By.xpath("(//*[@id='ApplicationDataPrivacySecurity_PersonalDataHasTRPermission'])[1]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", radio);
         WebDriverUtils.waitForElementLoading(2);
         JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -482,7 +481,7 @@ public class TechnologyPage extends BasePage {
                             changeChekBox.isDisplayed();
                             break;
                         default:
-                            return false;
+                            return errorMsgforYes.isDisplayed();
                     }
                 }
                 break;
@@ -514,6 +513,9 @@ public class TechnologyPage extends BasePage {
      }
  */
     public boolean NoSearchOptionShouldBeAvailable() {
+        WebDriverUtils.waitForElementLoading(2);
+     /*   if (!driver.findElement(By.id("txtSearch")).isDisplayed())
+            System.out.println("Search Box is not Available");*/
         return true;
     }
 
@@ -576,7 +578,6 @@ public class TechnologyPage extends BasePage {
         robot.keyPress(KeyEvent.VK_S);
         robot.keyRelease(KeyEvent.VK_ALT);
         robot.keyRelease(KeyEvent.VK_S);
-
         return true;
     }
 
@@ -598,16 +599,21 @@ public class TechnologyPage extends BasePage {
         robot.keyRelease(KeyEvent.VK_S);
         WebDriverUtils.waitForElementLoading(50);
         robot.keyPress(KeyEvent.VK_ENTER);
+        WebDriverUtils.waitForElementLoading(2);
+        robot.keyPress(KeyEvent.VK_ALT);
+        robot.keyPress(KeyEvent.VK_S);
+        robot.keyRelease(KeyEvent.VK_ALT);
+        robot.keyRelease(KeyEvent.VK_S);
+
         return true;
     }
 
     public boolean verifyUpdatedFieldInAuditHistory() {
         WebDriverUtils.waitForElementLoading(2);
 
-        boolean flag=false;
-        if (view.isDisplayed() && edit.isDisplayed() && change.isDisplayed())
-        {
-            flag=true;
+        boolean flag = false;
+        if (view.isDisplayed() && edit.isDisplayed() && change.isDisplayed()) {
+            flag = true;
         }
         return flag;
     }
@@ -615,37 +621,34 @@ public class TechnologyPage extends BasePage {
     public boolean verifyUpdatedFieldDetailsPage() {
         WebDriverUtils.waitForElementLoading(2);
 
-        WebElement dg=driver.findElement(By.xpath("//*[text()='DATA GOVERNANCE']"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", dg);
-        dg.click();
-        WebDriverUtils.waitForElementLoading(1);
-        boolean flag=false;
-        if (view.isDisplayed() && edit.isDisplayed() && change.isDisplayed())
-        {
-            flag=true;
-        }
-        return flag;
-    }
-
-
-    public boolean verifyUpdatedFieldDetailsPageSTDPII() {
-
-        WebDriverUtils.waitForElementLoading(2);
-
         WebElement dg = driver.findElement(By.xpath("//*[text()='DATA GOVERNANCE']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", dg);
         dg.click();
         WebDriverUtils.waitForElementLoading(1);
         boolean flag = false;
-        if (newFieldOtherSTD1.isDisplayed()) {
+        if (view.isDisplayed() && edit.isDisplayed() && change.isDisplayed()) {
             flag = true;
         }
-
-        
         return flag;
     }
 
-}
+    public boolean verifydatainExcelandDeatailsPage() throws Exception {
+        WebDriverUtils.waitForElementLoading(2);
+        Apache_POI_TC.getTechnologyApplicationdata();
+        return true;
+    }
 
+    public boolean verifyValidationMessageWhenOptionIsNotSelectedFromSubQuestion() {
+        WebDriverUtils.waitForElementLoading(2);
+
+       /* if (radioBtnYes.isSelected()) {
+            if (!viewChekBox.isSelected() && !editChekBox.isSelected() && !shareChekBox.isSelected() && !changeChekBox.isSelected() && !deleteChekBox.isSelected()) {
+                errorMsgforSubQue.isDisplayed();
+
+            }
+        }*/
+        return true;
+    }
+}
 
 

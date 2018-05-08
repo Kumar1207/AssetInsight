@@ -1,4 +1,4 @@
-package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Util;
+package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils;
 
 import java.util.Random;
 

@@ -55,4 +55,8 @@ public class ProductsPage_909_StepDef extends PageInstances {
     }
 
 
+    @Then("^I verify values present in the excel and in details page should be same$")
+    public void iVerifyValuesPresentInTheExcelAndInDetailsPageShouldBeSame() throws Throwable {
+        Assert.assertTrue(products_909_page.verifyValuesInExcelAndInDetailsPage());
+    }
 }

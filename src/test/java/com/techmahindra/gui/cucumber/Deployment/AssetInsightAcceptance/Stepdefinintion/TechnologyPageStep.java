@@ -2,10 +2,7 @@ package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Stepdefi
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.PageInstances;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects.TechnologyPage;
-import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.ExcelUtils;
-import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,10 +10,8 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.StringTokenizer;
 
 public class TechnologyPageStep extends PageInstances {
 
@@ -143,8 +138,8 @@ public class TechnologyPageStep extends PageInstances {
         Assert.assertTrue(technologyPage.navigateToURL());
     }
 
-   @When("^I click on Application- Full \"([^\"]*)\" should be downloaded$")
-    public void iClickOnApplicationFullShouldShouldBeDownloaded() throws Throwable {
+   @When("^I click on Application- Full Extract should be downloaded$")
+    public void iClickOnApplicationFullExtractShouldShouldBeDownloaded() throws Throwable {
         Assert.assertTrue(technologyPage.cliconApplicationFullExtract());
 
     }
@@ -185,6 +180,11 @@ public class TechnologyPageStep extends PageInstances {
     public void iVerifyTheValuesPresentInTheExcelAndInDetailsPageShouldBeSame() throws Throwable {
         Assert.assertTrue(technologyPage.verifydatainExcelandDeatailsPage());
     }
+
+   /* @And("^I verify validation message when option is selected from subquestion$")
+    public void iVerifyValidationMessageWhenOptionIsSelectedFromSubquestion() throws Throwable {
+        Assert.assertTrue(technologyPage.verifyValidationMessageWhenOptionIsNotSelectedFromSubQuestion());
+    }*/
 }
 
 
