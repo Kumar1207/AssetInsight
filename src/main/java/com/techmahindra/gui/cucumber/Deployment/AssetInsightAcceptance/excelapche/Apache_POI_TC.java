@@ -58,7 +58,7 @@ public class Apache_POI_TC extends BasePage {
 
             }
             for(int i=0;i<str.size();i++) {
-                if(str.get(i).contains(view) && str.get(i).contains(edit)&&str.get(i).contains(change)&&str.get(i).contains(share)) {
+                if(str.get(i).contains(view) || str.get(i).contains(edit)||str.get(i).contains(change)||str.get(i).contains(share)) {
                     System.out.println("Pass");
                 }
                 else
