@@ -1,8 +1,9 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.PageObjects;
 
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.BasePage;
-import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.Utility;
-import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.excelapche.Apache_POI_TC;
+//import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Utils.Utility;
+//import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.excelapche.Apache_POI_TC;
+import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Util.Utility;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 /*import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -244,6 +245,9 @@ public class TechnologyPage extends BasePage {
 
     @FindBy(xpath = "//*[text()='Application - Full Extract']")
     private WebElement clickOnFullExtract;
+
+    @FindBy(xpath = "//div[contains(@id, 'divPickListStandardPIIDataType')]")
+    private WebElement newFieldOtherSTD1;
 
 
     public TechnologyPage() throws Exception {
@@ -623,11 +627,22 @@ public class TechnologyPage extends BasePage {
         return flag;
     }
 
-    public boolean verifydatainExcelandDeatailsPage() throws Exception {
 
-        Apache_POI_TC.data();
-        return true;
+    public boolean verifyUpdatedFieldDetailsPageSTDPII() {
+
+        WebDriverUtils.waitForElementLoading(2);
+
+        WebElement dg = driver.findElement(By.xpath("//*[text()='DATA GOVERNANCE']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", dg);
+        dg.click();
+        WebDriverUtils.waitForElementLoading(1);
+        boolean flag = false;
+        if (newFieldOtherSTD1.isDisplayed()) {
+            flag = true;
+        }
+        return flag;
     }
+
 }
 
 
