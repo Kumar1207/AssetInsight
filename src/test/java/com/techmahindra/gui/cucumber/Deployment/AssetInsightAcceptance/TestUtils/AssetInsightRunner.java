@@ -17,8 +17,8 @@ import java.io.File;
         , plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
         , features = {"src/test/resources"}
         , monochrome = true
-//        , tags = {"@AC_TechnologyPage_16_02"}
-     , tags = {"@Feature_RetentionPeriodPage,@Feature_ProductsPage_900,@Feature_TechnologyPage,@Feature_ProductsPage_16_1,@Feature_TechnologyPage_16"}
+       , tags = {"@AC_TechnologyPage_16_02"}
+//     , tags = {"@Feature_RetentionPeriodPage,@Feature_ProductsPage_900,@Feature_TechnologyPage,@Feature_ProductsPage_16_1,@Feature_TechnologyPage_16"}
 )
 
 
