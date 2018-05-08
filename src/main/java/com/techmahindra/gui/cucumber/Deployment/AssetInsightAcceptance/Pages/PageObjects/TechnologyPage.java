@@ -640,6 +640,8 @@ public class TechnologyPage extends BasePage {
         if (newFieldOtherSTD1.isDisplayed()) {
             flag = true;
         }
+
+        
         return flag;
     }
 
