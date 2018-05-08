@@ -5,6 +5,7 @@ import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Bas
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.webdriver.WebDriverUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 //import sun.plugin.dom.core.Element;
@@ -607,5 +608,20 @@ public class DatGovernancePage extends BasePage {
 
 
 
+    }
+
+    public boolean verifyPRDdataSaved(String txt) {
+
+        boolean flag = false;
+
+
+        if(newSubQuetextFieldPRD.isDisplayed()) {
+            newSubQuetextFieldPRD.sendKeys(txt);
+            WebDriverUtils.waitForElementLoading(10);
+            flag = true;
+        }
+
+
+        return flag;
     }
 }
