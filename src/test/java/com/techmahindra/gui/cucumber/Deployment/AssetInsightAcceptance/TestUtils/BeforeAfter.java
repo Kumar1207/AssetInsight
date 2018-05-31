@@ -34,7 +34,7 @@ public class BeforeAfter extends PageInstances {
             Driver.setWebdriver(configFileReader.getBrowser(),true);
             driver = Driver.getDriver();
             driver.manage().deleteAllCookies();
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
             goToStartPosition();
             }else{
                 driver.manage().deleteAllCookies();

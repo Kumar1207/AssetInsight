@@ -58,7 +58,6 @@ public class AssetHomePage extends BasePage {
     }
 
     public boolean isPageDisplayed() throws Exception {
-        WebDriverUtils.waitForElementLoading(1);
         assetLogo.click();
         assetIncitesHomePage.isDisplayed();
         return true;
@@ -116,7 +115,7 @@ public class AssetHomePage extends BasePage {
         switch (Menu.toLowerCase()) {
             case "header":
                 switch (option.toLowerCase()){
-                    case "home":WebDriverUtils.waitForElementIsPresent(assetIncitesHomePage,10);
+                    case "home":WebDriverUtils.waitForElementIsPresent(assetIncitesHomePage,1);
                         return assetIncitesHomePage.isDisplayed();
                     case "content": return contentPage.isPageDisplayed();
                     case "trademark": return trademarkOptionsPage.isPageDisplayed();
@@ -137,7 +136,7 @@ public class AssetHomePage extends BasePage {
     }
 
     public boolean clickOnRandomLink(String link) {
-        WebDriverUtils.waitForElementLoading(40);
+        WebDriverUtils.waitForElementLoading(2);
         switch (link.toLowerCase()){
             case "content type":
                  driver.findElement(By.xpath("//a[contains(text(),'Metadata')]")).click(); break;

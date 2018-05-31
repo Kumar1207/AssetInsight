@@ -13,8 +13,8 @@ public abstract class BasePage extends PageInstances {
     public BasePage() throws Exception {
         currentWindowHandler = Driver.getDriver().getWindowHandle();
         try {
-            WebDriverUtils.waitForElementLoading(15);
-            WebDriverUtils.waitForElementIsPresent(elementForLoading(),20);
+            WebDriverUtils.waitForElementLoading(2);
+            WebDriverUtils.waitForElementIsPresent(elementForLoading(),2);
         } catch (NoSuchElementException e) {
             WebDriverUtils.waitForElementLoading(1);
         } catch (Exception e) {

@@ -23,7 +23,7 @@ public class ProductsPage extends BasePage {
 
     @Override
     public boolean isPageDisplayed() throws Exception {
-        WebDriverUtils.waitForElementIsPresent(productsHomePage,10);
+        WebDriverUtils.waitForElementIsPresent(productsHomePage,1);
         return productsHomePage.isDisplayed();
     }
 

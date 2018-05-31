@@ -51,7 +51,6 @@ public class HomePageStepDef extends PageInstances {
 
     @Then("^I verify the respective \"([^\"]*)\" page is displayed$")
     public void iVerifyTheRespectivePageIsDisplayed(String option) throws Throwable {
-        WebDriverUtils.waitForElementLoading(5);
         Assert.assertTrue(assetHomePage.verifyRespectivePage(option,"header"));
     }
 
