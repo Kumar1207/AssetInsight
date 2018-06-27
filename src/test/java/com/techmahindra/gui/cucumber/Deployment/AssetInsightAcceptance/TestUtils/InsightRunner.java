@@ -1,6 +1,5 @@
 package com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.TestUtils;
 
-import com.cucumber.listener.ExtentCucumberFormatter;
 import com.cucumber.listener.Reporter;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.Pages.Base.PageInstances;
 import com.techmahindra.gui.cucumber.Deployment.AssetInsightAcceptance.managers.FileReaderManager;
@@ -10,18 +9,20 @@ import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+
 import java.io.File;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(format = {"pretty", "json:target/cucumber-report.json", "junit:target/cucumber-junit-report/cuc.xml"}
         , glue = {"com.techmahindra.gui.cucumber"}
-        , plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}
+        , plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report3.html"}
         , features = {"src/test/resources"}
         , monochrome = true
-        , tags = {"@TechnologyPage_879_02"}
+        , tags = {"@AC_HomePage_903"}
 )
 
 
-public class AssetInsightRunner extends PageInstances {
+public class InsightRunner extends PageInstances {
     @BeforeClass
     public static void BeforeClass() throws Exception
     {
