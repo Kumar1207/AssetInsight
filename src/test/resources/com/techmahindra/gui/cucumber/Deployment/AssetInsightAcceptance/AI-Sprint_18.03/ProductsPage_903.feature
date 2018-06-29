@@ -1,10 +1,10 @@
-@Feature_ProductsPage_900
-Feature: I verify Please provide a short description of the product's use of personal data in the DataGovernance Tab Present in the Products Page
+@Feature_ProductsPage_903
+Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change or use the personal data is present in Data Governance section
 
   Background:
     Given Asset Insight Home page should be displayed
 
-  @pageDisplay @AC_HomePage_1
+  @AC_HomePage_903
   Scenario: Given Asset Insight Home page should be displayed
     When I click on the "Home" in the homepage
     Then I verify the respective "Home" page is displayed
@@ -15,7 +15,7 @@ Feature: I verify Please provide a short description of the product's use of per
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
 
-  @pageDisplay @AC_ProductPage_01
+  @AC_ProductPage_903_01
   Scenario: Creating a New Product
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
@@ -25,11 +25,27 @@ Feature: I verify Please provide a short description of the product's use of per
       | Business Sub Segment | EBS                               |
       | Product Status       | Not Yet Launched                  |
       | Product Level        | Base                              |
-      | Marketing Contact    | Modium, Prashanthi                |
+      | Marketing Contact    | Prashanthi Modium                 |
+    Then I click on "SAVE/VALIDATE" button
+    And  I click on "Edit This Record" Details Page
+    And  I click on "Data Governance" tab
+    Then I verify "<fieldName>" field present in the "Data Governance" page
+    Then I verify "<fieldName>" default value should be blank
+    And  I Check the type of the "<fieldName>" filed
+    And  I verify field type of"<fieldName>" should be same as Existing filed "<ExistingfieldName>" type
+    Then I verify that "Help text" should be displayed below the radio button for the main question filed
+    Then I click on "SAVE/VALIDATE" button
+    When I do not select any option i verify validation message should be displayed
+    When I click on Yes option below subquestions should be displayed
+      | View   |
+      | Edit   |
+      | Delete |
+      | Share  |
+      | Change |
+      | Use    |
     Then I click on "SAVE/VALIDATE" button
 
-
-  @pageDisplay @AC_ProductPage_02
+  @AC_ProductPage_903_02
   Scenario Outline: I Verify the Existing Product
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
@@ -39,7 +55,7 @@ Feature: I verify Please provide a short description of the product's use of per
     And  I click on "Data Governance" tab
     Then I verify "<fieldName>" should present in the DataGovernance page
     And  I Check the type of the "<fieldName>" field
-    Then I verify that Help text should be displayed for the "<fieldName>"
+    #Then I verify that Help text should be displayed for the "<fieldName>"
     And  I click on information box present next to General section
     Then I verify the "<fieldName>" and help text should be displayed in information textbox
     And  I verify that "<fieldName>" should be mandatory field
@@ -54,13 +70,5 @@ Feature: I verify Please provide a short description of the product's use of per
     Examples:
       | fieldName                                                                |
       | Please provide a short description of the product's use of personal data |
-
-
-  @pageDisplay @AC_ProductPage_03
-  Scenario: I verify Excel should be downloaded with the updated values
-    When I click on the "Products" in the homepage
-    Then I verify the respective "Products" page is displayed
-    When I click on the "Products" below the lists in the homepage
-#    And  I click on "export to Excel" button and Excel should be downloaded
 
 

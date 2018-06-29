@@ -1,10 +1,10 @@
-@Feature_TechnologyPage
+@Feature_TechnologyPage_876
 Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change or use the personal data
 
   Background:
     Given Asset Insight Home page should be displayed
 
-  @pageDisplay @AC_TechnologyPage_01
+  @AC_TechnologyPage_876_01
   Scenario: Creating a New Application
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
@@ -20,10 +20,11 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
       | Platform Classification         | No Intent to Migrate     |
     Then I click on "SAVE/VALIDATE" button
 
-  @pageDisplay @AC_TechnologyPage_02
+  @AC_TechnologyPage_876_02
   Scenario Outline: I Verify the Existing Application
     Then I click on the "Technology" in the homepage
     Then I verify the respective "Technology" page is displayed
+    Then I verify updated field should be displayed in Data Governance tab present in the Details page
     Then I click on the "Applications" present in the Technology page
     And  I select any Existing Application present in the Result Page
     And  I click on "Edit This Record" Details Page
@@ -48,30 +49,18 @@ Feature: I verify Is Thomson Reuters able to view, edit, delete, share, change o
     And  I click on "Audit history"
     Then I verify updated field should be displayed in audit History tab
     Then I click on "Back to detail" button respective application details page should be displayed
-    Then I verify updated field should be displayed in Data Governance tab present in the Details page
 
 
     Examples:
       | fieldName                                                                              | ExistingfieldName |
       | Is Thomson Reuters able to view, edit, delete, share, change or use the personal data? | Standard Customer |
 
-  @pageDisplay @AC_TechnologyPage_03
-  Scenario: I verify Excel should be downloaded with the updated values
-    Then  I click on the "Technology" in the homepage
-    Then  I verify the respective "Technology" page is displayed
-    Then  I click on the "Applications" present in the Technology page
-    And   I click on "export to Excel" button and Excel should be downloaded
-
-  @pageDisplay @AC_TechnologyPage_04
-  Scenario: Verifying Downloaded Excel data with GUI
-    Given I navigate to URL "https://assetsdev.int.thomsonreuters.com/Technology/tgo"
-    When  I click on Application- Full Extract should be downloaded
-
-
-  @pageDisplay @AC_TechnologyPage_05
+  @ExcelPage_876_03
   Scenario: I verify data present in both Excel and details Page should be same
     Then  I click on the "Technology" in the homepage
     Then  I verify the respective "Technology" page is displayed
     Then  I click on the "Applications" present in the Technology page
     And   I select any Existing Application present in the Result Page
     Then  I verify the values present in the excel and in details page should be same
+      | TR can view and modify personal data   |
+      | Actions TR can take with personal data |

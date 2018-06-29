@@ -4,7 +4,7 @@ Feature: I verify where possible please specify the retention period applied to 
   Background:
     Given Asset Insight Home page should be displayed
 
-  @pageDisplay @AC_ProductPage_15_01
+  @AC_ProductPage_909_01
   Scenario: Creating a New Product
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
@@ -17,7 +17,7 @@ Feature: I verify where possible please specify the retention period applied to 
       | Marketing Contact    | Modium, Prashanthi                |
     Then I click on "SAVE/VALIDATE" button
 
-  @pageDisplay @AC_ProductPage_15_02
+  @AC_ProductPage_909_02
   Scenario Outline: I Verify the Existing Product
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
@@ -41,15 +41,7 @@ Feature: I verify where possible please specify the retention period applied to 
       | fieldName                                                                                                  |
       | Where possible please specify the retention period applied to personal data on your product and its basis. |
 
-
-  @pageDisplay @AC_ProductPage_09_03
-  Scenario: I verify Excel should be downloaded with the updated values
-    When I click on the "Products" in the homepage
-    Then I verify the respective "Products" page is displayed
-    When I click on the "Products" below the lists in the homepage
-    And  I click on "export to Excel" button and Excel should be downloaded
-
-  @pageDisplay @AC_ProductPage_09_04
+  @AC_ProductPage_909_03
   Scenario: I Verify Values in Excel and in Details Page
     When I click on the "Products" in the homepage
     Then I verify the respective "Products" page is displayed
